@@ -1,0 +1,35 @@
+[{
+    "text": "首页",
+    "route": "home",
+    "params": {}
+  },
+  {
+    "text": "关于FBC",
+    "route": "team",
+    "params": {}
+  },
+  {
+    "text": "FB浏览器",
+    "route": "browser",
+    "params": {}
+  },
+  {
+    "text": "社区",
+    "route": "team",
+    "params": {}
+  },
+  {
+    "text": "基金会",
+    "route": "us",
+    "params": {}
+  },
+  {
+    "text": "白皮书",
+    "route": "whitepaper",
+    "params": {}
+  }, {
+    "text": "钱包",
+    "route": "tech",
+    "params": {}
+  }
+]

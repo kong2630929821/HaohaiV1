@@ -1,0 +1,56 @@
+.footer-h1 {
+  font-size: 24px;
+  height: 31px;
+  color: #00B6FF;
+  margin-bottom: 21px;
+}
+
+.main-h1 {
+  font-size: 36px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+.main-aside {
+  font-size: 24px;
+  color: #bbbbbb;
+  text-align: center;
+}
+
+.home-h1 {
+  font-weight: 600;
+  color: #333333;
+  font-size: 42px;
+  line-height: 59px;
+  text-align: center;
+  padding-bottom: 6px;
+  padding-top: 180px;
+}
+
+.home-h2 {
+    font-weight: 600;
+    color: #333333;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    padding-bottom: 6px;
+    padding-left:10px;
+}
+
+.home-p {
+  font-weight: 300;
+  color: #666666;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+
+.home-p2{
+    font-weight: 300;
+    color: #666666;
+    font-size: 18px;
+    line-height: 25px;
+    text-indent: 2em;
+}

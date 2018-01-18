@@ -1,0 +1,52 @@
+.btn {
+    min-width:150px;
+    height:50px;
+    font-size:16px;
+    font-weight: 200;
+    line-height: 40px;
+    padding:0 15px;
+    color:#00a7fe;
+    border:none;
+    background-color: rgba(0,0,0,0);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-i {
+    background-color: #00a7fe;
+    color:#fff;
+    font-weight: 400;
+    font-size:20px;
+    height:60px;
+    line-height: 60px;
+}
+
+.btn-o {
+    transition:border 0.2s,color 0.2s;
+    border:1px solid #00a7fe;
+    color:#00a7fe;
+}
+
+.btn-o:hover {
+    transition:border 0.2s,color 0.2s;
+    border:1px solid #98dafd;
+    background-color: #00a7fe;
+    color:#fff;
+}
+
+
+.btn-center{
+    display:block;
+    margin:0 auto;
+}
+
+
+/* 其他样式 */
+.btn-nav {
+    background-color:#00B6FF;
+    line-height:50px;
+    width:100px;
+    height:50px;
+    text-align: center;
+    
+}

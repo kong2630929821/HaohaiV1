@@ -1,0 +1,34 @@
+.layout {
+    display:flex;
+}
+
+.layout-inline {
+    display:inline-flex;
+}
+
+.y-center {
+    align-items: center;
+}
+
+.x-center {
+    justify-content: center;
+}
+
+.x-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1280px;
+    padding:0 12px;
+    margin: 0 auto
+}
+
+.main-container {
+    padding-bottom:500px;
+}

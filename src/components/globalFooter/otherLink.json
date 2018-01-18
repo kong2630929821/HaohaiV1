@@ -1,0 +1,23 @@
+[
+    {
+        "name":"路线图",
+        "route":"linkmap"
+    },
+    {
+        "name":"发行计划",
+        "route":"plan"
+    },
+    {
+        "name":"团队",
+        "route":"team"
+    },
+    {
+        "name":"法律",
+        "route":"law"
+    },
+    {
+        "name":"关于我们",
+        "route":"us"
+    }
+
+]
