@@ -1,13 +1,16 @@
 <template>
   <nav class="global-nav">
     <section class="global-nav-container container layout y-center">
-      <figure class="logo"><imgs src="logo.png"></imgs></figure>
+      <figure @click="gotoHome" class="logo">
+        <imgs src="logo.png" ></imgs>
+      </figure>
       <ul class="menu">
-        <li v-for="(item,index) of menuItems" :key="index"><router-link :to="{name:item.route,params:item.params}">{{item.text}}</router-link></li>
-        <!-- <li>登录</li> -->
-        <li>注册</li>
-        <li>
-          <section class="btn-nav">登录</section></li>
+        <li v-for="(item,index) of menuItems" :key="index">
+          <router-link v-if="!item.forbidden" :to="{name:item.route,params:item.params}">{{item.text}}</router-link>
+          <a style="color:#9e9e9e;cursor:not-allowed;" v-else>{{item.text}}</a>
+        </li>
+        <!-- <li>注册</li>
+        <li><section class="btn-nav">登录</section></li> -->
       </ul>
     </section>
 
@@ -19,9 +22,16 @@
 
   export default {
     name: 'global-header',
-    data(){
+    data() {
       return {
         menuItems
+      }
+    },
+    methods: {
+      gotoHome() {
+        this.$router.push({
+          name:'home'
+        })
       }
     }
   }
@@ -31,28 +41,28 @@
 <style scoped>
   .global-nav {
     height: 180px;
-    position:absolute;
-    z-index:3;
-    top:0;
-    display:flex;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    display: flex;
     justify-content: center;
-    width:100%;
+    width: 100%;
   }
 
   .global-nav-container {
-      height:100%;
-      justify-content: space-between;
+    height: 100%;
+    justify-content: space-between;
   }
 
   .logo {
-      height:80%;
-      width:180px;
-      color:#fff;
-      font-size:42px;
-      line-height: 144px;
-      text-align: center;
+    height: 80%;
+    width: 180px;
+    color: #fff;
+    font-size: 42px;
+    line-height: 144px;
+    text-align: center;
+    cursor: pointer;
   }
-
   /* 菜单 */
 
   .menu,
@@ -65,14 +75,13 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin:0 19px;
-    color:#fff;
-    cursor: pointer;
-    font-size:16px;
+    margin: 0 19px;
+    color: #fff;
+    font-size: 16px;
   }
 
   .menu li a {
-    color:#fff;
+    color: #fff;
   }
 
 </style>

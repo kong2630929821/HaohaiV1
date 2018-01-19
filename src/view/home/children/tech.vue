@@ -9,7 +9,7 @@
       <section class="container section-container">
         <section class="w1">
           <header class="layout y-center" style="margin-bottom:9px;">
-            <imgs size="40px" src="temp.png"></imgs>
+            <imgs style="width:40px" src="home_c.png"></imgs>
             <h2 class="home-h2">
               超级侧链
             </h2>
@@ -29,7 +29,7 @@
           </section>
           <section class="w2">
             <header class="layout y-center" style="margin-bottom:9px;">
-              <imgs size="40px" src="temp.png"></imgs>
+              <imgs style="width:40px" src="home_b.png"></imgs>
               <h2 class="home-h2">
                 安全网关
               </h2>
@@ -44,7 +44,7 @@
       <section class="container full-section-container">
         <section class="w1">
           <header class="layout y-center" style="margin-bottom:9px;">
-            <imgs size="40px" src="temp.png"></imgs>
+            <imgs style="width:40px"  src="home_a.png"></imgs>
             <h2 class="home-h2" style="color:#00B6FF">
               POS
             </h2>

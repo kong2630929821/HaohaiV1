@@ -6,7 +6,7 @@
       基于所有权的权益证明基于区块链开发不光可以得到更高的安全性来应对盗号，破解和外挂等问题外，还将带来全新的游戏经济体系。
     </p>
     <button class="btn btn-i">钱包下载</button>
-    <p class="btn-a">购买FBC</p>
+    <p class="btn-a" @click="$router.push('buy')">购买FBC</p>
   </section>
 </template>
 

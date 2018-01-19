@@ -1,11 +1,11 @@
 <template>
   <section class="home-container">
-    <main class="home-main main-container">
+    <main class="home-main main-container" style="padding-bottom:0px">
       <!-- 头块 -->
       <section class="head" :style="bg">
         <section style="display:flex;justify-content:center">
           <section class="head-main">
-            <h3>FairBlock.com</h3>
+            <h3><imgs src="logo_2.png" style="height:300px;"></imgs></h3>
             <h1>区块链让世界更公平</h1>
           </section>
           <section class="top-card-container container layout x-between">
@@ -65,7 +65,7 @@
       <route></route>
 
       <!-- team块 -->
-      <team></team>
+      <!-- <team></team> -->
     </main>
 
   </section>
@@ -121,7 +121,7 @@
   }
 
   .head-main {
-    margin-top: 477px;
+    margin-top: 277px;
   }
 
   .head-main h3 {

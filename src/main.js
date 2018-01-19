@@ -13,7 +13,7 @@ import './css/reset.css';
 import './css/layout.css';
 import './css/global.css';
 import './css/btn.css';
-
+import './css/table.css';
 registerGlobalCom();
 
 new Vue({
