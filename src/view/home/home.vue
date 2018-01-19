@@ -114,7 +114,7 @@
   /* head */
 
   .head {
-    height: 1000px;
+    height: 100vh;
     width: 100%;
     background-color: #00a7fe;
     position: relative;

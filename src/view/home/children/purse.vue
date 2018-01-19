@@ -45,6 +45,7 @@
     text-align: center;
     font-weight: 400;
     margin-top:16px;
+    cursor: pointer;
   }
 
 </style>

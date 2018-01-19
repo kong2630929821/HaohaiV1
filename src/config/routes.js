@@ -6,10 +6,10 @@ Vue.use(VueRouter);
 
 import Home from "../view/home"
 import Team from "../view/team"
+import Browser from "../view/browser";
 import Tech from "../view/tech"
 import Us from "../view/us"
 import Whitepaper from "../view/whitepaper"
-
 
 import BitApp from "../view/bit/bitApp";
 import BitPage from "../view/bit/bitPage";
@@ -21,6 +21,11 @@ const navRoutes = [{
     name: 'home',
     path: '/',
     component: Home
+  },
+  {
+    name:'browser',
+    path:'/browser',
+    component:Browser
   },
   {
     name: 'team',
