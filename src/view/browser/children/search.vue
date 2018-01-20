@@ -1,9 +1,9 @@
 <template>
   <section class="search-out search-container" :class="{'search-out-focus':isUnFold}">
-    <imgs @click.native="search" class="search-icon" src="search.png"></imgs>
+    <imgs style="padding:0 2em;" @click.native="search" class="search-icon" src="search.png"></imgs>
     <section v-show="isUnFold" class="control">
       <ul>
-        <li class="label-word" :class="{'li-active':conditionActiveIndex==0}" @click="conditionActiveIndex=0">地点</li>
+        <li class="label-word" :class="{'li-active':conditionActiveIndex==0}" @click="conditionActiveIndex=0">地址</li>
         <li class="label-word" :class="{'li-active':conditionActiveIndex==1}" @click="conditionActiveIndex=1">交易</li>
         <!-- <li class="label-word" :class="{'li-active':conditionActiveIndex==2}" @click="conditionActiveIndex=2">时间</li> -->
       </ul>
@@ -39,10 +39,30 @@
         result: {}
       }
     },
+    props: ['type', 'words'],
+    watch: {
+      words(val,oldVal) {
+        if (type && type !== '' && words && words != '') {
+          debugger;
+          this.search_words = this.words;
+          this.conditionActiveIndex = this.type=='address' ? 0 : 1;
+        }
+      },
+      type(val,oldVal) {
+        debugger;
+        if (type && type !== '' && words && words != '') {
+          this.search_words = this.words;
+          this.conditionActiveIndex = this.type=='address' ? 0 : 1;
+        }
+      }
+    },
     created() {
       //   debugger;
       //     let Transaction = web3.eth.getTransaction("0x49d895676f63696f6bc619737787d4765afa2fb12833b940c7fd051ff7224847")
       //     let banlance = web3.eth.getBalance("0x91f28b79b263c9016070df84719b3fddbb9bfa2e")
+      this.search_words = "0x49d895676f63696f6bc619737787d4765afa2fb12833b940c7fd051ff7224847";
+      this.conditionActiveIndex = 1;
+      this.search();
     },
     methods: {
       search() {
@@ -50,31 +70,34 @@
         this.result = {};
         if (condition == 'address') {
           try {
-            this.result.price = web3.eth.getBalance(format16X(this.search_words)).toString();
+            this.result.address = this.search_words;
+            this.result.price = web3.eth.getBalance(format16X(this.search_words));
+            this.result.price = web3.fromWei(this.result.price, 'ether');
             this.result.type = 'address'
           } catch (e) {
             this.result.type = 'error'
           }
-          this.$emit('search', {
-            type: this.result.type,
-            value: this.result
-          });
+
         } else if (condition == 'transaction') {
           try {
             this.result = web3.eth.getTransaction(format16X(this.search_words));
             let timeStamp = web3.eth.getBlock(this.result.blockHash).timestamp;
             let gasUsed = web3.eth.getTransactionReceipt(format16X(this.search_words)).gasUsed;
             this.result.timeStamp = timeStamp;
-            this.result.cost = web3.fromWei(gasUsed*this.result.gasPrice.c[0],'ether');
+            this.result.cost = web3.fromWei(gasUsed * this.result.gasPrice.c[0], 'ether');
+            this.result.totalCost = web3.fromWei(this.result.value, 'ether').toString();
             this.result.type = 'transaction';
           } catch (e) {
             this.result.type = 'error';
           }
-          this.$emit('search', {
-            type: this.result.type,
-            value: this.result
-          });
+
         }
+
+        console.log('result', this.result)
+        this.$emit('search', {
+          type: this.result.type,
+          value: this.result
+        });
 
       }
     }
@@ -107,7 +130,7 @@
   .search-icon {
     margin-top: 6px;
     position: absolute;
-    right: 2em;
+    right: 0;
   }
 
   .search-container {
@@ -117,7 +140,7 @@
     height: 42px;
     width: 649px;
     outline: none;
-    padding: 0 3em;
+    padding: 0 1em;
     color: #fff;
     font-size: 20px;
     margin: 0 auto;
@@ -125,10 +148,12 @@
 
   .block {
     height: 100%;
+    width: 100%;
   }
 
   input {
     width: 100%;
+    padding: 0 3em 0 1em;
     background-color: rgba(0, 0, 0, 0);
     height: 100%;
     border: none;

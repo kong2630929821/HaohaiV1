@@ -2,16 +2,28 @@
   <section>
 
     <section v-if="obj.type=='error'" class="block">
-        <h1 class="block-h1">查不到当前信息</h1>
+      <h1 class="block-h1">查不到当前信息</h1>
     </section>
 
     <section v-if="obj.type=='address'" class="block">
-      <h1 class="block-h1" style="color:#012E5D">余额</h1>
+      <h1 class="block-h1" style="color:#012E5D">地址明细</h1>
       <main class="block-main">
         <table class="table">
           <tr>
+            <td>地址</td>
+            <td>{{obj.address}}</td>
+          </tr>
+          <tr>
             <td>余额</td>
-            <td>{{obj.price}}</td>
+            <td>{{fbc}} FBC</td>
+          </tr>
+          <tr>
+            <td>美元</td>
+            <td>$ {{dollar}} </td>
+          </tr>
+          <tr>
+            <td>人民币</td>
+            <td>￥ {{rmb}} </td>
           </tr>
         </table>
       </main>
@@ -34,12 +46,16 @@
             <td>{{obj.to}}</td>
           </tr>
           <tr>
-            <td>Actual Tx Cost/Fee</td>
+            <td>Actual Tx Cost</td>
             <td>{{obj.cost}} FBC</td>
           </tr>
           <tr>
-              <td>InputData</td>
-              <td>{{obj.input}}</td>
+            <td>Total Cost</td>
+            <td>{{obj.totalCost}}</td>
+          </tr>
+          <tr>
+            <td>InputData</td>
+            <td>{{obj.input}}</td>
           </tr>
         </table>
       </main>
@@ -52,34 +68,42 @@
 <script>
   export default {
     name: 'browser-index',
-    props:['obj'],
-    computed:{
-        time(){
-            let time = new Date(this.obj.timeStamp*1000);
-            let format = {
-                year:time.getFullYear(),
-                month:time.getMonth()+1,
-                day:time.getDate(),
-                hour:time.getHours(),
-                min:time.getMinutes(),
-                sec:time.getSeconds()
-            }
-
-            for (const key in format) {
-                if (format.hasOwnProperty(key)) {
-                    let element = format[key];
-                    if(element.length<=1){
-                        format[key] = '0'+element;
-                    }
-                }
-            }
-
-            return `${format.year}年${format.month}月${format.day} ${format.hour}:${format.min}:${format.sec}`
+    props: ['obj'],
+    computed: {
+      time() {
+        let time = new Date(this.obj.timeStamp * 1000);
+        let format = {
+          year: time.getFullYear(),
+          month: time.getMonth() + 1,
+          day: time.getDate(),
+          hour: time.getHours(),
+          min: time.getMinutes(),
+          sec: time.getSeconds()
         }
+
+        for (const key in format) {
+          if (format.hasOwnProperty(key)) {
+            let element = format[key];
+            if (element.length <= 1) {
+              format[key] = '0' + element;
+            }
+          }
+        }
+
+        return `${format.year}年${format.month}月${format.day} ${format.hour}:${format.min}:${format.sec}`
+      },
+      fbc() {
+        return this.obj.price.toFixed(6);
+      },
+      dollar() {
+        return (this.obj.price * 0.36).toFixed(2);
+      },
+      rmb() {
+        return (this.obj.price * 2.3).toFixed(2);
+      }
     },
     // props:['timestamp','from','to','cost','inputdata'],
-    methods: {
-    }
+    methods: {}
   }
 
 </script>

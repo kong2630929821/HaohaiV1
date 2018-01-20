@@ -4,8 +4,6 @@
       <section class="head" :style="bg">
         <header>
           <h1 style="margin-bottom:30px">购买FBC</h1>
-          <p style="width:580px;margin:0 auto">您可以通过数字货币兑换买入，卖出或交易Ada 以下是目前列出Ada的交易所清单，在未来几个月内会持续更新
-          </p>
           <section class="icon-area ">
             <imgs src="Bitmap.png" style="margin-right:10px"></imgs>
             <imgs src="Bitmap2.png" style="margin-right:10px"></imgs>
@@ -17,6 +15,7 @@
     </section>
 
     <main class="main container word-container" style="width:800px">
+      <section style="display:flex">
       <p class="footer-h1">HitBTC
         <span>(即将公布)</span>
       </p>
@@ -26,6 +25,12 @@
       <p class="footer-h1">Cryptopia
         <span>(即将公布)</span>
       </p>
+    </section>
+    <section>
+        <p class="footer-h1">okex
+            <span>(即将公布)</span>
+          </p>
+    </section>
     </main>
   </section>
 </template>
@@ -55,7 +60,7 @@
 
 <style scoped>
   .first-screen {
-    height: 700px;
+    height: 550px;
     overflow: hidden;
     background-color: #003874;
     display: flex;
@@ -69,6 +74,7 @@
     width: 1800px;
     display: flex;
     flex-direction: column;
+
     justify-content: center;
   }
 
@@ -106,7 +112,8 @@
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer-h1 {

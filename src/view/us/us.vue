@@ -7,8 +7,7 @@
         <imgs src="bg_5.jpg" class="header-h2-bg"></imgs>
         <main class="header-main">
           <h1 class="header-main-h1">联系我们</h1>
-          <p class="header-main-p">我们随时准备回答您可能遇到的任何问题 依托于全新构架的区块链体系，我们将建立一套去中心的，自由和稳定的全新社交网络
-          </p>
+          <p class="header-main-p">我们随时准备回答您可能遇到的任何问题</p>
         </main>
       </header>
       <main class="block" style="padding-bottom:150px;">
@@ -23,7 +22,7 @@
                 <input type="text">
               </section>
               <section class="form-area">
-                <label for="">名字
+                <label for="">姓氏
                   <span>*</span>
                 </label>
                 <input type="text">
@@ -55,17 +54,16 @@
           </section>
           <aside>
             <h1 class="block-header">如何购买FBC</h1>
-            <p class="block-p">对于有兴趣购买FBC的个人，请参阅如何购买XRP</p>
+            <p class="block-p">对于有兴趣购买FBC的个人，请参阅如何<router-link style="color:#00B6FF" to="buy">购买FBC</router-link></p>
             <h1 class="block-header" style="margin-top:26px">支持</h1>
-            <p class="block-p" >请通过FairBlock@ripple.com与我们联系</p>
-            <p class="block-p">+46(0) 000 000 0000</p>
+            <p class="block-p">请通过fairblock@gmail.com与我们联系</p>
           </aside>
 
         </main>
         <button class="btn btn-i">发送消息</button>
         <aside class="btn-aside">通过提供上述信息，您同意FairBlock使用条款和隐私政策。</aside>
       </main>
-      <section class="hr"></section>
+      <!-- <section class="hr"></section>
       <main class="block footer-container" style="height:363px;margin-top:0">
         <section>
           <section class="footer-header">
@@ -90,7 +88,7 @@
           </section>
           <p class="footer-p">FairBlock@ripple.com</p>
         </section>
-      </main>
+      </main> -->
     </main>
   </section>
 </template>
@@ -98,8 +96,8 @@
 <script>
   export default {
     name: 'us',
-    mounted(){
-      window.scrollTo(0,0)
+    mounted() {
+      window.scrollTo(0, 0)
     }
   }
 
@@ -157,11 +155,24 @@
     text-align: center;
   }
 
-  .block {
-    margin: 0 auto;
-    margin-top: 60px;
-    min-height: 300px;
-    width: 1000px;
+
+
+  @media screen and (min-width:1201px) {
+    .block {
+      margin: 0 auto;
+      margin-top: 60px;
+      min-height: 300px;
+      width: 1000px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .block {
+      margin: 0 auto;
+      margin-top: 60px;
+      min-height: 300px;
+      padding:0 12px;
+    }
   }
 
   .block-header {
@@ -174,10 +185,10 @@
   input {
     margin-top: 10px;
     border: 1px solid #CCCCCC;
-    height: 50px;
+    height: 35px;
     border-radius: 4px;
     outline: none;
-    padding: 0 2em;
+    padding: 0 0.6em;
     font-size: 16px;
     color: rgb(80, 80, 80);
     width: 100%;
@@ -190,13 +201,14 @@
   textarea {
     margin-top: 10px;
     border: 1px solid #CCCCCC;
-    height: 450px;
+    height: 230px;
     border-radius: 4px;
     outline: none;
-    padding: 1em 2em;
+    padding: 0.6em 0.6em;
     font-size: 16px;
     color: rgb(80, 80, 80);
     width: 100%;
+    resize:none;
   }
 
 
@@ -245,7 +257,7 @@
 
   .form-col {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .form-area {
@@ -261,7 +273,7 @@
   }
 
   .footer-container {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }

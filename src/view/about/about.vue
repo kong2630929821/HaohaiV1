@@ -7,15 +7,12 @@
         <imgs src="bg_4.jpg" class="header-h2-bg"></imgs>
         <main class="header-main">
           <h1 class="header-main-h1">关于FairBlock</h1>
-          <p class="header-main-p">FairBlock去中心化娱乐社区平台的出现正是为了解决传统中心化社交网络面临的种种问题 依托于全新构架的区块链体系，我们将建立一套去中心的，自由和稳定的全新社交网络
-
-          </p>
+          <p class="header-main-p">更安全，更快捷，更方便</p>
         </main>
       </header>
       <main class="block">
-        <p class="block-header">FairBlock.com是您所有与比特币有关的首要来源。我们可以帮助您 购买FBC和/或选择FBC钱包。您也可以阅读最新消息，或在我们的FBC论坛上与社区进行交流。这是一个商业网站，列出钱包，交易所和其他比特币相关的公司。
+        <p class="block-header" style="margin-bottom:31px">FairBlock基于全新构架的第三代区块链体系，致力于构建一个高效而可靠的价值传输体系，推动互联网成为构建社会信任的基础设施。我们试图建立一套去中心的、自由和稳定的全新互联网信任体系，并重点解决区块链应用开发中以游戏等强交互应用为典型代表的泛娱乐领域的开发痛点，推进区块链技术面向普通大众的普及和推广应用。
         </p>
-        <p class="block-header"  style="margin-bottom:31px">如果您有兴趣在Bitcoin.com工作，请点击这里查看我们目前的机会。</p>
         <button class="btn btn-i" @click="$router.push('us')">联系我们</button>
       </main>
     </main>

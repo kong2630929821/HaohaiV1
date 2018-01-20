@@ -3,17 +3,17 @@
     <section class="first-screen">
       <section class="head" :style="bg">
         <header>
-          <h1>FairBlock.com</h1>
-          <p>Search addresses on the Cardano network</p>
+          <h1>FairBlock.io</h1>
+          <p>搜索地址和交易明细</p>
         </header>
-        <search @search="updateDetail" style="margin:0 auto">
+        <search  :type="type" :words="words" @search="updateDetail" style="margin:0 auto">
         </search>
       </section>
     </section>
 
     <main class="main container">
             <!-- <brower-index></brower-index> -->
-            <brower-detail :obj="result"></brower-detail>
+      <brower-detail :obj="result"></brower-detail>
     </main>
   </section>
 </template>
@@ -37,10 +37,21 @@
           'background-image': `url(${Assert_bg})`,
           'background-size': `100% 100%`
         },
+        type:'',
+        words:'',
+        init:{},
         result:{}
       }
     },
+    mounted(){
+      this.getParams();
+    },
     methods: {
+        getParams(){
+            this.type = this.$route.params.type || '';
+            this.words = this.$route.params.search_words || '';
+        },
+
         updateDetail(result){
             this.result = result.value;
             this.result.type=result.type;
@@ -52,7 +63,7 @@
 
 <style scoped>
   .first-screen {
-    height: 600px;
+    height: 560px;
     overflow: hidden;
     background-color: #003874;
     display: flex;
@@ -61,7 +72,7 @@
   }
 
   .head {
-    margin-top: 109px;
+    margin-top: 209px;
     height: 350px;
     width: 1800px;
     display: flex;

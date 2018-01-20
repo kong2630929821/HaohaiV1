@@ -12,54 +12,19 @@
       </section>
       <section class="time-point-layout">
         <section>
-          <section class="time-point">
+          <section v-for="(item,index) of routes" class="time-point">
+            <section class="time-point-before"></section>
             <section class="time-area1">
-              <h1>17年11月30日</h1>
-              <p>搭建FairBlock官网</p>
+              <h1>{{item.time}}</h1>
             </section>
             <section class="time-area2">
               <imgs size="260px;130px" src="lux_1.jpg"></imgs>
             </section>
             <section class="time-area3">
-              我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是
+              {{item.content}}
             </section>
           </section>
-          <section class="time-point">
-            <section class="time-area1">
-              <h1>18年1月20日</h1>
-              <p>发布FairBlock代码和FairBlock钱包</p>
-            </section>
-            <section class="time-area2">
-              <imgs size="260px;130px" src="lux_2.jpg"></imgs>
-            </section>
-            <section class="time-area3">
-              我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是
-            </section>
-          </section>
-          <section class="time-point">
-            <section class="time-area1">
-              <h1>18年1月31日</h1>
-              <p>在FairBlock主链中发布2-3个上链资产，这些资产在钱包中可见</p>
-            </section>
-            <section class="time-area2">
-              <imgs size="260px;130px" src="lux_3.jpg"></imgs>
-            </section>
-            <section class="time-area3">
-              我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是
-            </section>
-          </section>
-          <section class="time-point">
-            <section class="time-area1">
-              <h1>18年1月31日</h1>
-              <p>在FairBlock主链中发布2-3个上链资产，这些资产在钱包中可见</p>
-            </section>
-            <section class="time-area2">
-              <imgs size="260px;130px" src="lux_3.jpg"></imgs>
-            </section>
-            <section class="time-area3">
-              我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是一串开发解释我是
-            </section>
-          </section>
+
         </section>
       </section>
 
@@ -68,8 +33,15 @@
 </template>
 
 <script>
+  import routes from './route.json';
+
   export default {
-    name: 'home-route'
+    name: 'home-route',
+    data() {
+      return {
+        routes
+      }
+    }
   }
 
 </script>
@@ -101,11 +73,15 @@
     padding-left: 32px;
     display: flex;
     border: none;
+    margin-left: 15px;
+    border-left: 1px solid #999999;
   }
 
   .time-point:not(:last-child) {
     border-left: 1px solid #999999;
   }
+
+
 
   .time-point::before {
     content: "";
@@ -121,7 +97,7 @@
 
   .time-area1 {
     margin-right: 30px;
-    flex: 1 1 230px;
+    flex: 0 1 160px;
   }
 
   .time-area1 h1 {
@@ -151,19 +127,38 @@
   }
 
   .mask {
-    width: 30px;
-    background-color: #f2f5fa;
+    width: 45px;
+    background-color: #f2f5fa00;
     position: absolute;
     z-index: 3;
     bottom: 0;
     left: 0;
-    height: 198px;
+    height: 8px;
+  }
+
+  .mask::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 3;
+    top: 3px;
+    left: 25px;
+    background-color: #999999;
   }
 
   .next-icon {
     position: absolute;
     z-index: 5;
-    transform: rotate(270deg) translateY(10px) translateX(-15px);
+    transform: rotate(270deg) translateY(25px) translateX(-20px);
+  }
+  /* 滑条样式 */
+
+   ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: rgba(245, 245, 245, 0);
   }
 
 </style>

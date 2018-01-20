@@ -3,9 +3,9 @@
     <section class="fill"></section>
     <h1 class="home-h1" style="padding-top:140px">FairBlock钱包</h1>
     <p class="home-p" style="width:35%;margin:0 auto;margin-top:20px;margin-bottom:62px">
-      基于所有权的权益证明基于区块链开发不光可以得到更高的安全性来应对盗号，破解和外挂等问题外，还将带来全新的游戏经济体系。
+        更安全，更快捷，更方便
     </p>
-    <button class="btn btn-i">钱包下载</button>
+    <a style="color:#fff" href="https://chrome.google.com/webstore/detail/fairblockwallet/jpcpjfhljjjdlhciheahiecoiofnpnge?hl=zh-CN" target="_blank"><button class="btn btn-i">钱包下载</button></a>
     <p class="btn-a" @click="$router.push('buy')">购买FBC</p>
   </section>
 </template>

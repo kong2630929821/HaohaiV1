@@ -22,7 +22,7 @@ const navRoutes = [{
   },
   {
     name: 'browser',
-    path: '/browser',
+    path: '/browser/:type?/:search_words?',
     component: Browser
   },
   {

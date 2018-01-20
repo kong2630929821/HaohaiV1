@@ -6,16 +6,14 @@
           <section class="mask"></section>
           <imgs src="bg_4.jpg" class="header-h2-bg"></imgs>
           <main class="header-main">
-            <h1 class="header-main-h1">下载白皮书</h1>
-  
-            </p>
+            <h1 class="header-main-h1">白皮书</h1>
+            <p class="header-main-p">竞争权益证明，超级侧链，安全函数</p>            
           </main>
         </header>
         <main class="block">
-          <p class="block-header">fewiofjwieofjwioefjiweojfioewjgiowrejgiowrejgiowjgiowjiogjweiog
+          <p class="block-header" style="margin-bottom:31px">FairBlock作为革命性的互联网底层架构，其所能实现的功能远不止数字货币或电子合约，许多我们常用的工作、生活甚至娱乐或游戏应用将可以以全新的形态在区块链上呈现。作为一套去中心化的协作体系，得益于技术团队带来的革命性技术，我们有能力将大多数互联网应用以去中心化的方式进行重构，互联网将变得更安全、更可靠、更富有想象力。
           </p>
-          <p class="block-header"  style="margin-bottom:31px">如果您有兴趣在Bitcoin.com工作，请点击这里查看我们目前的机会。</p>
-          <button class="btn btn-i">下载白皮书</button>
+          <a style="color:#fff" href="http://jenovachen.com/flowingames/Flow_in_games_final.pdf" target="_blank"><button class="btn btn-i">下载白皮书</button></a>
         </main>
       </main>
     </section>

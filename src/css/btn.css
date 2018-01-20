@@ -43,11 +43,3 @@
     
 }
 
-.btn-o-dark {
-    transition:border 0.2s,color 0.2s;
-    border: 1px solid #666666;
-    color:black;
-    font-weight: 500;
-    font-size:16px;
-    line-height: 18px;
-}

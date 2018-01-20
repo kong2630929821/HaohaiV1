@@ -6,7 +6,7 @@
     const getImg = src => {
         // webpack有特殊规则，require不能直接引用一个变量，但特殊的写法就能引用变量。
         // 一个图片如果require就能被webpack追踪到，就能编译hash
-        if (src.match(/(\.jpg|\.png)/g) == null) {
+        if (src.match(/(\.jpg|\.png|\.gif)/g) == null) {
             src = src + ".png";
         }
         return require("../../../res/" + src);

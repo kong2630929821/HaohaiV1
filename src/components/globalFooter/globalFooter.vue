@@ -1,23 +1,6 @@
 <template>
   <footer class="global-footer" :style="bg">
     <ul class="container footer-container">
-      <!-- Other -->
-      <li>
-        <section class="other-detail-block">
-          <p style="margin-bottom:17px;">我们将建立一套去中心的，自由和稳定的全新社交网络 </p>
-          <p>All trademarks, logos and brands are property of their respective owners. </p>
-          <p>All company, product and service names used in this website are for identification purposes only.</p>
-          <p>Responsible Disclosure Policy for Security Researchers</p>
-          <p style="margin-top:30px">© 2017 Digital Asset Holdings, LLC</p>
-          <section style="margin-top:50px">
-            <imgs size="24px" style="margin-right:24px" src="temp.png"></imgs>
-            <imgs size="24px" style="margin-right:24px" src="temp.png"></imgs>
-            <imgs size="24px" style="margin-right:24px" src="temp.png"></imgs>
-            <imgs size="24px" style="margin-right:24px" src="temp.png"></imgs>
-            <imgs size="24px" style="margin-right:24px" src="temp.png"></imgs>
-          </section>
-        </section>
-      </li>
       <li>
         <section>
           <imgs src="logo.png" ></imgs>
@@ -63,7 +46,7 @@
   .footer-container {
     padding-top: 110px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .footer-container>li {
@@ -76,7 +59,7 @@
     font-weight: 400;
     color: #fff;
     margin: 0 5px;
-    text-align: right;
+    text-align: center;
     cursor: pointer;
   }
 

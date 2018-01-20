@@ -4,8 +4,8 @@
     "params": {}
   },
   {
-    "text": "关于FBC",
-    "route": "about",
+    "text": "白皮书",
+    "route": "whitepaper",
     "params": {}
   },
   {
@@ -14,24 +14,29 @@
     "params": {}
   },
   {
+    "text": "钱包",
+    "route": "purse",
+    "params": {}
+  },
+  {
+    "text": "购买",
+    "route": "buy",
+    "params": {}
+  },
+  {
     "text": "社区",
     "route": "",
     "params": {},
-    "forbidden":"true"
+    "forbidden": "true"
   },
   {
     "text": "基金会",
     "route": "",
     "params": {},
-    "forbidden":"true"
-  },
-  {
-    "text": "白皮书",
-    "route": "whitepaper",
-    "params": {}
+    "forbidden": "true"
   }, {
-    "text": "钱包",
-    "route": "purse",
+    "text": "关于FB",
+    "route": "about",
     "params": {}
   }
 ]

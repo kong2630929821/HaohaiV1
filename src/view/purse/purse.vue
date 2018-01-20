@@ -7,15 +7,13 @@
               <imgs src="bg_4.jpg" class="header-h2-bg"></imgs>
               <main class="header-main">
                 <h1 class="header-main-h1">钱包</h1>
-      
-                </p>
+                <p class="header-main-p">更安全，更快捷，更方便</p>
               </main>
             </header>
             <main class="block">
-              <p class="block-header">fewiofjwieofjwioefjiweojfioewjgiowrejgiowrejgiowjgiowjiogjweiog
+              <p class="block-header">FairBlock钱包不单是链上资产的存储系统，更是区块链与用户交互的媒介，用户将可以在钱包中直接使用第三方分布式应用。钱包在整个生态系统中是如此的重要，正如浏览器在互联网中的作用。
               </p>
-              <p class="block-header"  style="margin-bottom:31px">如果您有兴趣在Bitcoin.com工作，请点击这里查看我们目前的机会。</p>
-              <button class="btn btn-i">下载钱包</button>
+              <a style="color:#fff" href="https://chrome.google.com/webstore/detail/fairblockwallet/jpcpjfhljjjdlhciheahiecoiofnpnge?hl=zh-CN" target="_blank"><button class="btn btn-i" >下载钱包</button></a>
             </main>
           </main>
         </section>
@@ -94,6 +92,7 @@
           font-size: 16px;
           color:#333333;
           text-align: center;
+          margin-bottom:30px
         }
       
       

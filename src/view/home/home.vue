@@ -5,8 +5,10 @@
       <section class="head" :style="bg">
         <section style="display:flex;justify-content:center">
           <section class="head-main">
-            <h3><imgs src="logo_2.png" style="height:300px;"></imgs></h3>
-            <h1>区块链让世界更公平</h1>
+            <h3>
+              <imgs src="logo_2.png" style="height:13vh;"></imgs>
+            </h3>
+            <h1 style="font-size:4.5vh">区块链让世界更公平</h1>
           </section>
           <section class="top-card-container container layout x-between">
 
@@ -14,25 +16,27 @@
             <section class="top-card top-card-padding">
               <imgs class="top-card-bg" src="hex_1.png" />
               <section class="top-card-top">
-                <h1 class="top-card-h1">超级侧链</h1>
-                <p class="top-card-p">经FairBlock研发</p>
-                <p class="top-card-p">超级侧链技术支持以混合模式分叉侧链</p>
+                <h1 class="top-card-h1">竞争权益证明</h1>
               </section>
-              <section class="top-card-bottom">
-                <h1 class="top-card-h1">既独立与原有链</h1>
-                <h1 class="top-card-h1">又能与原区块链网络相兼容</h1>
+              <section class="top-card-center">
+                <h1 class="top-card-title">独创秒级权益证明
+                </h1>
+                <p class="top-card-p2">高容错，高效率，低消耗</p>
               </section>
+
             </section>
 
             <!-- block-2 -->
             <section class="top-card">
               <imgs class="top-card-bg" src="hex_2.png" />
               <section class="top-card-top">
-                <h1 class="top-card-h1">安全网关</h1>
+                <h1 class="top-card-h1">安全函数</h1>
               </section>
-              <section class="top-card-bottom">
-                <p class="top-card-p">我们提供一个经验证的安全的网关系统</p>
-                <h1 class="top-card-h1">FairBlock区块链架构中</h1>
+              <section class="top-card-bottom" style="bottom:56px">
+                <h1 class="top-card-title">安全链接现实世界
+                </h1>
+                <h1 class="top-card-p">通过安全函数链接现实世界，跨越现实世界和区块链间的鸿沟
+                </h1>
               </section>
             </section>
 
@@ -40,12 +44,14 @@
             <section class="top-card">
               <imgs class="top-card-bg" src="hex_3.png" />
               <section class="top-card-top">
-                <h1 class="top-card-h1">cPOS</h1>
+                <h1 class="top-card-h1">超级侧链</h1>
               </section>
-              <section class="top-card-center">
-                <h1 class="top-card-title">时间被缩短到秒级</h1>
-                <p class="top-card-p2">如何在去中心化的网络中建立时间序列的概念</p>
+              <section class="top-card-bottom">
+                <h1 class="top-card-h1">无限侧链创建</h1>
+                <p class="top-card-p">全新树形侧链结构</p>
+                <p class="top-card-p">跨链事务处理，跨链联合权益证明</p>
               </section>
+
             </section>
           </section>
         </section>
@@ -74,7 +80,7 @@
 <script>
   import LandscapeCard from './children/LandscapeCard.vue';
   import Tech from './children/tech.vue';
-  import Service from './children/service.vue'; 
+  import Service from './children/service.vue';
   import Purse from './children/purse.vue';
   import Route from './children/route.vue';
   import Team from './children/team.vue';
@@ -98,10 +104,9 @@
         }
       }
     },
-    created() {
-    },
+    created() {},
     methods: {
- 
+
     }
   }
 
@@ -116,12 +121,22 @@
   .head {
     height: 100vh;
     width: 100%;
-    background-color: #00a7fe;
+    background-color: #fff;
     position: relative;
   }
 
-  .head-main {
-    margin-top: 277px;
+
+
+  @media screen and (min-height:581px) {
+    .head-main {
+      margin-top: 38vh;
+    }
+  }
+
+  @media screen and (max-height: 580px) {
+    .head-main {
+      margin-top: 25vh;
+    }
   }
 
   .head-main h3 {
@@ -192,6 +207,7 @@
     font-size: 16px;
     line-height: 18px;
     color: #fff;
+    width: 350px;
   }
 
   .top-card-p2 {
@@ -207,6 +223,15 @@
     content: "";
     position: absolute;
     background-color: rgba(255, 0, 0, 0.459);
+  }
+
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 12px;
+      margin: 0 auto
+    }
   }
 
   .top-card:not(:last-child) {

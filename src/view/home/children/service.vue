@@ -1,8 +1,8 @@
 <template>
   <section>
     <header>
-      <h1 class="home-h1">应用服务</h1>
-      <p class="home-p">第三代泛娱乐公链</p>
+      <h1 class="home-h1">链上应用</h1>
+      <!-- <p class="home-p" style="width:700px;margin:0 auto">FairBlock作为革命性的互联网底层架构，其所能实现的功能远不止数字货币或电子合约，许多我们常用的工作、生活甚至娱乐或游戏应用将可以以全新的形态在区块链上呈现。作为一套去中心化的协作体系，得益于技术团队带来的革命性技术，我们有能力将大多数互联网应用以去中心化的方式进行重构，互联网将变得更安全、更可靠、更富有想象力。</p> -->
     </header>
     <main>
       <section class="b0">
@@ -12,8 +12,8 @@
               <imgs class="firgue" src="yinyong_1.png"></imgs>
               <section class="bit-joy-main">
                 <section class="bit-joy-main-inner">
-                  <h1 class="bit-h1 bit-h1-light">BitJoy</h1>
-                  <p class="bit-p bit-p-light">基于真实身份的去中心化社交网络，用户可以通过Timeline发布博客，图片，短视频等原创内容，信息以时间线形式展示</p>
+                  <h1 class="bit-h1 bit-h1-light">高性能</h1>
+                  <p class="bit-p bit-p-light">基于cPoS技术的FairBlock能够极大地提高区块链的处理效率，而全新的去中心化协作模式能够带来极低的处理成本。在小规模的测试网络中我们已经可以实现每秒2000次的处理效率。</p>
                 </section>
               </section>
             </section>
@@ -22,8 +22,8 @@
                 <section class="bit-game-inner">
                   <section class="bit-game-main">
                     <section class="bit-game-main-inner">
-                      <h1 class="bit-h1 ">BitGame</h1>
-                      <p class="bit-p">基于真实身份的去中心化社交网络，用户可以通过Timeline发布博客，图片，短视频等原创内容，信息以时间线形式展示</p>
+                      <h1 class="bit-h1 ">独立性</h1>
+                      <p class="bit-p">我们提供完整的解决方案并鼓励开发者直接在侧链上开发应用。超级侧链功能可以提供独立和可靠的应用开发环境，而跨链事务规范则充分保证了主链与侧链间的交互。</p>
                     </section>
                   </section>
                   <imgs class="firgue" style="margin-right:10%;" src="yinyong_3.png"></imgs>
@@ -31,8 +31,8 @@
               </section>
         </section>
         <section class="bit-page">
-          <h1 class="bit-h1">BitPage</h1>
-          <p class="bit-p ">为博客作者和原创者准备的内容发布平台，创建由个人管理且运行在区块链上的个人主页，用户甚至可以将原创作品在FairBlock上进行商业化</p>
+          <h1 class="bit-h1">可交互性</h1>
+          <p class="bit-p ">在FairBlock区块链架构中，我们提供一个用户定义的外部函数调用，运行在FairBlock链中的代码可以通过安全函数调用外部数据，这将极大的拓展智能合约的应用范围。</p>
           <imgs class="firgue" src="yinyong_2.png"></imgs>
         </section>
       </section>
@@ -154,7 +154,7 @@
   .bit-page .firgue {
     position: absolute;
     bottom: 0;
-    right: -180px;
+    right: -120px;
     z-index: -1;
   }
 
