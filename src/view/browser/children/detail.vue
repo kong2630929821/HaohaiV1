@@ -30,7 +30,7 @@
     </section>
 
     <section v-if="obj.type=='transaction'" class="block">
-      <h1 class="block-h1">概要</h1>
+      <h1 class="block-h1">交易明细</h1>
       <main class="block-main">
         <table class="table">
           <tr>

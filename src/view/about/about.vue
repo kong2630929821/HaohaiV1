@@ -11,8 +11,13 @@
         </main>
       </header>
       <main class="block">
-        <p class="block-header" style="margin-bottom:31px">FairBlock基于全新构架的第三代区块链体系，致力于构建一个高效而可靠的价值传输体系，推动互联网成为构建社会信任的基础设施。我们试图建立一套去中心的、自由和稳定的全新互联网信任体系，并重点解决区块链应用开发中以游戏等强交互应用为典型代表的泛娱乐领域的开发痛点，推进区块链技术面向普通大众的普及和推广应用。
+        <p class="block-header" >FairBlock基于全新构架的第三代区块链体系
         </p>
+        <p class="block-header">致力于构建一个高效而可靠的价值传输体系</p>
+        <p class="block-header">推动互联网成为构建社会信任的基础设施</p>
+        <p class="block-header">我们试图建立一套去中心的、自由和稳定的全新互联网信任体系</p>
+        <p class="block-header">重点解决区块链应用开发中以游戏等强交互应用为典型代表的泛娱乐领域的开发痛点</p>
+        <p class="block-header">推进区块链技术面向普通大众的普及和推广应用</p>
         <button class="btn btn-i" @click="$router.push('us')">联系我们</button>
       </main>
     </main>
@@ -79,15 +84,16 @@
   }
 
   .block {
-    margin:0 auto;
-    margin-top: 152px;
+    margin: 0 auto;
+    margin-top: 132px;
     min-height: 300px;
-    width:900px;
+    width: 900px;
   }
 
   .block-header {
-    font-size: 16px;
-    color:#333333;
+    font-size: 24px;
+    line-height: 70px;
+    color: #333333;
     text-align: center;
   }
 
@@ -102,6 +108,8 @@
     padding: 0 3em;
     display: block;
     margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 102px;
   }
 
 </style>

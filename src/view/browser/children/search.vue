@@ -39,20 +39,22 @@
         result: {}
       }
     },
-    props: ['type', 'words'],
+    props: {
+      type: {
+        type: String,
+        default: ''
+      },
+      words: {
+        type: String,
+        default: ''
+      }
+    },
     watch: {
-      words(val,oldVal) {
+      words(val, oldVal) {
         if (this.type && this.type !== '' && this.words && this.words != '') {
           debugger;
           this.search_words = this.words;
-          this.conditionActiveIndex = this.type=='address' ? 0 : 1;
-        }
-      },
-      type(val,oldVal) {
-        debugger;
-        if (this.type && this.type !== '' && this.words && this.words != '') {
-          this.search_words = this.words;
-          this.conditionActiveIndex = this.type=='address' ? 0 : 1;
+          this.conditionActiveIndex = this.type == 'address' ? 0 : 1;
         }
       }
     },
@@ -60,7 +62,7 @@
       //   debugger;
       //     let Transaction = web3.eth.getTransaction("0x49d895676f63696f6bc619737787d4765afa2fb12833b940c7fd051ff7224847")
       //     let banlance = web3.eth.getBalance("0x91f28b79b263c9016070df84719b3fddbb9bfa2e")
-      this.search_words = "0x49d895676f63696f6bc619737787d4765afa2fb12833b940c7fd051ff7224847";
+      this.search_words = "0x296284ca3b5051feb7b6db27ef0b15cb832aa755e325511b7946347463798dc5";
       this.conditionActiveIndex = 1;
       this.search();
     },
@@ -70,6 +72,7 @@
         this.result = {};
         if (condition == 'address') {
           try {
+            this.result = {};
             this.result.address = this.search_words;
             this.result.price = web3.eth.getBalance(format16X(this.search_words));
             this.result.price = web3.fromWei(this.result.price, 'ether');
@@ -80,6 +83,7 @@
 
         } else if (condition == 'transaction') {
           try {
+            this.result = {};
             this.result = web3.eth.getTransaction(format16X(this.search_words));
             let timeStamp = web3.eth.getBlock(this.result.blockHash).timestamp;
             let gasUsed = web3.eth.getTransactionReceipt(format16X(this.search_words)).gasUsed;

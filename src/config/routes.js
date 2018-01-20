@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
+import {eventBus} from '../bus/eventBus.js'
 Vue.use(VueRouter);
 
+console.log('eventBus',eventBus)
 
 import Home from "../view/home"
 import Team from "../view/team"
@@ -68,6 +69,16 @@ const routes = [...navRoutes]
 
 const router = new VueRouter({
   routes: routes
+})
+
+router.afterEach((to, from) => {
+  eventBus.$nextTick(()=>{
+    if(to.name=='home'){
+      eventBus.$emit('updateFooterPosition',true)
+    }
+    eventBus.$emit('updateFooterPosition',{});
+  })
+  
 })
 
 export default router;

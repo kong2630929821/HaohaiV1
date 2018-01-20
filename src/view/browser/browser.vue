@@ -6,7 +6,7 @@
           <h1>FairBlock.io</h1>
           <p>搜索地址和交易明细</p>
         </header>
-        <search  :type="type" :words="words" @search="updateDetail" style="margin:0 auto">
+        <search    @search="updateDetail" style="margin:0 auto">
         </search>
       </section>
     </section>
@@ -98,7 +98,7 @@
 
   .main {
     background-color: #fff;
-    min-height: 100px;
+    min-height: 700px;
     padding-bottom:100px;
   }
 

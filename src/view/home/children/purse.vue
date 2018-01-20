@@ -20,6 +20,8 @@
 <style scoped>
   .purse-container {
     height: 560px;
+    background-color: #f2f5fa;
+    
   }
 
   .fill {

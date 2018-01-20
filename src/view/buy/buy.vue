@@ -6,31 +6,39 @@
           <h1 style="margin-bottom:30px">购买FBC</h1>
           <section class="icon-area ">
             <imgs src="Bitmap.png" style="margin-right:10px"></imgs>
-            <imgs src="Bitmap2.png" style="margin-right:10px"></imgs>
-            <imgs src="Bitmap3.png" style="margin-right:10px"></imgs>
-            <imgs src="Bitmap4.png"></imgs>
+
           </section>
         </header>
       </section>
     </section>
 
     <main class="main container word-container" style="width:800px">
-      <section style="display:flex">
-      <p class="footer-h1">HitBTC
+      <section class="footer-h1">
+        <imgs src="Bitmap2.png"></imgs>
         <span>(即将公布)</span>
-      </p>
-      <p class="footer-h1">Bitt
+      </section>
+      <section class="footer-h1">
+        <imgs src="Bitmap3.png"></imgs>
         <span>(即将公布)</span>
-      </p>
-      <p class="footer-h1">Cryptopia
+      </section>
+      <section class="footer-h1">
+        <imgs src="Bitmap4.png"></imgs>
         <span>(即将公布)</span>
-      </p>
-    </section>
-    <section>
-        <p class="footer-h1">okex
-            <span>(即将公布)</span>
-          </p>
-    </section>
+      </section>
+      <section class="footer-h1">
+        <imgs src="bitt.png"></imgs>
+        <span>(即将公布)</span>
+      </section>
+      <section class="footer-h1">
+        <imgs src="crypt.png"></imgs>
+        <span>(即将公布)</span>
+      </section>
+      <section class="footer-h1">
+        <imgs src="hitbtc.png"></imgs>
+        <span>(即将公布)</span>
+      </section>
+
+
     </main>
   </section>
 </template>
@@ -50,8 +58,8 @@
         result: {}
       }
     },
-    mounted(){
-        window.scrollTo(0,0)
+    mounted() {
+      window.scrollTo(0, 0)
     },
     methods: {}
   }
@@ -97,16 +105,21 @@
   .main {
     background-color: #fff;
     min-height: 300px;
+    padding:150px 0;
   }
 
   .icon-area {
     width: 780px;
     margin: 43px auto 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
 
+  .icon-area img {
+    margin-bottom: 35px;
+  }
 
   .word-container {
     display: flex;
@@ -120,6 +133,12 @@
     color: #333333;
     font-size: 24px;
     line-height: 28px;
+    height:fit-content;
+    margin-bottom:80px;
+  }
+
+  .footer-h1 img {
+    width:170px;
   }
 
   .footer-h1 span {

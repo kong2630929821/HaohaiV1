@@ -18,7 +18,7 @@
               <h1>{{item.time}}</h1>
             </section>
             <section class="time-area2">
-              <imgs size="260px;130px" src="lux_1.jpg"></imgs>
+              <imgs size="260px;130px" :src="'route-'+(index+1)+'.png'"></imgs>
             </section>
             <section class="time-area3">
               {{item.content}}

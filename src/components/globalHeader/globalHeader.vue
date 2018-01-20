@@ -42,7 +42,7 @@
   .global-nav {
     height: 180px;
     position: absolute;
-    z-index: 3;
+    z-index: 15;
     top: 0;
     display: flex;
     justify-content: center;
