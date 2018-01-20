@@ -2,11 +2,16 @@
   <footer class="global-footer" :style="bg">
     <ul class="container footer-container">
       <li>
-        <section>
+        <section style="text-align:center">
           <imgs src="logo.png" ></imgs>
-          <h1 class="footer-title" style="margin-top:17px;" @click="goto('question')">常见问题</h1>
-          <h1 class="footer-title" @click="goto('us')">联系我们</h1>
-          <h1 class="footer-title" @click="goto('whitepaper')">白皮书</h1>
+          <h1 class="other-detail-block" @click="goto('us')" style="cursor:pointer;margin:0 auto;margin-top:7px;text-align:center">联系我们</h1>
+        </section>
+        <section style="margin-top:35px">
+          <a href="http://www.github.com/"><imgs size="30px" style="margin-right:17px" src="github"></imgs></a>
+          <a href=""><imgs size="30px" style="margin-right:17px" src="twitter"></imgs></a>
+          <a href=""><imgs size="30px" style="margin-right:17px" src="googleplus"></imgs></a>
+          <a href=""><imgs size="30px" style="margin-right:17px" src="reddit"></imgs></a>
+          <a href=""><imgs size="30px" style="margin-right:17px" src="send"></imgs></a>
         </section>
       </li>
     </ul>
@@ -39,13 +44,14 @@
 
 <style scoped>
   .global-footer {
-    height: 420px;
+    height: 250px;
     width: 100%;
   }
 
   .footer-container {
-    padding-top: 110px;
     display: flex;
+    height:100%;
+    align-items: center;
     justify-content: center;
   }
 

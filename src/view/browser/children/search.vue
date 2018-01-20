@@ -42,7 +42,7 @@
     props: ['type', 'words'],
     watch: {
       words(val,oldVal) {
-        if (type && type !== '' && words && words != '') {
+        if (this.type && this.type !== '' && this.words && this.words != '') {
           debugger;
           this.search_words = this.words;
           this.conditionActiveIndex = this.type=='address' ? 0 : 1;
@@ -50,7 +50,7 @@
       },
       type(val,oldVal) {
         debugger;
-        if (type && type !== '' && words && words != '') {
+        if (this.type && this.type !== '' && this.words && this.words != '') {
           this.search_words = this.words;
           this.conditionActiveIndex = this.type=='address' ? 0 : 1;
         }

@@ -2,7 +2,7 @@
   <section>
     <header>
       <h1 class="home-h1">核心技术</h1>
-      <p class="home-p">FairBlock区块链网络核心技术</p>
+      <p class="home-p" style="margin-bottom:45px">FairBlock区块链网络核心技术</p>
     </header>
     <main>
       <!-- POS -->
@@ -18,7 +18,7 @@
             <p class="home-p2" style="color:#FFFFFF">PoS(Proof of Stake)是第三代区块链的象征，这是一种基于链上货币计价的共识机制。PoS算法不需要计算复杂的数学问题，避免了资源和能源的浪费。考虑到网络环境和区块链运行效率，在充分保证安全的前提下，FairBlock设计了全新的PoS方案：基于竞争的PoS(cPoS)</p>
           </section>
           <section class="p1">
-            <imgs src="jihua_3.gif"></imgs>
+            <imgs style="width:100%;height:100%" src="jihua_3.gif"></imgs>
           </section>
         </section>
       </section>
@@ -26,7 +26,7 @@
       <section class="gateway-container">
         <section class="container section-container gateway-inner">
           <section class="p1">
-            <imgs src="jihua_2.gif"></imgs>
+            <imgs style="width:100%;height:100%" src="jihua_2.gif"></imgs>
           </section>
           <section class="w2">
             <header class="layout y-center" style="margin-bottom:9px;">
@@ -52,7 +52,7 @@
             <p class="home-p2">FairBlock带来全新的超级侧链技术，为开发者提供全新侧链应用模式。超级侧链代码和主链相同，使用相同的共识算法（cPOS），有自己独立的区块链。得益于PoS的共识算法，超级侧链可以直接使用部分主链的节点网络，也可以独立部署节点网络。</p>
           </section>
           <section class="p1">
-            <imgs src="jihua_1.gif"></imgs>
+            <imgs style="width:100%;height:100%" src="jihua_1.gif"></imgs>
           </section>
         </section>
       </section>
