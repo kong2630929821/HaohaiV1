@@ -29,15 +29,15 @@
     margin: 0 auto
 }
 
-@media screen and (min-width:1201px){
+@media screen and (min-width:1401px){
     .container {
-        width: 1200px;
+        width: 1400px;
         padding:0 12px;
         margin: 0 auto
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .container {
         width: 100%;
         box-sizing: border-box;

@@ -20,15 +20,30 @@
         <section class="routemap">
           <main style="display:flex;flex-wrap:wrap">
             <template v-for="(item,index) of routemap">
+              <!-- 正文 -->
+              <template v-for="(content,index2) of item.content">
+                <div class="routemap-left" :class="index%2==0?'even-box':'odd-box'">
+                </div>
+                <div class="routemap-right">
+                  <section class="routemap-point" :class="index%2==0?'even-point':'odd-point'"></section>
+                  <section class="routemap-content">
+                    <h1 :class="content.isUpdated?'updated':''">{{content.title}}</h1>
+                    <p @click="toggleFold(index,index2)" :class="content.fold?'fold':''">{{content.detail}}</p>
+                    <aside @click="toggleFold(index,index2)" v-show="content.over2line"  class="unfolder-btn">
+                      <imgs :class="content.fold?'fold-btn':'unfold-btn'" style="width:15px" src="arrow.png"></imgs>
+                    </aside>
+                  </section>
+                </div>
+              </template>
               <!-- 标题 -->
-              <div class="routemap-left">
+              <div class="routemap-left" :class="index%2==0&&index!=routemap.length-1?'odd-box':'even-box'">
                 <section class="routemap-content routemap-content-left ">
                   <h1 class="routemap-content-left-title">{{item.title.text}}</h1>
                   <p class="routemap-content-left-p">{{item.title.detail}}</p>
                 </section>
               </div>
               <div class="routemap-right">
-                <section class="routemap-point"></section>
+                <section class="routemap-point" :class="index%2==0?'even-point':'odd-point'"></section>
                 <section class="progress">
                   <h1 class="progress-title">
                     <span>进展</span>
@@ -39,35 +54,15 @@
                   </div>
                 </section>
               </div>
-
-              <!-- 正文 -->
-              <template v-for="(content,index2) of item.content">
-                <div class="routemap-left">
-                </div>
-                <div class="routemap-right">
-                  <section class="routemap-point"></section>
-                  <section class="routemap-content">
-                    <h1 :class="content.isUpdated?'updated':''">{{content.title}}</h1>
-                    <p  :class="content.fold?'fold':''">{{content.detail}}</p>
-                    <aside v-show="content.over2line" @click="toggleFold(index,index2)" class="unfolder-btn">
-                      <imgs :class="content.fold?'fold-btn':'unfold-btn'" style="width:15px" src="arrow.png"></imgs>
-                    </aside>
-                  </section>
-                </div>
-              </template>
             </template>
           </main>
-          <section class="routemap-point-last"></section>
+          <section class="routemap-point-last" :class="routemap.length%2!=0?'even-point':'odd-point'"></section>
           <aside class="routemap-next">
             下一次更新
           </aside>
           <aside class="routemap-next-time">
             {{countdown}}
           </aside>
-
-          <template v-for="value of routemap">
-            {{value.content.title}}
-          </template>
         </section>
       </section>
     </main>
@@ -101,7 +96,7 @@
         const nowTime = new Date();
         let countdownS = parseInt((this.nextTime - nowTime) / 1000); // 精确到秒
         if (countdownS <= 0) {
-          clearInterval(timer);
+          timer && clearInterval(timer);
           this.countdown = 0
         } else {
 
@@ -119,8 +114,9 @@
         }
       },
       toggleFold(index, index2) {
-        let detail = this.routemap[index].content[index2]
+        let detail = this.routemap[index].content[index2];
         detail.fold = !detail.fold
+        this.routemap = this.routemap.slice(0); 
       },
       updateRouteMap() {
         let self = this;
@@ -129,9 +125,9 @@
 
           route.content = route.content.map((content, index2) => {
             content.fold = true;
-            if(content.detail.length>=27){
+            if (content.detail.length >= 27) {
               content.over2line = true
-            }else {
+            } else {
               content.over2line = false
             }
             return content
@@ -211,6 +207,18 @@
     top: 0px;
   }
 
+  .even-box {
+    border-right: 1px solid #E05FE0;
+  }
+
+  .odd-box {
+    border-right: 1px solid #4266B8;
+  }
+
+
+
+
+
   .routemap-point-last {
     width: 16px;
     height: 16px;
@@ -221,6 +229,14 @@
     left: 0px;
     top: 0px;
     margin: 0 auto;
+  }
+
+  .even-point {
+    background-color: #E05FE0;
+  }
+
+  .odd-point {
+    background-color: #4266B8;
   }
 
   .routemap-content-left {
@@ -339,7 +355,7 @@
 
   .header-main {
     margin: 0 auto;
-    margin-top: 123px;
+    margin-top: 0px;
     width: 900px;
   }
 
@@ -372,12 +388,12 @@
   }
 
 
-  .updated{
-    color:#00B6FF !important
+  .updated {
+    color: #00B6FF !important
   }
 
   .updated:hover {
-    color:#0090CA !important; 
+    color: #0090CA !important;
   }
 
 </style>

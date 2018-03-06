@@ -5,14 +5,14 @@
         <imgs src="logo.png"></imgs>
       </figure>
       <ul class="menu">
-        <li v-for="(item,index) of menuItems" :key="index">
+        <li  v-for="(item,index) of menuItems" :key="index">
           <router-link v-if="!item.forbidden" :to="{name:item.route,params:item.params}">{{item.text}}</router-link>
           <a style="color:#9e9e9e;cursor:not-allowed;" v-else>{{item.text}}</a>
         </li>
         <li class="li" @click="showMenu">
           中
           <ul :class="{'language-menu':menuIsShow,'language-menu-hidden':!menuIsShow}">
-            <li @click="changeLanguage('zh')">中</li>
+            <li  @click="changeLanguage('zh')">中</li>
             <li @click="changeLanguage('en')">EN</li>
           </ul>
         </li>
@@ -81,6 +81,10 @@
   }
   /* 菜单 */
 
+  .menu {
+    display:flex;
+  }
+
   .menu,
   .menu>li {
     height: 100%;
@@ -96,6 +100,7 @@
     font-size: 16px;
     cursor: pointer;
     position: relative;
+    flex:1 1 auto;
   }
 
   .menu>li a {

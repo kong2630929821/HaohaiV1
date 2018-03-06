@@ -157,7 +157,7 @@
 
 
 
-  @media screen and (min-width:1201px) {
+  @media screen and (min-width:1401px) {
     .block {
       margin: 0 auto;
       margin-top: 60px;
@@ -166,7 +166,7 @@
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1400px) {
     .block {
       margin: 0 auto;
       margin-top: 60px;
