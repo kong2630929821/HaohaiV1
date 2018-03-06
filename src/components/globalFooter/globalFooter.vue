@@ -7,7 +7,7 @@
           <h1 class="other-detail-block" @click="goto('us')" style="cursor:pointer;margin:0 auto;margin-top:7px;text-align:center">联系我们</h1>
         </section>
         <section style="margin-top:35px">
-          <a href="http://www.github.com/">
+          <a href="http://www.github.com/fairblock">
             <imgs size="30px" style="margin-right:17px" src="github"></imgs>
           </a>
           <a href="http://www.twitter.com/">
@@ -55,7 +55,9 @@
     },
     methods: {
       goto(i) {
-        location.href = `http://${location.host}/#/${i}`
+        this.$router.push({
+          name:'us'
+        })
       },
       updateFooterPosition(force) {
         force = force || '';

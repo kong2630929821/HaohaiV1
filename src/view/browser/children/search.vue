@@ -9,10 +9,10 @@
       </ul>
     </section>
     <section class="block" v-if="conditionActiveIndex==0">
-      <input @focus="isUnFold=true" @blur="isUnFold=false" @keyup.enter="search" class="address" type="text" v-model="search_words">
+      <input @focus="isUnFold=true" @keyup.enter="search" class="address" type="text" v-model="search_words">
     </section>
     <section class="block" v-else-if="conditionActiveIndex==1">
-      <input class="transaction" @focus="isUnFold=true" @keyup.enter="search" @blur="isUnFold=false" type="text" v-model="search_words">
+      <input class="transaction" @focus="isUnFold=true" @keyup.enter="search"  type="text" v-model="search_words">
     </section>
     <!-- 按时间条件 -->
     <!-- <section class="block" v-else-if="conditionActiveIndex==2">
@@ -33,7 +33,7 @@
     name: 'search',
     data() {
       return {
-        isUnFold: false,
+        isUnFold: true,
         conditionActiveIndex: 0,
         search_words: '',
         result: {}
@@ -50,11 +50,20 @@
       }
     },
     watch: {
+      type(val, oldVal) {
+        if (this.type && this.type !== '' && this.words && this.words != '') {
+          debugger;
+          this.search_words = this.words;
+          this.conditionActiveIndex = this.type == 'address' ? 0 : 1;
+          this.search();
+        }
+      },   
       words(val, oldVal) {
         if (this.type && this.type !== '' && this.words && this.words != '') {
           debugger;
           this.search_words = this.words;
           this.conditionActiveIndex = this.type == 'address' ? 0 : 1;
+          this.search();
         }
       }
     },
@@ -78,6 +87,7 @@
             this.result.price = web3.fromWei(this.result.price, 'ether');
             this.result.type = 'address'
           } catch (e) {
+            this.result = {};
             this.result.type = 'error'
           }
 
@@ -92,6 +102,7 @@
             this.result.totalCost = web3.fromWei(this.result.value, 'ether').toString();
             this.result.type = 'transaction';
           } catch (e) {
+            this.result = {};
             this.result.type = 'error';
           }
 
@@ -168,6 +179,7 @@
 
   .search-out-focus input {
     color: #fff;
+    padding-right:10em;
   }
 
   .address,
@@ -196,6 +208,14 @@
     align-items: center;
     height: 100%;
   }
+
+  .control ul li {
+    display:flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+  }
+
 
   .label-word {
     font-size: 14px;

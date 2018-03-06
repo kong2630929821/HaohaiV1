@@ -9,6 +9,18 @@
     "params": {}
   },
   {
+    "text": "路线图",
+    "route": "routemap",
+    "params": {}
+  },
+  {
+    "text": "新闻",
+    "route": "news",
+    "params": {
+      "page":1
+    }
+  },
+  {
     "text": "FB浏览器",
     "route": "browser",
     "params": {}

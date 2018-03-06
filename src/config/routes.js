@@ -14,6 +14,9 @@ import Question from "../view/question";
 import About from "../view/about";
 import Buy from "../view/buy";
 import Purse from "../view/purse";
+import RouteMap from "../view/routemap"
+import News from "../view/news";
+import NewsDetail from "../view/news/detail.vue"
 
 /** nav路由 */
 const navRoutes = [{
@@ -60,6 +63,18 @@ const navRoutes = [{
     name: 'whitepaper',
     path: '/whitepaper',
     component: Whitepaper
+  },{
+    name:'routemap',
+    path:'/routemap',
+    component:RouteMap
+  },{
+    name:'news',
+    path:'/news/:page',
+    component:News
+  },{
+    name:'newsdetail',
+    path:'/newsdetail/:id',
+    component:NewsDetail
   }
 ]
 

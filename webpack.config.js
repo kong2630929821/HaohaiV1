@@ -1,8 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
 
-
-
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -18,41 +16,11 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
-      },
-      {
-        test: /\.sass$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader?indentedSyntax'
-        ],
-      },
-      {
+      },      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
           loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            'scss': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader'
-            ],
-            'sass': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax'
-            ]
           }
           // other vue-loader options go here
         }
@@ -60,15 +28,18 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        // include:[path.resolve(__dirname,'src'),path.resolve(__dirname,'node_modules/pinyin')]
-        // exclude: /node_modules(?!\S*pinyin)/,
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]?[hash:8]'
+          name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test:/\.(md)$/,
+        loader:'raw-loader'
       }
     ]
   },
@@ -90,7 +61,7 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#cheap-module-source-map'
+  module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({

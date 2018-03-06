@@ -4,9 +4,9 @@
       <section class="head" :style="bg">
         <header>
           <h1>FairBlock.io</h1>
-          <p>搜索地址和交易明细</p>
+          <p>搜索地址和交易详情</p>
         </header>
-        <search    @search="updateDetail" style="margin:0 auto">
+        <search  :type="type" :words="words"  @search="updateDetail" style="margin:0 auto">
         </search>
       </section>
     </section>

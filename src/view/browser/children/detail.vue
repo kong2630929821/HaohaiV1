@@ -50,8 +50,8 @@
             <td>{{obj.cost}} FBC</td>
           </tr>
           <tr>
-            <td>Total Cost</td>
-            <td>{{obj.totalCost}}</td>
+            <td>Amount</td>
+            <td>{{obj.totalCost}} FBC</td>
           </tr>
           <tr>
             <td>InputData</td>

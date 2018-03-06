@@ -17,7 +17,7 @@
           <p class="block-header">得益于技术团队带来的革命性技术，FairBlock实现了一套去中心化的协作体系</p>
           <p class="block-header" >我们有能力将大多数互联网应用以去中心化的方式进行重构</p>
           <p class="block-header"style="margin-bottom:31px">互联网将变得更安全、更可靠、更富有想象力</p>
-          <a style="color:#fff" href="http://jenovachen.com/flowingames/Flow_in_games_final.pdf" target="_blank"><button class="btn btn-i">下载白皮书</button></a>
+          <a style="color:#fff" target="_blank"><button class="btn btn-i">下载白皮书</button></a>
         </main>
       </main>
     </section>
@@ -112,6 +112,7 @@
       margin: 0 auto;
       margin-top:80px;
       margin-bottom:102px;
+      cursor: not-allowed;
     }
   
   </style>
