@@ -79,7 +79,7 @@
       },
       readMd() {
         try {
-          axios.get(`/article/${this.id}.md`).then(resp => {
+          axios.get(`/article_zh/${this.id}.md`).then(resp => {
             this.content = marked(resp.data)
           })
         } catch (e) {
@@ -87,7 +87,7 @@
         }
       },
       updateList() {
-        axios.get('/article/newslist.json').then(resp => {
+        axios.get('/article_zh/newslist.json').then(resp => {
           console.log('resprespresp', resp)
           this.list = resp.data;
           this.obj = this.list.find((item) => {

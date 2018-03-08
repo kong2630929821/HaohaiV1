@@ -7,62 +7,66 @@
         <imgs src="bg_4.jpg" class="header-h2-bg"></imgs>
         <main class="header-main">
           <h1 class="header-main-h1">fairblock路线图</h1>
-          <p class="header-main-p">2018年3月15日 ， 公告，开发，一般，更新</p>
-          <p class="header-content-p">整个Cardano团队由全球专家组成，核心技术团队由Well Typed，Serokell，运行时验证，可预测网络解决方案和ATIX组成，IOHK为团队领导。Grimm，RPI Cryptography Group和FP
-            Complete等外部审计师通过对IOHK负责，确保产品质量。
-          </p>
-          <p class="header-content-p">指导制定路线图的三项原则是：首先，社区的发展及其需求; 第二，真正符合Satoshi最初愿景的分布式和弹性网络，第三，平衡研发速度，因此商业优势在科学严谨性的应用上并不能取胜。</p>
-          <p class="header-content-p">一个加密货币只和它背后的社区一样好。我们一直对我们社区一直以来的惊人，耐心和帮助感到谦卑。我们的希望是，路线图是我们可以随着时间的推移一起建立起来的，它成为我们最强大的支柱之一。</p>
-          <p class="header-content-p">现有的智能合约模式缺乏严格的基础，IOHK的发展目标是纠正这种模式。为此，IOHK已经将编程语言理论领域的领先思想部署到智能合约的设计中。</p>
+          <p class="header-main-aside">FB项目分为四个阶段，以历史上伟大帝王出现的先后顺序命名。</p>
+          <section class="hr"></section>
         </main>
       </header>
       <section class="content">
+
         <section class="routemap">
-          <main style="display:flex;flex-wrap:wrap">
-            <template v-for="(item,index) of routemap">
+          <template v-for="(item,index) of routemap">
+
+            <header class="header-content-p">
+              {{item.desc}}
+            </header>
+
+            <section class="name">
+              {{item.blockname}}
+            </section>
+            <section class="face-container">
+              <imgs class="face" :src="'routermap_'+item.pics+'.jpg'"></imgs>
+            </section>
+            <main style="display:flex;flex-wrap:wrap">
+              <!-- 标题 -->
+              <template>
+                <div class="routemap-left"></div>
+                <div class="routemap-right"></div>
+              </template>
+
               <!-- 正文 -->
-              <template v-for="(content,index2) of item.content">
-                <div class="routemap-left" :class="index%2==0?'even-box':'odd-box'">
+              <template v-if="item.contents.length>0" v-for="(content,index2) of item.contents">
+                <!-- left -->
+                <div class="routemap-left" :class="{'is-last':index2==item.contents.length-1}">
+                  <h1 class="routemap-content-left-title" :class="content.isUpdated?'updated':''">{{content.name}}</h1>
+                  <p class="routemap-content-left-p" :class="content.fold?'fold':''">{{content.desc}}</p>
                 </div>
+
+                <!-- right -->
                 <div class="routemap-right">
-                  <section class="routemap-point" :class="index%2==0?'even-point':'odd-point'"></section>
+                  <section class="routemap-point"></section>
                   <section class="routemap-content">
-                    <h1 :class="content.isUpdated?'updated':''">{{content.title}}</h1>
-                    <p @click="toggleFold(index,index2)" :class="content.fold?'fold':''">{{content.detail}}</p>
-                    <aside @click="toggleFold(index,index2)" v-show="content.over2line"  class="unfolder-btn">
-                      <imgs :class="content.fold?'fold-btn':'unfold-btn'" style="width:15px" src="arrow.png"></imgs>
-                    </aside>
+                    <section v-if="content.progress!=-1" class="progress">
+                      <p class="progress-title">
+                        <span>进展</span>
+                        <span>{{content.progress}}%</span>
+                      </p>
+                      <section class="progress-back">
+                        <section class="progress-fore" :style="{width:content.progress+'%'}"></section>
+                      </section>
+                    </section>
                   </section>
                 </div>
               </template>
-              <!-- 标题 -->
-              <div class="routemap-left" :class="index%2==0&&index!=routemap.length-1?'odd-box':'even-box'">
-                <section class="routemap-content routemap-content-left ">
-                  <h1 class="routemap-content-left-title">{{item.title.text}}</h1>
-                  <p class="routemap-content-left-p">{{item.title.detail}}</p>
-                </section>
-              </div>
-              <div class="routemap-right">
-                <section class="routemap-point" :class="index%2==0?'even-point':'odd-point'"></section>
-                <section class="progress">
-                  <h1 class="progress-title">
-                    <span>进展</span>
-                    <span>{{item.title.progress}}%</span>
-                  </h1>
-                  <div class="progress-back">
-                    <div class="progress-fore" :style="`width:${item.title.progress}%`"></div>
-                  </div>
-                </section>
-              </div>
-            </template>
-          </main>
-          <section class="routemap-point-last" :class="routemap.length%2!=0?'even-point':'odd-point'"></section>
-          <aside class="routemap-next">
-            下一次更新
-          </aside>
-          <aside class="routemap-next-time">
-            {{countdown}}
-          </aside>
+              <template v-else-if="item.contents.length==0">
+                <div class="routemap-left" :class="{'is-last':index2==item.contents.length-1}">
+                </div>
+                <div class="routemap-right">
+                  <section class="routemap-point"></section>
+                </div>
+              </template>
+            </main>
+            <section v-show="index!=routemap.length-1" class="hr"></section>
+          </template>
         </section>
       </section>
     </main>
@@ -116,7 +120,7 @@
       toggleFold(index, index2) {
         let detail = this.routemap[index].content[index2];
         detail.fold = !detail.fold
-        this.routemap = this.routemap.slice(0); 
+        this.routemap = this.routemap.slice(0);
       },
       updateRouteMap() {
         let self = this;
@@ -156,18 +160,40 @@
 </script>
 
 <style scoped>
+  .hr {
+    height: 150px;
+    width: 100%;
+  }
+
+  .hr::after {
+    content: "---------------";
+    padding-top: 50px;
+    color: #00B6FF;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+  }
+
   header.header-h1 {
     height: 180px;
     background-color: #003874;
+    padding-bottom: 30px;
+  }
+
+  .header-main-aside {
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
   }
 
   .header-content-p {
-    margin-top: 20px;
     color: #EEEEEE;
     font-size: 12px;
     line-height: 18px;
-    margin-bottom: 1em;
-    text-indent: 2em;
+    text-align: center;
   }
 
   .container {
@@ -182,6 +208,30 @@
     margin: 0 auto;
   }
 
+  .face-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    z-index: 2;
+  }
+
+  .face {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    border: 1px solid #00B6FF;
+  }
+
+  .name {
+    color: #00B6FF;
+    text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+    position: relative;
+    top: 20px;
+  }
+
 
   .routemap-left,
   .routemap-right {
@@ -193,29 +243,23 @@
   }
 
   .routemap-left {
-    border-right: 1px solid #E05FE0;
+    border-right: 1px solid #4266B8;
+  }
+
+  .is-last {
+    border-right: 1px solid rgba(0, 0, 0, 0);
   }
 
   .routemap-point {
     width: 16px;
     height: 16px;
     border: 3px solid #fff;
-    background-color: #E05FE0;
+    background-color: #4266B8;
     border-radius: 15px;
     position: absolute;
     left: -8px;
     top: 0px;
   }
-
-  .even-box {
-    border-right: 1px solid #E05FE0;
-  }
-
-  .odd-box {
-    border-right: 1px solid #4266B8;
-  }
-
-
 
 
 
@@ -223,7 +267,7 @@
     width: 16px;
     height: 16px;
     border: 3px solid #fff;
-    background-color: #E05FE0;
+    background-color: #4266B8;
     border-radius: 15px;
     position: relative;
     left: 0px;
@@ -231,13 +275,7 @@
     margin: 0 auto;
   }
 
-  .even-point {
-    background-color: #E05FE0;
-  }
 
-  .odd-point {
-    background-color: #4266B8;
-  }
 
   .routemap-content-left {
     width: fit-content;
@@ -250,7 +288,23 @@
   .routemap-content-left-p {
     text-align: right;
     cursor: pointer;
+  }
 
+  .routemap-content-left-title {
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position:relative;
+    top:-3px;
+  }
+
+  .routemap-content-left-p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 200;
   }
 
   .routemap-content h1 {
@@ -300,7 +354,7 @@
   }
 
   .progress-fore {
-    background-color: #00B6FF;
+    background-image: linear-gradient(-90deg, #00DCFF 0%, #C9C738 100%);
     height: 2px;
   }
 
@@ -309,6 +363,7 @@
     width: 200px;
     height: 2px;
     background-color: black;
+    overflow: hidden;
   }
 
   .routemap-next {
@@ -340,7 +395,7 @@
 
   header.header-h2 {
     position: relative;
-    height: 550px;
+    height: 275px;
     overflow: hidden;
   }
 

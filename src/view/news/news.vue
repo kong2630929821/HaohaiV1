@@ -58,7 +58,7 @@
         this.page = parseInt(this.$route.params.page) || 1;
       },
       fetchList() {
-        axios.get('/article/newslist.json').then(resp => {
+        axios.get('/article_zh/newslist.json').then(resp => {
           this.newsList = resp.data;
           this.splitNewsList();
         })
