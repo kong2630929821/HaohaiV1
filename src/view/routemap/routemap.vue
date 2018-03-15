@@ -78,7 +78,7 @@
 
 
   export default {
-    name: 'route-map',
+    name: 'road-map',
     data() {
       return {
         countdown: 0,
@@ -182,8 +182,8 @@
   }
 
   .header-main-aside {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 25px;
+    line-height: 32px;
     color: #fff;
     font-weight: 200;
     text-align: center;
@@ -191,8 +191,8 @@
 
   .header-content-p {
     color: #EEEEEE;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 22px;
     text-align: center;
   }
 
@@ -236,7 +236,6 @@
   .routemap-left,
   .routemap-right {
     flex: 0 0 50%;
-    width: 50%;
     min-height: 100px;
     padding: 0px 30px 20px 30px;
     position: relative;
@@ -302,8 +301,8 @@
 
   .routemap-content-left-p {
     color: #fff;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 200;
   }
 

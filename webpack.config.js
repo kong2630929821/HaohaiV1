@@ -34,7 +34,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]?[hash]'
+          name: 'images/[name].[ext]?[hash:8]'
         }
       },
       {
@@ -62,6 +62,13 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
+
+  module.exports.output = {
+    path:path.resolve(__dirname,'./dist/'),
+    publicPath:'./dist/',
+    filename:'build.js'
+  }
+
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({

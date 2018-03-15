@@ -5,7 +5,7 @@
       <item v-for="(item,index) of filterList" :obj="item" @click.native="enterDetail(index)"></item>
     </main>
     <main class="block empty" v-else>
-      抱歉，列表为空
+      即将上线，敬请期待
     </main>
     <footer class="content content-lr">
       <span @click="pre">← 旧的新闻</span>
@@ -144,7 +144,7 @@
   .block {
     margin: 0 auto;
     margin-top: 132px;
-    min-height: 300px;
+    min-height: 1100px;
     width: 900px;
   }
 

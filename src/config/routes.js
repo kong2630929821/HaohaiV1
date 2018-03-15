@@ -64,8 +64,8 @@ const navRoutes = [{
     path: '/whitepaper',
     component: Whitepaper
   },{
-    name:'routemap',
-    path:'/routemap',
+    name:'roadmap',
+    path:'/roadmap',
     component:RouteMap
   },{
     name:'news',
