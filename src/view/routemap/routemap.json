@@ -7,7 +7,7 @@
       {
         "name": "store",
         "desc": "内存数据的序列化和反序列化，内存数据的快速检索，虚拟内存",
-        "progress": "30"
+        "progress": "50"
       },
       {
         "name": "tools",
@@ -27,12 +27,12 @@
       {
         "name": "db",
         "desc": "本地存储数据库，序列化和反序列化，数据压缩",
-        "progress": "40"
+        "progress": "60"
       },
       {
         "name": "vm",
         "desc": "使用rust实现的js虚拟机，支持ES5语言和部分ES6特性",
-        "progress": "60"
+        "progress": "80"
       },
       {
         "name": "p2p",
@@ -42,7 +42,7 @@
       {
         "name": "net",
         "desc": "底层网络协议",
-        "progress": "45"
+        "progress": "70"
       },
       {
         "name": "serv",
