@@ -1,19 +1,21 @@
 <template>
 <div>
   <TheHeader :headerBg="headerBg"></TheHeader>
-  <NewsList></NewsList>
+  <NewsDetailBody></NewsDetailBody>
+  
   <TheFooter></TheFooter>
 </div>
 </template>
 <script>
 import TheHeader from '@/components/theHeader'
 import TheFooter from '@/components/theFooter'
-import NewsList from '@/components/newsList'
+import NewsDetailBody from '@/components/newsDetailBody'
+
 export default {
   components:{
       TheHeader,
       TheFooter,
-      NewsList
+      NewsDetailBody,
   },
   data(){
     return {

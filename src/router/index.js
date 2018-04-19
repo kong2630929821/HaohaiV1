@@ -29,6 +29,21 @@ export default new Router({
       path: '/news',
       name: 'news',
       component: resolve => require(['@/page/news'],resolve)
+    },
+    {
+      path: '/news/:id',
+      name: 'newsDetail',
+      component: resolve => require(['@/page/newsDetail'],resolve)
+    },
+    {
+      path: '/whitePaper',
+      name: 'whitePaper',
+      component: resolve => require(['@/page/whitePaper'],resolve)
+    },
+    {
+      path: '/routeMap',
+      name: 'routeMap',
+      component: resolve => require(['@/page/routeMap'],resolve)
     }
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -8,7 +8,7 @@
             :to="menuItem.link"
             :class="menuItem.children ? 'menu-item ignore-menu-item has-children' : 'menu-item ignore-menu-item'" 
             active-class="active"
-            exact
+            :exact="menuItem.link === '/' ? true : false"
             >
                 <li >
                     {{menuItem.text}} <img src="../../static/image/triangular.png" v-if="menuItem.children">
