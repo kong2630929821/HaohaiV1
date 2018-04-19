@@ -2,22 +2,28 @@ export default {
     //顶部导航
     headerMenu:[
         {
-            text:'GAIA'
+            text:'GAIA',
+            link:'/'
         },
         {
-            text:'白皮书'
+            text:'白皮书',
+            link:'/test'
         },
         {
             text:'关于',
+            link:'/aboutUs'
         },
         {
             text:'资讯',
+            link:'/news'
         },
         {
-            text:'GAIA浏览器'
+            text:'GAIA浏览器',
+            link:'/GAIAExplorer'
         },
         {
-            text:'钱包'
+            text:'钱包',
+            link:'/wallet'
         }
     ],
     //语言切换显示
@@ -128,5 +134,68 @@ export default {
         title:'GAIA钱包',
         text:'更安全，更快捷，更方便',
         downloadText:'钱包下载'
+    },
+    //关于我们-关于GAIA
+    aboutUsAboutGAIA:{
+        title:'关于GAIA',
+        text:'GAIA.WORD是您所有与比特币有关的首要来源。我们可以帮助您 购买GAIA和/或选择GAIA钱包。您也可以阅读最新消息，或在我们的GAIA论坛上与社区进行交流。这是一个商业网站，列出钱包，交易所和其他比特币相关的公司。如果您对GAIA有，请点击这里联系我们。',
+    },
+    //关于我们-我们的团队
+    aboutUsOurTeam:{
+        title:'我们的团队',
+        text:'GAIA拥有经验丰富的技术团队',
+        item:[{
+            imgUrl:'400081806_wx.png',
+            name:'纳塔利娅',
+            job:'职位',
+            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+        },{
+            imgUrl:'400081806_wx.png',
+            name:'纳塔利娅',
+            job:'职位',
+            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+        },{
+            imgUrl:'400081806_wx.png',
+            name:'纳塔利娅',
+            job:'职位',
+            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+        },{
+            imgUrl:'400081806_wx.png',
+            name:'纳塔利娅',
+            job:'职位',
+            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+        }]
+    },
+    GAIAExplorerSearchFor:{
+        title:'gaia.world',
+        text:'Search addresses, transactions, epochs & slots on the Cardano network',
+        tips:'搜索不成功'
+    },
+    walletTopBanner:{
+        title:'下载GAIA钱包',
+        text:'GAIA钱包不单是链上资产的存储系统，更是区块链与用户交互的媒介，用户将可以在钱包中直接使用第三方分布式应用，钱包在整个生态系统中是如此的重要，正如浏览器在互联网中的作用',
+        phoneDownload:{
+            title:'—— 手机 ——',
+            item:[{
+                title:'App Store',
+                imgUrl:'icon-app.png'
+            },{
+                title:'Google Play',
+                imgUrl:'icon-Google.png'
+            }]
+        },
+        pcDownload:{
+            title:'—— 桌面 ——',
+            item:[{
+                title:'Mac OS',
+                imgUrl:'icon-mac.png'
+            },{
+                title:'Windows',
+                imgUrl:'icon-Windows.png'
+            },{
+                title:'Linux',
+                imgUrl:'icon-linux.png'
+            }]
+        }
     }
 }

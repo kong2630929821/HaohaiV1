@@ -5,9 +5,10 @@
           <router-link 
             v-for="(menuItem,index) in $t('headerMenu')" 
             :key="index" 
-            to="/"
+            :to="menuItem.link"
             :class="menuItem.children ? 'menu-item ignore-menu-item has-children' : 'menu-item ignore-menu-item'" 
             active-class="active"
+            exact
             >
                 <li >
                     {{menuItem.text}} <img src="../../static/image/triangular.png" v-if="menuItem.children">
@@ -39,6 +40,7 @@ header{
     padding: 0 80px 0 45px;
     position: fixed;
     top: 0;
+    z-index: 999;
 }
 .header-bg-1{
     background: rgba(61,107,193,0.80);
@@ -57,9 +59,7 @@ header{
     display: flex;
     align-items: center;
 }
-.active{
-    color: #1A6BD3;
-}
+
 .ignore-menu-item,
 .ignore-sub-menu-item,
 .ignore-switch-lang-btn,
@@ -148,6 +148,9 @@ header{
 }
 .ignore-switch-lang-btn:hover .ignore-triangular{
     transform: rotate(180deg)
+}
+.active{
+    color: #1A6BD3;
 }
 </style>
 <script>
