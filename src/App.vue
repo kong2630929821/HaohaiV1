@@ -1,33 +1,15 @@
 <template>
   <div id="app">
-    <global-header></global-header>
-    <router-view></router-view>
-    <global-footer></global-footer>
+    <router-view/>
   </div>
 </template>
 
 <script>
-
-import globalHeader from './components/globalHeader';
-import globalFooter from './components/globalFooter';
-
-
 export default {
-  name: 'app',
-  components:{
-    globalHeader,
-    globalFooter
-  },
-  data () {
-    return {
-    }
-  }
+  name: 'App'
 }
 </script>
 
 <style>
-a {
-  text-decoration-line: none;
-  color:black;
-}
+@import url(./style/style);
 </style>

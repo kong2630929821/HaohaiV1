@@ -1,18 +1,12 @@
-# block-home
+# block-homes
 
-> A Vue.js project
+#技术栈
+1. vue
+2. vue-router
+3. vue-i18n
 
-## Build Setup
+# 官网地址
+http://www.fairblock.io
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# 标注地址
+http://192.168.31.241:10080/weiw/GAIA_material.git

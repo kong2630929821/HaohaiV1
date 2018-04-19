@@ -1,23 +1,17 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
+import router from './router'
+import i18n from './i18n'
 
+Vue.config.productionTip = false
 
-// 引入路由
-import router from './config/routes';
-
-// 引入全局组件
-import registerGlobalCom from './config/globalCom';
-
-// 引入全局样式
-import './css/reset.css';
-import './css/layout.css';
-import './css/global.css';
-import './css/btn.css';
-import './css/table.css';
-registerGlobalCom();
-
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  i18n,
+  components: { App },
+  template: '<App/>'
 })
