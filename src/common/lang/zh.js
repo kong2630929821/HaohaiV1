@@ -78,7 +78,7 @@ export default {
     //底部联系我们
     footerContactAs:{
         title:'联系我们',
-        copyright:'权所有� GAIA 版权所有'
+        copyright:'权所有©2018 GAIA 版权所有'
     },
     //首页顶部banner
     indexTopBanner:{
@@ -90,13 +90,13 @@ export default {
         title:'什么是GAIA',
         item:[{
             text:'高并发、强扩展的第三代公链',
-            imgUrl:'400081806_wx.png'
+            imgUrl:'400081806_wx.jpg'
         },{
             text:'适合以游戏为经典应用场景',
-            imgUrl:'400081806_wx.png'
+            imgUrl:'400081807_wx.jpg'
         },{
             text:'独创真正去中心化的POS共识',
-            imgUrl:'400081806_wx.png'
+            imgUrl:'400070120_wx.jpg'
         }]
     },
     //首页优势
@@ -122,15 +122,15 @@ export default {
         item:[{
             title:'高性能',
             text:'基于PoS技术的GAIA能够极大地提高区块链的处理效率，而全新的去中心化协作模式能够带来极低的处理成本。在小规模的测试网络中我们已经可以实现每秒2000次的处理效率。',
-            imgUrl:'logo.png'
+            imgUrl:'yo1.jpg'
         },{
             title:'可交互性',
             text:'在GAIA区块链架构中，我们提供一个用户定义的外部函数调用，运行在GAIA链中的代码可以通过安全函数调用外部数据，这将极大的拓展智能合约的应用范围。',
-            imgUrl:'logo.png'
+            imgUrl:'yo2.jpg'
         },{
             title:'独立性',
             text:'我们提供完整的解决方案并鼓励开发者直接在侧链上开发应用。超级侧链功能可以提供独立和可靠的应用开发环境，而跨链事务规范则充分保证了主链与侧链间的交互。',
-            imgUrl:'Group16.png'
+            imgUrl:'yo3.jpg'
         }]
     },
     //首页gaia钱包
@@ -149,32 +149,34 @@ export default {
         title:'我们的团队',
         text:'GAIA拥有经验丰富的技术团队',
         item:[{
-            imgUrl:'400081806_wx.png',
+            imgUrl:'portrait1.jpg',
             name:'纳塔利娅',
             job:'职位',
             text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
         },{
-            imgUrl:'400081806_wx.png',
+            imgUrl:'portrait2.jpg',
             name:'纳塔利娅',
             job:'职位',
             text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
         },{
-            imgUrl:'400081806_wx.png',
+            imgUrl:'portrait3.jpg',
             name:'纳塔利娅',
             job:'职位',
             text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
         },{
-            imgUrl:'400081806_wx.png',
+            imgUrl:'portrait4.jpg',
             name:'纳塔利娅',
             job:'职位',
             text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
         }]
     },
+    //GAIA浏览器搜索
     GAIAExplorerSearchFor:{
         title:'gaia.world',
         text:'Search addresses, transactions, epochs & slots on the Cardano network',
         tips:'搜索不成功'
     },
+    //钱包banner
     walletTopBanner:{
         title:'下载GAIA钱包',
         text:'GAIA钱包不单是链上资产的存储系统，更是区块链与用户交互的媒介，用户将可以在钱包中直接使用第三方分布式应用，钱包在整个生态系统中是如此的重要，正如浏览器在互联网中的作用',
@@ -202,139 +204,143 @@ export default {
             }]
         }
     },
+    //新闻列表
     newsList:{
         prePage:'←  旧的新闻',
         nextPage:'较新的新闻  →'
     },
+    //新闻详情侧边栏
     newsDetailSideBar:{
         returnList:'←  返回列表',
         recentNews:'最近的帖子'
     },
+    //路线图banner
     routeMapBanner:{
         title:'GAIA路线图',
         text:'FB项目分为四个阶段，以历史上伟大帝王出现的先后顺序命名'
     },
+    //路线图各个阶段
     routeMapStages:{
         progressText:'进展',
         stages:[{
             title:'亚历山大',
             text:`搭建整个项目的整体框架，并且实现自研的cpos算法。
-            实现一个本地数据库和一个内存数据库，用于存储区块链数据。实现一个加密数学库用于网络消息传递的加解密和用户私人信息的保护。
-            我们还使用rust语言实现了一个js虚拟机，js语言的使用者众多，使用js作为上层应用的开发语言，能够吸引更多的开发者参与FB项目。
-            我们还会开发一个js的模拟环境，使得开发者即使没有搭建区块链，直接导入一个js模拟文件，就可以开发上层应用。实现一个支持超级侧链的p2p网络层。我们还会实现一个前端框架，用于快速开发应用程序。当然最重要的还是实现我们自研的CPOS算法。`,
+实现一个本地数据库和一个内存数据库，用于存储区块链数据。实现一个加密数学库用于网络消息传递的加解密和用户私人信息的保护。
+我们还使用rust语言实现了一个js虚拟机，js语言的使用者众多，使用js作为上层应用的开发语言，能够吸引更多的开发者参与FB项目。
+我们还会开发一个js的模拟环境，使得开发者即使没有搭建区块链，直接导入一个js模拟文件，就可以开发上层应用。实现一个支持超级侧链的p2p网络层。我们还会实现一个前端框架，用于快速开发应用程序。当然最重要的还是实现我们自研的CPOS算法。`,
             imgUrl:'Alexander.jpg',
             item:[{
-                percentage:'50%',
+                percentage:50,
                 title:'store',
                 text:'内存数据的序列化和反序列化，内存数据的快速检索，虚拟内存'
             },{
-                percentage:'10%',
+                percentage:10,
                 title:'tools',
                 text:'项目通用的工具'
             },{
-                percentage:'25%',
+                percentage:25,
                 title:'crypto',
                 text:'加密算法'
             },{
-                percentage:'20%',
+                percentage:20,
                 title:'math',
                 text:'通用基础数学'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'db',
                 text:'本地存储数据库，序列化和反序列化，数据压缩'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'vm',
                 text:'使用rust实现的js虚拟机，支持ES5语言和部分ES6特性'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'p2p',
                 text:'支持多网络共存的p2p层'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'net',
                 text:'底层网络协议'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'serv',
                 text:'通用的服务器框架'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'env',
                 text:'js模拟环境'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'cpos',
                 text:'基于竞争的权益证明算法'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'build',
                 text:'一个用于快速构建项目的工具'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'front',
                 text:'一个前端框架'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'app',
                 text:'一个简易的交互工具'
             }]
         },{
             title:'屋大维',
             text:`实现了整个区块链项目的主体功能。实现实现智能合约，为了吸引开发者，我们的虚拟机会兼容以太坊的EVM，使得以太坊的应用开发者能够方便的切换到FB网络，我们也会提供经过验证的模板智能合约，以降低入门门槛。
-            实现支持多重签名的钱包，保证用户财产的安全性是区块链项目成功的基石。我们会实现一个去中心化的交易所，我们认为区块链的一个重要使命就是取代传统的中心化交易所，除此之外，我们还会实现安全函数，解决区块链和现实世界的交互问题，安全函数在博弈领域会有非常重要的地位。安全函数+钱包+交易所+多重签名+智能合约`,
+实现支持多重签名的钱包，保证用户财产的安全性是区块链项目成功的基石。我们会实现一个去中心化的交易所，我们认为区块链的一个重要使命就是取代传统的中心化交易所，除此之外，我们还会实现安全函数，解决区块链和现实世界的交互问题，安全函数在博弈领域会有非常重要的地位。安全函数+钱包+交易所+多重签名+智能合约`,
             imgUrl:'Octavian.jpg',
             item:[{
-                percentage:'13%',
+                percentage:13,
                 title:'smart constract ',
                 text:'提供基于JS的智能合约，并且兼容以太坊的合约'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'constract template',
                 text:'提供JS智能合约的模板，使得基础用户可以直接使用以后的合约，无需再次开发'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'multi-signature',
                 text:'实现多重签名的功能，更好的保护用户的财产安全'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'Decentralized exchange.',
                 text:'实现一个去中心化的交易所，FB能够实现一个稳定快速的交易系统'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'Security Function',
                 text:'通过安全函数解决区块链和现实世界的互信和交互问题'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'wallet',
                 text:'实现一个多币种的钱包，用户可以使用钱包购买商品或者和其他货币进行交换'
             }]
         },{
             title:'君士坦丁',
             text:`补充周边功能和用户体验的优化。
-            我们需要实现一个映射系统，将冗长的数学表达简化为人类易记易读的字符，以普通用户对区块链的理解和使用成本。
-            同时，我们会实现一个轻客户端，使得更多用户能够更加快捷和方便的使用区块链上的信息。除此之外，为了保护用户利益，我们还会实现一个纸钱包和硬件钱包。
-            为了方便用户的财产转移和使用其他链提供的服务，我们会实现一个基于CPOS的侧链。`,
+我们需要实现一个映射系统，将冗长的数学表达简化为人类易记易读的字符，以普通用户对区块链的理解和使用成本。
+同时，我们会实现一个轻客户端，使得更多用户能够更加快捷和方便的使用区块链上的信息。除此之外，为了保护用户利益，我们还会实现一个纸钱包和硬件钱包。
+为了方便用户的财产转移和使用其他链提供的服务，我们会实现一个基于CPOS的侧链。`,
             imgUrl:'Constantine.jpg',
             item:[{
-                percentage:'13%',
+                percentage:13,
                 title:'mapping ',
                 text:'将区块链上的一切事物映射为一个字符表达'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'light client',
                 text:'无需下载完整的区块即可进行数据验证和交易发送'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'paper wallet',
                 text:'纸钱包可以极大的方便初级用户对区块链的使用'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'hardware wallet',
                 text:'硬件钱包具有极高的安全性和隐私性'
             },{
-                percentage:'13%',
+                percentage:13,
                 title:'sidechain',
                 text:'侧链极大的扩展了区块链可能的应用场景'
             }]

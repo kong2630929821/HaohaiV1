@@ -55,7 +55,6 @@ export default {
   created:function(){
       //获取配置文件
       this.$api.getNewsConfig('newsConfig.json',res=>{
-          console.log(res.data);  
           this.sortedNews.push(...sortByDate(res.data));
       });
   },

@@ -9,6 +9,7 @@
             :class="menuItem.children ? 'menu-item ignore-menu-item has-children' : 'menu-item ignore-menu-item'" 
             active-class="active"
             :exact="menuItem.link === '/' ? true : false"
+            :target="menuItem.link === '/whitePaper' ? '_blank' : ''"
             >
                 <li >
                     {{menuItem.text}} <img src="../../static/image/triangular.png" v-if="menuItem.children">
@@ -44,7 +45,6 @@ header{
 }
 .header-bg-1{
     background: rgba(61,107,193,0.80);
-
 }
 .header-bg-2{
     background: rgba(250,250,250,0.95);

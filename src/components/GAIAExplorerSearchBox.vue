@@ -17,8 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 250px;
-    margin-bottom: 230px;
+    height: 100vh;
 }
 .ignore-title{
     font-size: 36px;

@@ -6,6 +6,7 @@
   <IndexAdvantages :advantageShow0="advantageShow0" :advantageShow1="advantageShow1" :advantageShow2="advantageShow2"></IndexAdvantages>
   <IndexApplication></IndexApplication>
   <IndexGAIAWallet></IndexGAIAWallet>
+  <BackToTop></BackToTop>
   <TheFooter></TheFooter>
 </div>
 </template>
@@ -17,6 +18,7 @@ import IndexWhatIsGAIA from '@/components/indexWhatIsGAIA'
 import IndexAdvantages from '@/components/indexAdvantages'
 import IndexApplication from '@/components/indexApplication'
 import IndexGAIAWallet from '@/components/indexGAIAWallet'
+import BackToTop from '@/components/backToTop'
 export default {
   components:{
       TheHeader,
@@ -26,6 +28,7 @@ export default {
       IndexAdvantages,
       IndexApplication,
       IndexGAIAWallet,
+      BackToTop,
   },
   data(){
     return {
@@ -33,7 +36,7 @@ export default {
       advantageShow0:false,
       advantageShow1:false,
       advantageShow2:false,
-      headerBg:'header-bg-1'
+      headerBg:''
     }
   },
   mounted(){
@@ -64,9 +67,12 @@ export default {
       if(scrollTop > wH){
         this.headerBg = 'header-bg-2';
       }else{
-        this.headerBg = 'header-bg-1';
+        this.headerBg = '';
       }
     },
-  }
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
 }
 </script>

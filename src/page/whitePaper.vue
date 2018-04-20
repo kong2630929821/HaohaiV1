@@ -1,6 +1,6 @@
 　<template>
     <div>
-  　　<iframe src="../../static/README.pdf"></iframe>
+  　　<iframe src="../../static/whitePaper.pdf"></iframe>
     </div>
 　</template>
 <style scoped>

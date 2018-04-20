@@ -137,7 +137,7 @@ export default {
       return {
           contactWays:['github.png','facebook.png','googleplus.png','reddit.png','send.png'],
           email:{
-              imgUrl:'phone.png',
+              imgUrl:'email_L.png',
               text:'gaia@gaia.world'
           },
           phone:{
