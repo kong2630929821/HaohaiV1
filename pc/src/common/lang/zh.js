@@ -84,7 +84,7 @@ export default {
         title:'联系我们',
         email:{
             imgUrl:'email_L.png',
-            text:'gaia@gaia.world'
+            text:'info@gaia.world'
         },
         address:{
             imgUrl:'ion-map.png',
