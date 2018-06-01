@@ -50,7 +50,8 @@
           <DividingLine></DividingLine>
           <div class="ignore-contact-ways">
               <a :href="item.link" v-for="(item,index) in contactWays" :key="index" class="ignore-contact-way-item"  @mouseover="mouseHover(index)" @mouseout="mouseNormal(index)">
-                <img :src="'/pc/static/image/' + (item.isHover ? item.hover:item.normal)">
+                <img :src="'/pc/static/image/' + (item.isHover ? item.hover:item.normal)" class="contact-img">
+                <img :src="'/pc/static/image/' + item.qrcode" :class="item.isHover ? 'ignore-qrcode-img qrcode-img-show' : 'ignore-qrcode-img'">
               </a>
           </div>
           <div class="ignore-email-box">
@@ -118,13 +119,25 @@ footer{
     height: 30px;
     margin-right: 12px;
     cursor: pointer;
+    position: relative;
 }
-.ignore-contact-way-item img{
+.contact-img{
     width: 100%;
     height: 100%;
 }
 .ignore-contact-way-item:last-child{
     margin: 0;
+}
+.ignore-qrcode-img{
+    position: absolute;
+    top: -187px;
+    left: 0;
+    width: 172px;
+    height: 172px;
+    display: none;
+}
+.qrcode-img-show{
+    display: block;
 }
 .ignore-email-box,
 .ignore-phone-box{
@@ -193,8 +206,8 @@ footer{
         color: #FFFFFF;
     }
     .ignore-contact-way-item{
-        width: 26px;
-        height: 26px;
+        width: 30px;
+        height: 30px;
     }
     .ignore-email-box{
         margin-top: 18px;
@@ -214,6 +227,12 @@ export default {
   data(){
       return {
           contactWays:[{
+              normal:'wechat.png',
+              hover:'wechat2.png',
+              isHover:false,
+              qrcode:"gaia_QR.png",
+              link:''
+          }/* ,{
               normal:'github.png',
               hover:'ion-github2.png',
               isHover:false,
@@ -238,7 +257,7 @@ export default {
               hover:'ion-send2.png',
               isHover:false,
               link:''
-          },],
+          }, */],
           
       }
   },
