@@ -1,6 +1,6 @@
 <template>
   <footer>
-      <img :src="'/pc/static/image/' + footerLogo" class="logo-img">
+      <img :src="'/pc/static/image/' + footerLogo" class="logo-img" :alt="$t('footerLogo.bgAlt')" :title="$t('footerLogo.bgTitle')">
       <div class="community-and-help">
           <h4 class="ignore-title">{{$t('footerCommunityAndHelp.title')}}</h4>
           <DividingLine></DividingLine>

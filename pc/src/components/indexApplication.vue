@@ -5,7 +5,7 @@
       <DividingLine></DividingLine>
       <div :class="isShow ? 'application-container fade-in-up' : 'application-container'" id="application-container" >
         <div class="item-card" :key="index" v-for="(item,index) in $t('indexApplication.item')" >
-            <div class="ignore-img" :style="{backgroundImage:'url(/pc/static/image/' + item.imgUrl + ')'}"></div>
+            <div class="ignore-img" :style="{backgroundImage:'url(/pc/static/image/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>
             <div class="ignore-item-title">{{item.title}}</div>
             <div class="ignore-item-text">{{item.text}}</div>
         </div>
@@ -42,8 +42,8 @@
     animation-fill-mode:forwards;
 }
 .ignore-img{
-    width: 80px;
-    height: 80px;
+    width: 84px;
+    height: 84px;
 }
 .item-card{
     display: flex;
@@ -60,6 +60,7 @@
     color: #333333;
     line-height: 33px;
     margin:40px 0 30px;
+    text-align: center;
 }
 .ignore-item-text{
     font-size: 14px;

@@ -1,6 +1,6 @@
 <template>
 <!--路线图banner-->
-  <section class="ignore-top-banner">
+  <section class="ignore-top-banner" :alt="$t('routeMapBanner.bgAlt')" :title="$t('routeMapBanner.bgTitle')">
       <h6 class="ignore-title title">{{$t('routeMapBanner.title')}}</h6>
       <DividingLine class="ignore-margin"></DividingLine>
       <div class="ignore-text">{{$t('routeMapBanner.text')}}</div>

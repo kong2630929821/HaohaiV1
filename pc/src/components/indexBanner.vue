@@ -1,6 +1,6 @@
 <template>
 <!--首页  banner-->
-  <section class="top-banner">
+  <section class="top-banner" :alt="$t('indexTopBanner.bgAlt')" :title="$t('indexTopBanner.bgTitle')">
       <img src="/pc/static/image/banner_logo.png" class="ignore-banner-logo">
       <div>
         <h3 class="ignore-banner-title">{{$t('indexTopBanner.title')}}</h3>
@@ -22,6 +22,7 @@
 .ignore-banner-logo{
     width: 160px;
     height: 200px;
+    flex-shrink: 0;
 }
 .ignore-banner-title{
     font-size: 64px;
@@ -35,6 +36,7 @@
     line-height: 22px;
     padding-left: 4px;
     padding-right: 20px;
+    margin-right: 10px;
 }
 .advantage-item:last-child span{
     display: none;

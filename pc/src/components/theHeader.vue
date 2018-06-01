@@ -207,7 +207,7 @@ export default {
   methods:{
        switchLang(lang){
           this.$i18n.locale = lang;
-          localStorage.setItem('lang',lang);
+          document.title = this.$t('explorerTitle');
       },
     handleScroll () {
       let wH = window.innerHeight;

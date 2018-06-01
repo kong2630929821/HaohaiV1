@@ -1,6 +1,6 @@
 <template>
 <!--首页  钱包-->
-  <section class="wallet">
+  <section class="wallet" :alt="$t('indexGAIAWallet.bgAlt')" :title="$t('indexGAIAWallet.bgTitle')">
       <h6 class="ignore-title">{{$t('indexGAIAWallet.title')}}</h6>
       <DividingLine></DividingLine>
       <p class="ignore-text">{{$t('indexGAIAWallet.text')}}</p>

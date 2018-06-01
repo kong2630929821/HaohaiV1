@@ -7,7 +7,7 @@
           <div class="ignore-gaia-text gaia-text">{{$t('aboutUsAboutGAIA.text')}}</div>
       </div>
       <div class="img-box">
-          <div class="gaia-img"></div>
+          <div class="gaia-img" :alt="$t('aboutUsAboutGAIA.bgAlt')" :title="$t('aboutUsAboutGAIA.bgTitle')"></div>
           <div class="gaia-img-shadow"></div>
       </div>
   </section>
