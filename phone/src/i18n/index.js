@@ -6,7 +6,7 @@ import en from '@/common/lang/en'
 Vue.use(VueI18n)
 
 export default new VueI18n({
-    locale:localStorage.getItem('lang') ? localStorage.getItem('lang') : 'zh-CN',
+    locale:'en-US',
     messages:{
         'zh-CN': zh,
         'en-US': en

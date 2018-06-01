@@ -1,7 +1,7 @@
 <template>
 <!--首页  banner-->
   <section class="top-banner">
-      <div class="banner-bg">
+      <div class="banner-bg" :alt="$t('indexTopBanner.bgAlt')" :title="$t('indexTopBanner.bgTitle')">
         <img src="/phone/static/image/banner_logo.png" class="banner-logo">
       </div>
       <div class="banner-content">
@@ -47,6 +47,7 @@
     line-height: 33px;
     color: #333333;
     font-family: "PingFangSC-Medium";
+    text-align: center;
 }
 .advantages-box{
     margin-top: 13px;

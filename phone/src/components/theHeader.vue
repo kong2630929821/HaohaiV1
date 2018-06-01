@@ -133,7 +133,7 @@ export default {
   methods:{
       switchLang(lang){
           this.$i18n.locale = lang;
-          localStorage.setItem('lang',lang);
+          document.title = this.$t('explorerTitle');
       },
       //点击菜单展开关闭
       clickMenuExpansion(){

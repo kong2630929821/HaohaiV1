@@ -1,18 +1,18 @@
 <template>
 <!--钱包  banner-->
   <section class="wallet-banner">
-      <div class="bg-banner">
+      <div class="bg-banner" :alt="$t('walletTopBanner.bgAlt')" :title="$t('walletTopBanner.bgTitle')">
         <div class="logo-img" :style="{backgroundImage:'url(/phone/static/image/' + logoImg + ')'}"></div>
         <div class="download-box">
             <h6 class="title">{{$t('walletTopBanner.title')}}</h6>
             <div class="download-ways">
                 <div v-for="(item,index) in $t('walletTopBanner.phoneDownload.item')" :key="index" class="download-way">
-                    <a :href="item.link"><img :src="'/phone/static/image/' + item.imgUrl" class="tag-img"></a>
+                    <a :href="item.link"><img :src="'/phone/static/image/' + item.imgUrl" class="tag-img" :alt="item.bgAlt" :title="item.bgTitle"></a>
                 </div>
             </div>
             <div class="download-ways">
                 <div v-for="(item,index) in $t('walletTopBanner.pcDownload.item')" :key="index" class="download-way">
-                    <a :href="item.link"><img :src="'/phone/static/image/' + item.imgUrl" class="tag-img"></a>
+                    <a :href="item.link"><img :src="'/phone/static/image/' + item.imgUrl" class="tag-img" :alt="item.bgAlt" :title="item.bgTitle"></a>
                 </div>
             </div>
         </div>

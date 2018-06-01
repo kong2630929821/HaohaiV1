@@ -32,6 +32,8 @@
     font-size: 24px;
     color: #333333;
     line-height: 33px;
+    padding: 0 10px;
+    text-align: center;
 }
 .application-container{
     display: flex;
