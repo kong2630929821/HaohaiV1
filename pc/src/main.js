@@ -12,6 +12,17 @@ Vue.prototype.$api = api
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+let isMobile = navigator.userAgent.indexOf("Mobile") >= 0;
+let href = location.href;
+if (isMobile) {
+  if(href.indexOf("pc") > -1){
+    location.href = href.replace("pc","phone");
+  }
+} else {
+  if(href.indexOf("phone") > -1){
+    location.href = href.replace("phone","pc");
+  }
+}
 new Vue({
   el: '#app',
   router,

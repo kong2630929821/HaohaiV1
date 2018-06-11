@@ -44,6 +44,16 @@ export default new Router({
       path: '/routeMap',
       name: 'routeMap',
       component: resolve => require(['@/page/routeMap'],resolve)
+    },
+    {
+      path: '/candyPromotionStep1',
+      name: 'candyPromotionStep1',
+      component: resolve => require(['@/page/candyPromotionStep1'],resolve)
+    },
+    {
+      path: '/candyPromotionStep2',
+      name: 'candyPromotionStep2',
+      component: resolve => require(['@/page/candyPromotionStep2'],resolve)
     }
   ],
   scrollBehavior (to, from, savedPosition) {
