@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(/phone/static/image/wallet.png);
+    background-image: url(../../static/phoneImage/wallet.png);
     background-size: cover;
     background-position: center;
 }

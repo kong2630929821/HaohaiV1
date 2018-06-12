@@ -12,7 +12,7 @@
     background-size: cover;
     background-position: center;
     height: 345px;
-    background-image: url(/phone/static/image/route-banner.jpg);
+    background-image: url(../../static/phoneImage/route-banner.jpg);
     display: flex;
     align-items: center;
     flex-direction: column;

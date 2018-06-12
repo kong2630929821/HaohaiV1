@@ -5,7 +5,7 @@
       <DividingLine></DividingLine>
       <div :class="isShow ? 'application-container fade-in-up' : 'application-container'" id="application-container" >
         <div class="item-card" :key="index" v-for="(item,index) in $t('indexApplication.item')" >
-            <div class="img" :style="{backgroundImage:'url(/phone/static/image/' + item.imgUrl + ')'}"></div>
+            <div class="img" :style="{backgroundImage:'url(../../static/phoneImage/' + item.imgUrl + ')'}"></div>
             <div class="item-title">{{item.title}}</div>
             <div class="item-text">{{item.text}}</div>
         </div>

@@ -5,7 +5,7 @@
       <p class="text">{{$t('GAIAExplorerSearchFor.text')}}</p>
       <div class="search-box">
           <input class="search-input" @keyup="search">
-          <img class="click-img" src="/phone/static/image/search.png" @click="searchFor">
+          <img class="click-img" src="../../static/phoneImage/search.png" @click="searchFor">
       </div>
       <transition name="fade">
         <div class="tips" v-show="showTips">{{$t('GAIAExplorerSearchFor.tips')}}</div>

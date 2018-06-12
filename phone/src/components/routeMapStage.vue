@@ -2,9 +2,9 @@
 <!--路线图  一个阶段-->
 <div :class="folded ? 'stage-item stage-item-no-shadow' : 'stage-item'" >
     <div class="stage-header" @click="clickItem">
-        <img :src="'/phone/static/image/' + stage.imgUrl" class="stage-img" :alt="stage.bgAlt" :title="stage.bgTitle">
+        <img :src="'../../static/phoneImage/' + stage.imgUrl" class="stage-img" :alt="stage.bgAlt" :title="stage.bgTitle">
         <p class="stage-name">{{stage.title}}</p>
-        <img src="/phone/static/image/triangular.png" :class="folded ? 'triangular triangular-rotate' : 'triangular'">
+        <img src="../../static/phoneImage/triangular.png" :class="folded ? 'triangular triangular-rotate' : 'triangular'">
     </div>
     <div :class="folded ? 'route-map-container' : 'route-map-container route-map-hidden'">
         <div class="route-map">

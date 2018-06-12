@@ -2,7 +2,7 @@
 <!--首页  banner-->
   <section class="top-banner">
       <div class="banner-bg" :alt="$t('indexTopBanner.bgAlt')" :title="$t('indexTopBanner.bgTitle')">
-        <img src="/phone/static/image/banner_logo.png" class="banner-logo">
+        <img src="../../static/phoneImage/banner_logo.png" class="banner-logo">
       </div>
       <div class="banner-content">
         <h3 class="banner-title">{{$t('indexTopBanner.title')}}</h3>
@@ -22,7 +22,7 @@
 .banner-bg{
     width: 100%;
     height: 345px;
-    background-image: url(/phone/static/image/banner.png);
+    background-image: url(../../static/phoneImage/banner.png);
     position: absolute;
     background-position: bottom;
     background-size: cover;

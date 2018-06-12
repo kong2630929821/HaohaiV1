@@ -2,7 +2,7 @@
   <!--关于我们  弹出框-->
   <div class="mask" @click="clickMask">
     <div class="pop-box">
-        <div class="person-img" :style="{backgroundImage:'url(/phone/static/image/' + selfIntroduction.imgUrl + ')'}"></div>
+        <div class="person-img" :style="{backgroundImage:'url(../../static/phoneImage/' + selfIntroduction.imgUrl + ')'}"></div>
         <p class="person-name">{{selfIntroduction.name}}</p>
         <p class="person-job">{{selfIntroduction.job}}</p>
         <div class="person-text">{{selfIntroductionText}}</div>

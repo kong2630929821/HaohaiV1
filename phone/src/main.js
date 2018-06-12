@@ -9,8 +9,20 @@ import api from './api/index.js'
 // 将API方法绑定到全局
 Vue.prototype.$api = api
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
+let isMobile = navigator.userAgent.indexOf("Mobile") >= 0;
+let href = location.href;
+if (isMobile) {
+  if(href.indexOf("pc") > -1){
+    location.href = href.replace("pc","phone");
+  }
+} else {
+  if(href.indexOf("phone") > -1){
+    location.href = href.replace("phone","pc");
+
+  }
+}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

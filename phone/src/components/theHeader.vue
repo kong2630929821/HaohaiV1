@@ -1,9 +1,9 @@
 <template>
 <header :class="menuExpansion === 1 ? ' header-bg-2 ' + headerBg : headerBg">
-    <router-link to="/"><img src="/phone/static/image/logo.png" class="logo-img"></router-link>
+    <router-link to="/"><img src="../../static/phoneImage/logo.png" class="logo-img"></router-link>
     <div class="header-right-box" @click="clickMenuExpansion">
         <img 
-            :src="'/phone/static/image/' + (menuExpansion === 1 ? '2.png' : '1.png')" 
+            :src="'../../static/phoneImage/' + (menuExpansion === 1 ? '2.png' : '1.png')" 
             :class="menuExpansion === 1 ? 'menu-fold' : 'menu-unfold'">
         <div :class="menuExpansion === 0 ? 'menu-list' :(menuExpansion === 1 ? 'menu-list menu-list-show' : 'menu-list menu-list-hidden')" >
             <ul class="nav-menu">

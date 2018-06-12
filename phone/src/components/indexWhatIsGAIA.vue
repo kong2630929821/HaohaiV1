@@ -5,7 +5,7 @@
   <DividingLine></DividingLine>
   <div id="what-is-gaia" :class="isShow ? 'tansition-container fade-in-up' : 'tansition-container'">
       <div v-for="(item,index) in $t('indexWhatIsGAIA.item')" :key="index" class="item-card" >
-          <div :style="{backgroundImage:'url(/phone/static/image/' + item.imgUrl + ')'}" class="card-img" :alt="item.bgAlt" :title="item.bgTitle"></div>
+          <div :style="{backgroundImage:'url(../../static/phoneImage/' + item.imgUrl + ')'}" class="card-img" :alt="item.bgAlt" :title="item.bgTitle"></div>
           <span class="item-text">{{item.text}}</span>
       </div>
   </div>

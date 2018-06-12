@@ -54,26 +54,26 @@
                 v-if="item.link.indexOf('http') === 0 ? false : true"
                 :to="item.link" 
                 class="item">
-                    <img :src="'/phone/static/image/' + (item.isHover ? item.hover:item.normal)">
+                    <img :src="'../../static/phoneImage/' + (item.isHover ? item.hover:item.normal)">
               </router-link>
               <a 
                 v-else
                 target="_blank" 
                 :href="item.link" 
                 class="item">
-                    <img :src="'/phone/static/image/' + (item.isHover ? item.hover:item.normal)">
+                    <img :src="'../../static/phoneImage/' + (item.isHover ? item.hover:item.normal)">
               </a>
               </span>
           </div>
           <div class="email-box">
               <div class="box">
-              <img :src="'/phone/static/image/' + $t('footerContactAs.email.imgUrl')">
+              <img :src="'../../static/phoneImage/' + $t('footerContactAs.email.imgUrl')">
               </div>
               <span class="text">{{$t('footerContactAs.email.text')}}</span>
           </div>
           <div class="phone-box">
               <div class="box">
-                <img :src="'/phone/static/image/' + $t('footerContactAs.address.imgUrl')">
+                <img :src="'../../static/phoneImage/' + $t('footerContactAs.address.imgUrl')">
               </div>
               <span class="text">{{$t('footerContactAs.address.text')}}</span>
           </div>

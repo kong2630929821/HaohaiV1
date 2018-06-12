@@ -4,7 +4,7 @@
       <h6 class="title">{{$t('indexAdvantages.title')}}</h6>
       <DividingLine></DividingLine>
       <div :class="isShow[index] ? 'item-card advantage-item-card fade-in-up' : 'item-card advantage-item-card'" :key="index" v-for="(item,index) in $t('indexAdvantages.item')">
-          <div class="advantage-img" :style="{backgroundImage:'url(/phone/static/image/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>    
+          <div class="advantage-img" :style="{backgroundImage:'url(../../static/phoneImage/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>    
           <div class="" :key="index" >
               <div class="item-title">{{item.title}}</div>
               <DividingLine></DividingLine>

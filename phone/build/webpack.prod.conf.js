@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 const env = require('../config/prod.env')
 
@@ -115,7 +116,15 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new PrerenderSpaPlugin({
+      // 输出目录的绝对路径
+      staticDir:path.join(__dirname, '../dist'),
+      // 预渲染的路由
+      routes:[ '/', '/aboutUs','/GAIAExplorer','/routeMap','/wallet'],
+      headless: true,
+      renderAfterTime: 5000
+    })
   ]
 })
 
