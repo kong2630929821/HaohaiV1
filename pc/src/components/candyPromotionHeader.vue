@@ -2,7 +2,7 @@
     <div class="ignore-candy-header">
         <div class="logo-container">
             <div class="ignore-logo-box">
-                <img src="/pc/static/image/img_candy_logo.jpg" class="ignore-candy-logo">
+                <img src="../../static/pcImage/img_candy_logo.jpg" class="ignore-candy-logo">
             </div>
             <div class="ignore-header-text ignore-lang">中文</div>
         </div>

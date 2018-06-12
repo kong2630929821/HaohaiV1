@@ -48,7 +48,7 @@
     position: relative;
 }
 .gaia-img{
-    background-image: url(/pc/static/image/100477742_wx.jpg);
+    background-image: url(../../static/pcImage/100477742_wx.jpg);
     width: 530px;
     height: 500px;
     background-position: center;

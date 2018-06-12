@@ -1,7 +1,7 @@
 <template>
 <!--钱包  banner-->
   <section class="ignore-wallet-banner wallet-banner" :alt="$t('walletTopBanner.bgAlt')" :title="$t('walletTopBanner.bgTitle')">
-      <div class="logo-img ignore-logo-img" :style="{backgroundImage:'url(/pc/static/image/' + logoImg + ')'}"></div>
+      <div class="logo-img ignore-logo-img" :style="{backgroundImage:'url(../../static/pcImage/' + logoImg + ')'}"></div>
       <div>
           <h6 class="ignore-title">{{$t('walletTopBanner.title')}}</h6>
           <DividingLine></DividingLine>
@@ -13,7 +13,7 @@
               <div class="ignore-download-ways">
                   <div v-for="(item,index) in $t('walletTopBanner.phoneDownload.item')" :key="index" class="ignore-download-way">
                       <a :href="item.link" class="ignore-download-link">
-                      <img :src="'/pc/static/image/' + item.imgUrl" :alt="item.bgAlt" :title="item.bgTitle">
+                      <img :src="'../../static/pcImage/' + item.imgUrl" :alt="item.bgAlt" :title="item.bgTitle">
                       <span class="ignore-download-way-title">{{item.title}}</span>
                       </a>
                   </div>
@@ -24,7 +24,7 @@
               <div class="ignore-download-ways download-ways-2">
                   <div v-for="(item,index) in $t('walletTopBanner.pcDownload.item')" :key="index" class="ignore-download-way">
                       <a :href="item.link" class="ignore-download-link">
-                      <img :src="'/pc/static/image/' + item.imgUrl" class="ignore-tag-img" :alt="item.bgAlt" :title="item.bgTitle">
+                      <img :src="'../../static/pcImage/' + item.imgUrl" class="ignore-tag-img" :alt="item.bgAlt" :title="item.bgTitle">
                       <span class="ignore-download-way-title">{{item.title}}</span>
                       </a>
                   </div>
@@ -46,7 +46,7 @@
     background: #171C2B;
     background-size: cover;
     background-position: center;
-    background-image: url(/pc/static/image/mask-banner.jpg);
+    background-image: url(../../static/pcImage/mask-banner.jpg);
 }
 
 .logo-img{

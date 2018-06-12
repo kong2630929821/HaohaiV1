@@ -1,6 +1,6 @@
 <template>
   <footer>
-      <img :src="'/pc/static/image/' + footerLogo" class="logo-img" :alt="$t('footerLogo.bgAlt')" :title="$t('footerLogo.bgTitle')">
+      <img :src="'../../static/pcImage/' + footerLogo" class="logo-img" :alt="$t('footerLogo.bgAlt')" :title="$t('footerLogo.bgTitle')">
       <div class="community-and-help">
           <h4 class="ignore-title">{{$t('footerCommunityAndHelp.title')}}</h4>
           <DividingLine></DividingLine>
@@ -50,19 +50,19 @@
           <DividingLine></DividingLine>
           <div class="ignore-contact-ways">
               <a :href="item.link" v-for="(item,index) in contactWays" :key="index" class="ignore-contact-way-item"  @mouseover="mouseHover(index)" @mouseout="mouseNormal(index)">
-                <img :src="'/pc/static/image/' + (item.isHover ? item.hover:item.normal)" class="contact-img">
-                <img :src="'/pc/static/image/' + item.qrcode" :class="item.isHover ? 'ignore-qrcode-img qrcode-img-show' : 'ignore-qrcode-img'">
+                <img :src="'../../static/pcImage/' + (item.isHover ? item.hover:item.normal)" class="contact-img">
+                <img :src="'../../static/pcImage/' + item.qrcode" :class="item.isHover ? 'ignore-qrcode-img qrcode-img-show' : 'ignore-qrcode-img'">
               </a>
           </div>
           <div class="ignore-email-box">
               <div class="ignore-box">
-              <img :src="'/pc/static/image/' + $t('footerContactAs.email.imgUrl')">
+              <img :src="'../../static/pcImage/' + $t('footerContactAs.email.imgUrl')">
               </div>
               <span class="ignore-text">{{$t('footerContactAs.email.text')}}</span>
           </div>
           <div class="ignore-phone-box">
               <div class="ignore-box">
-                <img :src="'/pc/static/image/' + $t('footerContactAs.address.imgUrl')">
+                <img :src="'../../static/pcImage/' + $t('footerContactAs.address.imgUrl')">
               </div>
               <span class="ignore-text">{{$t('footerContactAs.address.text')}}</span>
           </div>

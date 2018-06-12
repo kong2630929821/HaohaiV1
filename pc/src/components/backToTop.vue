@@ -1,7 +1,7 @@
 <template>
 <!--回到顶部-->
   <div class="ignore-back-to-top" @click="goTop" name="button" v-show="visible" :style="customStyle">
-      <img src="/pc/static/image/btn-top.png" class="back-to-top-img">
+      <img src="../../static/pcImage/btn-top.png" class="back-to-top-img">
   </div>
 </template>
 <style scoped>

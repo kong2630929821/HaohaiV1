@@ -8,7 +8,7 @@
       </div>
       <div class="ignore-persons">
           <div class="card-item" v-for="(item,index) in $t('aboutUsOurTeam.item')" :key="index">
-              <div class="person-img" :style="{backgroundImage:'url(/pc/static/image/' + item.imgUrl + ')'}"></div>
+              <div class="person-img" :style="{backgroundImage:'url(../../static/pcImage/' + item.imgUrl + ')'}"></div>
               <span class="ignore-person-name">{{item.name}}</span>
               <span class="ignore-person-job">{{item.job}}</span>
               <div class="ignore-line"></div>

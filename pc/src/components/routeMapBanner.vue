@@ -13,7 +13,7 @@
     background-size: cover;
     background-position: center;
     height: 370px;
-    background-image: url(/pc/static/image/route-banner.jpg);
+    background-image: url(../../static/pcImage/route-banner.jpg);
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -4,7 +4,7 @@
       <div class="stage-summary ignore-stage-summary">{{stage.text}}</div>
       <div class="ignore-stage-box">
           <p class="ignore-stage-name">{{stage.title}}</p>
-          <img :src="'/pc/static/image/' + stage.imgUrl" class="ignore-stage-img" :alt="stage.bgAlt" :title="stage.bgTitle">
+          <img :src="'../../static/pcImage/' + stage.imgUrl" class="ignore-stage-img" :alt="stage.bgAlt" :title="stage.bgTitle">
           <div class="top-route">
             <span class="ignore-short-line"></span>
             <span class="ignore-dot"></span>

@@ -1,7 +1,7 @@
 <template>
 <!--首页  banner-->
   <section class="top-banner" :alt="$t('indexTopBanner.bgAlt')" :title="$t('indexTopBanner.bgTitle')">
-      <img src="/pc/static/image/banner_logo.png" class="ignore-banner-logo">
+      <img src="../../static/pcImage/banner_logo.png" class="ignore-banner-logo">
       <div>
         <h3 class="ignore-banner-title">{{$t('indexTopBanner.title')}}</h3>
         <p class="ignore-banner-advantages"><span v-for="(item,index) in $t('indexTopBanner.advantages')" :key="index" class="advantage-item">{{item}}<span>&nbsp;&nbsp;/&nbsp;&nbsp;</span></span></p>
@@ -15,7 +15,7 @@
     background: rgba(61,107,193,0.80);
     padding-left: 300px;
     display: flex;
-    background-image: url(/pc/static/image/banner.jpg);
+    background-image: url(../../static/pcImage/banner.jpg);
     align-items: center;
     background-position: bottom;
 }

@@ -1,6 +1,6 @@
 <template>
   <header :class="headerBg + ' ignore-header-min-height'">
-      <img src="/pc/static/image/logo.png" class="logo-img">
+      <img src="../../static/pcImage/logo.png" class="logo-img">
       <ul class="nav-menu">
           <router-link 
             v-for="(menuItem,index) in $t('headerMenu')" 
@@ -17,7 +17,7 @@
           </router-link>
       </ul>
       <div class="switch-lang-btn ignore-switch-lang-btn">
-          {{$t('langSwitch.locale')}}<img src="/pc/static/image/triangular.png" class="ignore-triangular">
+          {{$t('langSwitch.locale')}}<img src="../../static/pcImage/triangular.png" class="ignore-triangular">
           <ul :class="'ignore-switch-lang switch-lang-' + $t('langSwitch.langs').length">
               <li v-for="(item,index) in $t('langSwitch.langs')" :key="index" class="switch-lang-item ignore-switch-lang-item" @click="switchLang(item.lang)"><span>{{item.text}}</span></li>
           </ul>
