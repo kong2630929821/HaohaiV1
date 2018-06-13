@@ -118,14 +118,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
 
-    new PrerenderSpaPlugin({
+    /* new PrerenderSpaPlugin({
       // 输出目录的绝对路径
       staticDir:path.join(__dirname, '../dist'),
       // 预渲染的路由
-      routes:[ '/', '/aboutUs','/GAIAExplorer','/routeMap','/wallet',"/candyPromotionStep1","/candyPromotionStep2"],
+      routes:[ '/', '/aboutUs','/GAIAExplorer','/routeMap','/wallet',"/candyPromotionStep1","/candyPromotionStep2","/news","/news/:id"],
       headless: true,
       renderAfterTime: 5000
-    })
+    }) */
 
   ]
 })

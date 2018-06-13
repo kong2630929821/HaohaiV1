@@ -3,7 +3,7 @@
   <section class="ignore-wallet-banner wallet-banner" :alt="$t('walletTopBanner.bgAlt')" :title="$t('walletTopBanner.bgTitle')">
       <div class="logo-img ignore-logo-img" :style="{backgroundImage:'url(../../static/pcImage/' + logoImg + ')'}"></div>
       <div>
-          <h6 class="ignore-title">{{$t('walletTopBanner.title')}}</h6>
+          <h1 class="ignore-title">{{$t('walletTopBanner.title')}}</h1>
           <DividingLine></DividingLine>
           <div class="ignore-text text">{{$t('walletTopBanner.text')}}</div>
       </div>

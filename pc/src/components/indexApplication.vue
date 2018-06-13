@@ -1,12 +1,12 @@
 <template>
 <!--首页  链上应用-->
   <section class="application">
-      <h6 class="ignore-title">{{$t('indexApplication.title')}}</h6>
+      <h2 class="ignore-title">{{$t('indexApplication.title')}}</h2>
       <DividingLine></DividingLine>
       <div :class="isShow ? 'application-container fade-in-up' : 'application-container'" id="application-container" >
         <div class="item-card" :key="index" v-for="(item,index) in $t('indexApplication.item')" >
             <div class="ignore-img" :style="{backgroundImage:'url(../../static/pcImage/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>
-            <div class="ignore-item-title">{{item.title}}</div>
+            <h3 class="ignore-item-title">{{item.title}}</h3>
             <div class="ignore-item-text">{{item.text}}</div>
         </div>
       </div>

@@ -10,6 +10,7 @@
             active-class="active"
             :exact="menuItem.link === '/' ? true : false"
             :target="menuItem.link === '/whitePaper' ? '_blank' : ''"
+            :title="'GAIA ' + menuItem.text"
             >
                 <li >
                     {{menuItem.text}}

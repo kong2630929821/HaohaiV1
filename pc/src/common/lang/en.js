@@ -20,7 +20,7 @@ export default {
         {
             text:'News',
             link:'/news',
-            disabled:true
+            disabled:false
         },
         {
             text:'Browser',

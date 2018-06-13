@@ -2,7 +2,7 @@
 <!--新闻详情  主体-->
   <section class="news-detail">
       <div class="ignore-detail-body detail-body">
-            <h6 class="ignore-news-title">{{title}}</h6>
+            <h2 class="ignore-news-title">{{title}}</h2>
             <div class="ignore-box">
                 <span v-text="formatedDate" class="ignore-date"></span>
                 <span class="ignore-vertical-line"></span>
@@ -10,8 +10,8 @@
                     <span v-for="(tag,index) in tags" :key="index" class="tag">{{tag}}<span>，</span></span>
                 </div>
             </div>
-            <div class="bg-img ignore-bg-img" :style="{backgroundImage:'url(/pc/static/newsImage/' + news.imgUrl + ')'}"></div>
-            <div class="markdown-container">
+            <div class="bg-img ignore-bg-img" :style="{backgroundImage:'url(/static/newsImage/' + news.imgUrl + ')'}"></div>
+            <div class="markdown-container" id="markdown-container">
                 <vue-markdown :source="newsContent"></vue-markdown>
             </div>
       </div>
@@ -72,6 +72,7 @@
     width: 100%;
     margin-bottom: 160px;
 }
+
 @media only screen and (max-width: 1199px) {
     .news-detail{
         padding-left: 10vw;
@@ -85,7 +86,7 @@
 }
 </style>
 <script>
-import { formatDate } from '../utils/index.js' 
+import { formatDate,sortByDate } from '../utils' 
 import VueMarkdown from 'vue-markdown'
 import api from '../api'
 import NewsDetailSideBar from './NewsDetailSideBar'
@@ -96,6 +97,7 @@ export default {
     },
   data(){
       return {
+          sortedNews:[],
           news:{},
           newsContent:""
       }
@@ -115,18 +117,27 @@ export default {
     }
   },
   created(){
-      const news = JSON.parse(localStorage.getItem('news'))
-      this.news = news;
-      this.fetchData();
+      //获取配置文件
+      this.$api.getNewsConfig('newsConfig.json',res=>{
+          const sortedNews = sortByDate(res.data);
+          this.sortedNews.push(...sortedNews);
+          this.fetchData();
+      });
   },
   methods:{
       fetchData(){
+          this.news = this.getCurrentNews(this.sortedNews,this.$route.params.id)[0];
           const url = this.$i18n.locale === 'zh-CN' ? `${this.$route.params.id}_zh.md` : `${this.$route.params.id}_en.md`;
           api.getNews(url,res=>{
             this.newsContent = res.data;
           },()=>{
-              this.newsContent = "";
+            this.$router.push({path:"/404"})
           })
+      },
+      getCurrentNews(newsList,id){
+          return newsList.filter(news=>{
+            return news.id === id;
+          });
       }
   },
    watch: {

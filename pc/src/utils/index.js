@@ -1,5 +1,6 @@
 //日期格式
 function formatDate(dateStr,lang="zh-CN"){
+    if(!dateStr) return null;
     let arr = dateStr.split("-");
     const date = new Date(arr[0],arr[1],arr[2]);
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];

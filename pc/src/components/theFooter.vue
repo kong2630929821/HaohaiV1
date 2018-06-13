@@ -10,14 +10,17 @@
               <router-link 
                 v-if="item.link.indexOf('http') === 0 ? false : true"
                 :to="item.link" 
-                class="ignore-item">
+                class="ignore-item"
+                :title="'GAIA ' + item.text">
                     <li>{{item.text}}</li>
               </router-link>
               <a 
                 v-else
                 :href="item.link" 
                 target="_blank"
-                class="ignore-item">
+                class="ignore-item"
+                :title="'GAIA ' + item.text"
+                rel="nofollow">
                     <li>{{item.text}}</li>
               </a>
               </span>
@@ -32,21 +35,24 @@
               <router-link 
                 v-if="item.link.indexOf('http') === 0 ? false : true"
                 :to="item.link" 
-                class="ignore-item">
+                class="ignore-item"
+                :title="'GAIA ' + item.text">
                     <li>{{item.text}}</li>
               </router-link>
               <a 
                 v-else
                 target="_blank" 
                 :href="item.link" 
-                class="ignore-item">
+                class="ignore-item"
+                :title="'GAIA ' + item.text"
+                rel="nofollow">
                     <li>{{item.text}}</li>
               </a>
               </span>
           </ul>
       </div>
       <div class="contact-us">
-          <h4 class="ignore-title">{{$t('footerContactAs.title')}}</h4>
+          <h2 class="ignore-title">{{$t('footerContactAs.title')}}</h2>
           <DividingLine></DividingLine>
           <div class="ignore-contact-ways">
               <a :href="item.link" v-for="(item,index) in contactWays" :key="index" class="ignore-contact-way-item"  @mouseover="mouseHover(index)" @mouseout="mouseNormal(index)">

@@ -1,7 +1,7 @@
 <template>
 <!--浏览器 搜索框-->
   <section class="search-for">
-      <h5 class="ignore-title">{{$t('GAIAExplorerSearchFor.title')}}</h5>
+      <h1 class="ignore-title">{{$t('GAIAExplorerSearchFor.title')}}</h1>
       <p class="ignore-text">{{$t('GAIAExplorerSearchFor.text')}}</p>
       <div class="search-box">
           <input class="ignore-search-input">

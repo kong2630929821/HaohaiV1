@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  //mode: 'history',
   base:"/pc/",
   routes: [
     {
@@ -56,6 +56,16 @@ export default new Router({
       path: '/candyPromotionStep2',
       name: 'candyPromotionStep2',
       component: resolve => require(['@/page/candyPromotionStep2'],resolve)
+    },
+    {
+      path:'/404',
+      name:'404',
+      component:resolve => require(['@/page/page404'],resolve)
+    },
+    {
+      path:'*',
+      name:'all',
+      component:resolve => require(['@/page/page404'],resolve)
     }
   ],
   scrollBehavior (to, from, savedPosition) {

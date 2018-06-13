@@ -1,7 +1,7 @@
 <template>
 <!--首页  钱包-->
   <section class="wallet" :alt="$t('indexGAIAWallet.bgAlt')" :title="$t('indexGAIAWallet.bgTitle')">
-      <h6 class="ignore-title">{{$t('indexGAIAWallet.title')}}</h6>
+      <h2 class="ignore-title">{{$t('indexGAIAWallet.title')}}</h2>
       <DividingLine></DividingLine>
       <p class="ignore-text">{{$t('indexGAIAWallet.text')}}</p>
       <div class="ignore-download-text">{{$t('indexGAIAWallet.downloadText')}}</div>

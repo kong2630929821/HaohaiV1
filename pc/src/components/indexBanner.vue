@@ -3,7 +3,7 @@
   <section class="top-banner" :alt="$t('indexTopBanner.bgAlt')" :title="$t('indexTopBanner.bgTitle')">
       <img src="../../static/pcImage/banner_logo.png" class="ignore-banner-logo">
       <div>
-        <h3 class="ignore-banner-title">{{$t('indexTopBanner.title')}}</h3>
+        <h1 class="ignore-banner-title">{{$t('indexTopBanner.title')}}</h1>
         <p class="ignore-banner-advantages"><span v-for="(item,index) in $t('indexTopBanner.advantages')" :key="index" class="advantage-item">{{item}}<span>&nbsp;&nbsp;/&nbsp;&nbsp;</span></span></p>
       </div>
   </section>

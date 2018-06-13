@@ -1,7 +1,7 @@
 <template>
 <!--首页  什么是GAIA-->
 <section class="what-is-gaia" >
-  <h6 class="ignore-title">{{$t('indexWhatIsGAIA.title')}}</h6>
+  <h2 class="ignore-title">{{$t('indexWhatIsGAIA.title')}}</h2>
   <DividingLine></DividingLine>
   <div id="what-is-gaia" :class="isShow ? 'tansition-container fade-in-up' : 'tansition-container'">
       <div v-for="(item,index) in $t('indexWhatIsGAIA.item')" :key="index" class="item-card" >
