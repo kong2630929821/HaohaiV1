@@ -6,12 +6,10 @@
             <div class="box">
                 <span v-text="formatedDate" class="date"></span>
                 <span class="vertical-line"></span>
-                <div class="tags">
-                    <span v-for="(tag,index) in tags" :key="index" class="tag">{{tag}}<span>，</span></span>
-                </div>
+                <span v-for="(tag,index) in tags" :key="index" class="tag">{{tag}}<span>，</span></span>
             </div>
             <div class="dividing-line"></div>
-            <div class="bg-img" :style="{backgroundImage:'url(/phone/static/newsImage/' + news.imgUrl + ')'}"></div>
+            <div class="bg-img" :style="{backgroundImage:'url(/static/newsImage/' + news.imgUrl + ')'}"></div>
             <div class="markdown-container">
                 <vue-markdown :source="newsContent"></vue-markdown>
             </div>
@@ -42,6 +40,10 @@
     color: #333333;
     line-height: 17px;
     margin-top: 8px;
+    flex-wrap: wrap;
+}
+.date{
+    flex-shrink: 0;
 }
 .vertical-line{
     width: 1px;
@@ -74,7 +76,7 @@
 
 </style>
 <script>
-import { formatDate } from '../utils/index.js' 
+import { formatDate,sortByDate } from '../utils' 
 import VueMarkdown from 'vue-markdown'
 import api from '../api'
 import NewsDetailSideBar from './NewsDetailSideBar'
@@ -85,6 +87,7 @@ export default {
     },
   data(){
       return {
+          sortedNews:[],
           news:{},
           newsContent:""
       }
@@ -104,18 +107,27 @@ export default {
     }
   },
   created(){
-      const news = JSON.parse(localStorage.getItem('news'))
-      this.news = news;
-      this.fetchData();
+      //获取配置文件
+      this.$api.getNewsConfig('newsConfig.json',res=>{
+        const sortedNews = sortByDate(res.data);
+        this.sortedNews.push(...sortedNews);
+        this.fetchData();
+    });
   },
   methods:{
       fetchData(){
+          this.news = this.getCurrentNews(this.sortedNews,this.$route.params.id)[0];
           const url = this.$i18n.locale === 'zh-CN' ? `${this.$route.params.id}_zh.md` : `${this.$route.params.id}_en.md`;
           api.getNews(url,res=>{
             this.newsContent = res.data;
           },()=>{
-              this.newsContent = "";
+            this.$router.push({path:"/404"})
           })
+      },
+      getCurrentNews(newsList,id){
+          return newsList.filter(news=>{
+            return news.id === id;
+          });
       }
   },
    watch: {

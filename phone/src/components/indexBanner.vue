@@ -5,7 +5,7 @@
         <img src="../../static/phoneImage/banner_logo.png" class="banner-logo">
       </div>
       <div class="banner-content">
-        <h3 class="banner-title">{{$t('indexTopBanner.title')}}</h3>
+        <h1 class="banner-title">{{$t('indexTopBanner.title')}}</h1>
         <ul class="advantages-box">
             <li v-for="(item,index) in $t('indexTopBanner.advantages')" :key="index" class="banner-text">{{item}}</li>
         </ul>

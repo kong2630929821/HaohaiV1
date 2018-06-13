@@ -117,14 +117,14 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    new PrerenderSpaPlugin({
+    /* new PrerenderSpaPlugin({
       // 输出目录的绝对路径
       staticDir:path.join(__dirname, '../dist'),
       // 预渲染的路由
       routes:[ '/', '/aboutUs','/GAIAExplorer','/routeMap','/wallet'],
       headless: true,
       renderAfterTime: 5000
-    })
+    }) */
   ]
 })
 

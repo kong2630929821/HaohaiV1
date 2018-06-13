@@ -2,7 +2,7 @@
 <!--关于我们  关于GAIA-->
   <section class="about-gaia">
       <div class="text-box">
-          <h6 class="title">{{$t('aboutUsAboutGAIA.title')}}</h6>
+          <h1 class="title">{{$t('aboutUsAboutGAIA.title')}}</h1>
           <DividingLine></DividingLine>
           <div class="gaia-text gaia-text">{{$t('aboutUsAboutGAIA.text')}}</div>
       </div>

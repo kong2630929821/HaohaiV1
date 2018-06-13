@@ -1,12 +1,12 @@
 <template>
 <!--首页  3大优势-->
   <section class="advantages">
-      <h6 class="title">{{$t('indexAdvantages.title')}}</h6>
+      <h2 class="title">{{$t('indexAdvantages.title')}}</h2>
       <DividingLine></DividingLine>
       <div :class="isShow[index] ? 'item-card advantage-item-card fade-in-up' : 'item-card advantage-item-card'" :key="index" v-for="(item,index) in $t('indexAdvantages.item')">
           <div class="advantage-img" :style="{backgroundImage:'url(../../static/phoneImage/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>    
           <div class="" :key="index" >
-              <div class="item-title">{{item.title}}</div>
+              <h3 class="item-title">{{item.title}}</h3>
               <DividingLine></DividingLine>
               <div class="item-text">{{item.text}}</div>
           </div>

@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  //mode: 'history',
   base:"/phone/",
   routes: [
     {
@@ -46,6 +46,16 @@ export default new Router({
       path: '/routeMap',
       name: 'routeMap',
       component: resolve => require(['@/page/routeMap'],resolve)
+    },
+    {
+      path:'/404',
+      name:'404',
+      component:resolve => require(['@/page/page404'],resolve)
+    },
+    {
+      path:'*',
+      name:'all',
+      component:resolve => require(['@/page/page404'],resolve)
     }
   ],
   scrollBehavior (to, from, savedPosition) {

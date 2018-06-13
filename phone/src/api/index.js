@@ -2,7 +2,7 @@ const axios = require('axios')
 
 //获取资讯详情
 function getNews (url, success, failure) {
-    const root = '/phone/static/news'
+    const root = '/static/news'
     axios({
       method: 'GET',
       url: url,
@@ -23,7 +23,7 @@ function getNews (url, success, failure) {
 
 //获取资讯配置文件
 function getNewsConfig(url,success,failure){
-  const root = '/phone/static/'
+  const root = '/static/'
     axios({
       method: 'GET',
       url: url,

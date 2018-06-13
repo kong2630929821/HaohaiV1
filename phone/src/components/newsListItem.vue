@@ -5,9 +5,7 @@
       <div class="box">
           <span v-text="formatedDate" class="date"></span>
           <span class="vertical-line"></span>
-          <div class="tags">
-              <span v-for="(tag,index) in tags" :key="index" class="tag">{{tag}}<span>，</span></span>
-          </div>
+          <span v-for="(tag,index) in tags" :key="index" class="tag">{{tag}}<span>，</span></span>
       </div>
       <div class="text">{{summary}}</div>
   </div>
@@ -41,6 +39,10 @@
     color: #333333;
     line-height: 17px;
     margin-top: 8px;
+    flex-wrap: wrap;
+}
+.date{
+    flex-shrink: 0;
 }
 .vertical-line{
     width: 1px;

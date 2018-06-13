@@ -4,7 +4,7 @@
       <div class="bg-banner" :alt="$t('walletTopBanner.bgAlt')" :title="$t('walletTopBanner.bgTitle')">
         <div class="logo-img" :style="{backgroundImage:'url(../../static/phoneImage/' + logoImg + ')'}"></div>
         <div class="download-box">
-            <h6 class="title">{{$t('walletTopBanner.title')}}</h6>
+            <h1 class="title">{{$t('walletTopBanner.title')}}</h1>
             <div class="download-ways">
                 <div v-for="(item,index) in $t('walletTopBanner.phoneDownload.item')" :key="index" class="download-way">
                     <a :href="item.link"><img :src="'../../static/phoneImage/' + item.imgUrl" class="tag-img" :alt="item.bgAlt" :title="item.bgTitle"></a>

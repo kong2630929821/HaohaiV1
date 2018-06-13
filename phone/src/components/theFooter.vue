@@ -10,14 +10,17 @@
             <router-link 
             v-if="item.link.indexOf('http') === 0 ? false : true"
             :to="item.link" 
-            class="item">
+            class="item"
+            :title="'GAIA ' + item.text">
                 <span>{{item.text}}</span>
             </router-link>
             <a 
             v-else
             :href="item.link" 
             target="_blank"
-            class="item">
+            class="item"
+            :title="'GAIA ' + item.text"
+            rel="nofollow">
                 <span>{{item.text}}</span>
             </a>
             </li>
@@ -32,14 +35,17 @@
               <router-link 
                 v-if="item.link.indexOf('http') === 0 ? false : true"
                 :to="item.link" 
-                class="item">
+                class="item"
+                :title="'GAIA ' + item.text">
                     <span>{{item.text}}</span>
               </router-link>
               <a 
                 v-else
                 target="_blank" 
                 :href="item.link" 
-                class="item">
+                class="item"
+                :title="'GAIA ' + item.text"
+                rel="nofollow">
                     <span>{{item.text}}</span>
               </a>
               </li>
@@ -53,14 +59,17 @@
               <router-link 
                 v-if="item.link.indexOf('http') === 0 ? false : true"
                 :to="item.link" 
-                class="item">
+                class="item"
+                :title="'GAIA ' + item.text">
                     <img :src="'../../static/phoneImage/' + (item.isHover ? item.hover:item.normal)">
               </router-link>
               <a 
                 v-else
                 target="_blank" 
                 :href="item.link" 
-                class="item">
+                class="item"
+                :title="'GAIA ' + item.text"
+                rel="nofollow">
                     <img :src="'../../static/phoneImage/' + (item.isHover ? item.hover:item.normal)">
               </a>
               </span>
