@@ -10,7 +10,7 @@ export default {
         {
             text:'White Paper',
             link:'/whitePaper',
-            disabled:true
+            disabled:false
         },
         {
             text:'About US',

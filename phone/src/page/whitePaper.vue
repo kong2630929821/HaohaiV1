@@ -1,7 +1,7 @@
 　<template>
     <div>
       <iframe width="100%" height="500" scrolling="no"
-    :src="'/phone/static/web/viewer.html?file=../' + openFile()"></iframe>
+    :src="'/static/web/viewer.html?file=../' + openFile()"></iframe>
     </div>
 　</template>
 <style scoped>
