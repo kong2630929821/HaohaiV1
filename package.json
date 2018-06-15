@@ -1,0 +1,14 @@
+{
+  "name": "block-home-nuxt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a31c8d30b6222f79fe79.worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
