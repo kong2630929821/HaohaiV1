@@ -10,7 +10,7 @@ export default {
         {
             text:'白皮书',
             link:'/whitePaper',
-            disabled:true
+            disabled:false
         },
         {
             text:'关于',

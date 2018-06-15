@@ -83,7 +83,6 @@ export default {
       },
       jumpTo(news){
         this.$router.push({path:`/news/${news.id}`});//类似post传参
-        localStorage.setItem('news',JSON.stringify(news));
       }
   },
 
