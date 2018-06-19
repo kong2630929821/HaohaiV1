@@ -8,5 +8,5 @@
 6. 点击build_pc.bat 构建pc端
 7. 点击build_phone.bat 构建移动端
 8. 将newsConfig.json,newsImage,newsimgs,newsPackage放入官网根目录
-9. 将/pc/dist下所有文件复制到官网/pc目录下
-10. 将/phone/dist下所有文件复制到官网/phone目录下
+9. 删除官网/pc下所有文件并将/pc/dist下所有文件复制到官网/pc目录下
+10. 删除官网/pc下所有文件并将/phone/dist下所有文件复制到官网/phone目录下
