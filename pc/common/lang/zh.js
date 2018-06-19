@@ -4,7 +4,7 @@ export default {
     headerMenu:[
         {
             text:'GAIA',
-            link:'/',
+            link:'',
             disabled:false
         },
         {

@@ -1,6 +1,6 @@
 <template>
 <!--新闻列表item-->
-<nuxt-link :to="'/news/' + news.id" ::key="news.id" >
+<nuxt-link :to="'/news/' + news.id + '/'" ::key="news.id" >
     <div class="ignore-news-item news-item">
         <h6 class="ignore-news-title">{{title}}</h6>
         <div class="ignore-box">

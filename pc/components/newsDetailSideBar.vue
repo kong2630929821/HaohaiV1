@@ -1,11 +1,11 @@
 <template>
 <!--新闻详情  侧边栏-->
     <div class="ignore-side-bar">
-        <nuxt-link to="/news"><div class="ignore-return-list">{{$t('newsDetailSideBar.returnList')}}</div></nuxt-link>
+        <nuxt-link to="/news/"><div class="ignore-return-list">{{$t('newsDetailSideBar.returnList')}}</div></nuxt-link>
         <div class="recent-news-container">
             <h6 class="ignore-recent-new-title">{{$t('newsDetailSideBar.recentNews')}}</h6>
             <ul class="ignore-recents">
-                <nuxt-link v-for="(news,index) in newsTop5" :key="index" :to="`/news/${news.id}`"><li>{{$i18n.locale === 'zh-CN' ? news.title_zh : news.title_en}}</li></nuxt-link>
+                <nuxt-link v-for="(news,index) in newsTop5" :key="index" :to="`/news/${news.id}/`"><li>{{$i18n.locale === 'zh-CN' ? news.title_zh : news.title_en}}</li></nuxt-link>
             </ul>
         </div>
     </div>

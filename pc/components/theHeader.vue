@@ -5,10 +5,10 @@
         <nuxt-link 
             v-for="(menuItem,index) in $t('headerMenu')" 
             :key="index" 
-            :to="menuItem.link === '/whitePaper' ? (menuItem.link + '?lang=' + $i18n.locale) : menuItem.link"
+            :to="menuItem.link === '/whitePaper' ? (menuItem.link + '/?lang=' + $i18n.locale ) : menuItem.link + '/'"
             :class="menuItem.disabled ? 'menu-item ignore-menu-item menu-item-disabled' : 'menu-item ignore-menu-item'" 
             active-class="active"
-            :exact="menuItem.link === '/' ? true : false"
+            :exact="menuItem.link === '' ? true : false"
             :target="menuItem.link === '/whitePaper' ? '_blank' : ''"
             :title="'GAIA ' + menuItem.text"
             >
