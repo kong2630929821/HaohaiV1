@@ -60,7 +60,7 @@ module.exports = {
   },
   generate: {
     routes: function () {
-      return axios.get('http://www.gaia.world/newsConfig.json')
+      return axios.get('/newsConfig.json')
       .then((res) => {
         return res.data.map((item) => {
           return '/news/' + item.id

@@ -63,7 +63,8 @@
         text-align: center;
     }
     .ignore-item-text{
-        font-size: 14px;
+        font-family: "PingFangSC-Medium";
+        font-size: 16px;
         color: #666666;
         line-height: 20px;
         display: flex;

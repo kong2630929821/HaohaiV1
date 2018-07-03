@@ -1,6 +1,6 @@
 <template>
 <header :class="menuExpansion === 1 ? ' header-bg-2 ' + headerBg : headerBg">
-    <router-link to="/"><img src="/phoneImage/logo.png" class="logo-img"></router-link>
+    <router-link to=""><div class="logo-img"></div></router-link>
     <div class="header-right-box" @click="clickMenuExpansion">
         <img 
             :src="'/phoneImage/' + (menuExpansion === 1 ? '2.png' : '1.png')" 
@@ -11,7 +11,7 @@
                 <router-link 
                     v-for="(menuItem,index) in $t('headerMenu')" 
                     :key="index" 
-                    :to="menuItem.link === '/whitePaper' ? (menuItem.link + '/?lang=' + $i18n.locale ) : menuItem.link + '/'"
+                    :to="menuItem.link === '/whitePaper' ? (menuItem.link + '/?lang=' + $i18n.locale) : menuItem.link + '/'"
                     :class="menuItem.disabled ? 'menu-item menu-item-disabled' : 'menu-item'" 
                     active-class="active"
                     :exact="menuItem.link === '' ? true : false"
@@ -44,12 +44,16 @@ header{
     left: 0;
     z-index: 9999;
 }
+
 .header-bg-2{
     background: rgba(255,255,255,0.99);
 }
 .logo-img{
     width: 128px;
     height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/phoneImage/logo.png);
 }
 .header-right-box{
     width: 48px;
@@ -138,35 +142,35 @@ export default {
         },
         //点击菜单展开关闭
         clickMenuExpansion(){
-        this.menuExpansion = this.menuExpansion === 1 ? 2 : 1;
-        if(this.menuExpansion === 1){
-            let doc = $(document);
-            this.docScrollTop = doc.scrollTop();
-        }
-        if(this.menuExpansion === 1){
-            $("body").css({
-                position:"fixed",
-                marginTop:-this.docScrollTop,
-            });  
-        }else{
-            $("body").css({
-                position:"relative",
-                marginTop:0,
-            });  
-            window.scrollTo(0,this.docScrollTop)
-        }
+            this.menuExpansion = this.menuExpansion === 1 ? 2 : 1;
+            if(this.menuExpansion === 1){
+                let doc = $(document);
+                this.docScrollTop = doc.scrollTop();
+            }
+            if(this.menuExpansion === 1){
+                $("body").css({
+                    position:"fixed",
+                    marginTop:-this.docScrollTop,
+                });  
+            }else{
+                $("body").css({
+                    position:"relative",
+                    marginTop:0,
+                });  
+                window.scrollTo(0,this.docScrollTop)
+            }
             
         },
         handleScroll () {
-        let wH = window.innerHeight;
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop||-parseInt(document.body.style.marginTop)
-        if(scrollTop == 0){
-            this.headerBg = '';
-        }else{
-            this.headerBg = 'header-bg-2';
-        }
-        //alert(scrollTop);
-    },
+            let wH = window.innerHeight;
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop||-parseInt(document.body.style.marginTop || 0)
+            if(scrollTop == 0){
+                this.headerBg = '';
+            }else{
+                this.headerBg = 'header-bg-2';
+            }
+            //alert(scrollTop);
+        },
     
     },
     mounted(){

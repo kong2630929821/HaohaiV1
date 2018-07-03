@@ -4,7 +4,7 @@
         <div class="recent-news-container">
             <h6 class="recent-new-title">{{$t('newsDetailSideBar.recentNews')}}</h6>
             <ul class="recents">
-                <router-link v-for="(news,index) in newsTop5" :key="index" :to="`/news/${news.id}`"><li>{{$i18n.locale === 'zh-CN' ? news.title_zh : news.title_en}}</li></router-link>
+                <router-link v-for="(news,index) in newsTop5" :key="index" :to="`/news/${news.id}/`"><li>{{$i18n.locale === 'zh-CN' ? news.title_zh : news.title_en}}</li></router-link>
             </ul>
         </div>
     </div>

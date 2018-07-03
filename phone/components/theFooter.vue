@@ -10,7 +10,7 @@
             <router-link 
             v-if="item.link.indexOf('http') === 0 ? false : true"
             :to="item.link" 
-            class="item"
+            class="ignore-item"
             :title="'GAIA ' + item.text">
                 <span>{{item.text}}</span>
             </router-link>
@@ -18,7 +18,7 @@
             v-else
             :href="item.link" 
             target="_blank"
-            class="item"
+            class="ignore-item"
             :title="'GAIA ' + item.text"
             rel="nofollow">
                 <span>{{item.text}}</span>
@@ -35,7 +35,7 @@
                 <router-link 
                 v-if="item.link.indexOf('http') === 0 ? false : true"
                 :to="item.link" 
-                class="item"
+                class="ignore-item"
                 :title="'GAIA ' + item.text">
                     <span>{{item.text}}</span>
                 </router-link>
@@ -43,7 +43,7 @@
                 v-else
                 target="_blank" 
                 :href="item.link" 
-                class="item"
+                class="ignore-item"
                 :title="'GAIA ' + item.text"
                 rel="nofollow">
                     <span>{{item.text}}</span>
@@ -51,28 +51,15 @@
                 </li>
             </ul>
         </div>
-        <div class="contact-us">
+        <div class="contact-us ignore-text">
             <h4 class="title">{{$t('footerContactAs.title')}}</h4>
             <div class="thin-line"></div>
-            <div class="contact-ways">
-                <span  v-for="(item,index) in contactWays" :key="index" class="contact-way-item" >
-                <router-link 
-                v-if="item.link.indexOf('http') === 0 ? false : true"
-                :to="item.link" 
-                class="item"
-                :title="'GAIA ' + item.text">
-                    <img :src="'/phoneImage/' + (item.isHover ? item.hover:item.normal)">
-                </router-link>
-                <a 
-                v-else
-                target="_blank" 
-                :href="item.link" 
-                class="item"
-                :title="'GAIA ' + item.text"
-                rel="nofollow">
-                    <img :src="'/phoneImage/' + (item.isHover ? item.hover:item.normal)">
-                </a>
-                </span>
+            <div class="ignore-contact-ways">
+                <div  v-for="(item,index) in contactWays" :key="index" :class="item.isHover ? 'contact-way-item contact-way-item-active' : 'contact-way-item' "  @click="mouseClick(index)" @mouseout="mouseNormal(index)">
+                    <div :style="'background-image:url(/phoneImage/' + (item.isHover ? item.hover:item.normal) + ')'" class="contact-img"></div>
+                    <div :style="'background-image:url(/phoneImage/' + item.qrcode + ')'" :class="item.isHover ? 'ignore-qrcode-img qrcode-img-show' : 'ignore-qrcode-img'"></div>
+                    <span class="ignore-contacts-text" >{{item.text}}</span>
+                </div>
             </div>
             <div class="email-box">
                 <div class="box">
@@ -111,13 +98,16 @@ footer{
 .contact-us{
     margin-top: 30px;
 }
+.ignore-text{
+    font-size: 14px;
+}
 .community-and-help-content,
 .about-gaia-content,
 .contact-ways{
     display: flex;
 }
 
-.item{
+.ignore-item{
     font-size: 14px;
     color: #B0B2C3;
     line-height: 30px;
@@ -136,23 +126,17 @@ footer{
 .about-gaia-content li:last-child{
     margin-right: 0;
 }
-.contact-way-item{
-    width: 30px;
-    height: 30px;
-    margin-right: 16px;
-}
-.contact-way-item img{
-    width: 100%;
-    height: 100%;
-}
+
 .email-box,
 .phone-box{
     display: flex;
     align-items: center;
-    margin-top: 34px;
+    margin-top: 14px;
+    color: #B0B2C3;
 }
 .phone-box{
     margin-top: 2px;
+    display: none;
 }
 .box{
     width: 20px;
@@ -174,7 +158,46 @@ footer{
     color: #B0B2C3;
     line-height: 20px;
 }
-
+.ignore-contact-ways{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contact-way-item{
+    margin-right: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #B0B2C3;
+}
+.contact-way-item-active{
+    color: #1A70DD;
+}
+.contact-way-item:last-child{
+    margin: 0;
+}
+.contact-img{
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-position: center;
+    background-size: cover;
+    
+}
+.ignore-qrcode-img{
+    position: absolute;
+    top: -187px;
+    left: 0;
+    width: 172px;
+    height: 172px;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
+.qrcode-img-show{
+    display: block;
+}
 </style>
 <script>
 import DividingLine from './dividingLine'
@@ -185,31 +208,13 @@ export default {
     data(){
         return {
             contactWays:[{
-                normal:'github.png',
-                hover:'ion-github2.png',
+                text:"WeChat",
+                normal:'wechat.png',
+                hover:'wechat2.png',
                 isHover:false,
+                qrcode:"gaia_QR.png",
                 link:''
-            },{
-                normal:'facebook.png',
-                hover:'ion-facebook2.png',
-                isHover:false,
-                link:''
-            },{
-                normal:'googleplus.png',
-                hover:'ion-googleplus2.png',
-                isHover:false,
-                link:''
-            },{
-                normal:'reddit.png',
-                hover:'ion-reddit2.png',
-                isHover:false,
-                link:''
-            },{
-                normal:'send.png',
-                hover:'ion-send2.png',
-                isHover:false,
-                link:''
-            },],
+            }],
             
         }
     },
@@ -218,6 +223,14 @@ export default {
             return this.$i18n.locale === 'zh-CN' ? 'footer_logo.png' : 'logo-footer2.png'
         }
     },
+    methods:{
+        mouseClick(index){
+            this.contactWays[index].isHover = !this.contactWays[index].isHover;
+        },
+        mouseNormal(index){
+            //this.contactWays[index].isHover = false;
+        }
+    }
 
 }
 </script>

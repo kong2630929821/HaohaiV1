@@ -1,5 +1,5 @@
 export default {
-    explorerTitle:"GAIA.WORLD-区块链游戏公链领创者",
+    explorerTitle:"GAIA.WORLD-區塊鏈遊戲公鏈領創者",
     //顶部导航
     headerMenu:[
         {
@@ -8,32 +8,32 @@ export default {
             disabled:false
         },
         {
-            text:'白皮书',
+            text:'白皮書',
             link:'/whitePaper',
             disabled:true
         },
         {
-            text:'关于',
+            text:'關於',
             link:'/aboutUs',
             disabled:false
         },
         {
-            text:'新闻',
+            text:'新聞',
             link:'/news',
             disabled:false
         },
         {
-            text:'GAIA浏览器',
+            text:'GAIA瀏覽器',
             link:'/GAIAExplorer',
             disabled:false
         },
         {
-            text:'路线图',
+            text:'路線圖',
             link:'/routeMap',
             disabled:false
         },
         {
-            text:'钱包',
+            text:'錢包',
             link:'/wallet',
             disabled:false
         }
@@ -48,32 +48,32 @@ export default {
     },
     //底部社区与帮助
     footerCommunityAndHelp:{
-        title:'社区和帮助',
+        title:'社區和幫助',
         item:[{
-            text:'社区',
+            text:'社區',
             link:''
         },{
             text:'博客',
             link:''
         },{
-            text:'技术支持',
+            text:'技術支持',
             link:''
         },{
-            text:'常见问题',
+            text:'常見問題',
             link:''
         }]
     },
      //底部关于GAIA
      footerAboutGAIA:{
-        title:'关于GAIA',
+        title:'關於GAIA',
         item:[{
-            text:'关于我们',
+            text:'關於我們',
             link:'/aboutUs'
         },{
-            text:'路线图',
+            text:'路線圖',
             link:'/routeMap'
         },{
-            text:'伙伴',
+            text:'夥伴',
             link:''
         },{
             text:'工作',
@@ -82,7 +82,7 @@ export default {
     },
     //底部联系我们
     footerContactAs:{
-        title:'联系我们',
+        title:'聯繫我們',
         email:{
             imgUrl:'email_L.png',
             text:'info@gaia.world'
@@ -93,124 +93,163 @@ export default {
         },
         copyright:'版权所有©2018 GAIA 版权所有'
     },
+    footerLogo:{
+        bgTitle:"GAIA.WORLD",
+        bgAlt:"GAIA.WORLD"
+    },
     //首页顶部banner
     indexTopBanner:{
-        title:'区块链游戏公链领创者',
-        advantages:['秒级竞争性权益证明共识算法', '安全链接现实世界的协议规范', '可无限扩展的超级侧链'],
-        bgTitle:"区块链游戏公链领创者",
-        bgAlt:"区块链游戏公链领创者"
+        title:'區塊鏈遊戲公鏈領創者',
+        advantages:['秒級競爭性權益證明共識算灋', '安全鏈接現實世界的協議規範', '可無限擴展的超級側鏈'],
+        bgTitle:"區塊鏈遊戲公鏈領創者",
+        bgAlt:"區塊鏈遊戲公鏈領創者"
     },
     //首页什么是GAIA
     indexWhatIsGAIA:{
-        title:'什么是GAIA',
+        title:'什麼是GAIA',
         item:[{
-            text:'高并发、强扩展的第三代公链',
+            text:'高並發、強擴展的第三代公鏈',
             imgUrl:'400081806_wx.jpg',
-            bgTitle:"高并发、强扩展的第三代公链",
-            bgAlt:"高并发、强扩展的第三代公链"
+            bgTitle:"高並發、強擴展的第三代公鏈",
+            bgAlt:"高並發、強擴展的第三代公鏈"
         },{
-            text:'适合以游戏为经典应用场景',
+            text:'適合以遊戲為經典應用場景',
             imgUrl:'400081807_wx.jpg',
-            bgTitle:"适合以游戏为经典应用场景",
-            bgAlt:"适合以游戏为经典应用场景"
+            bgTitle:"適合以遊戲為經典應用場景",
+            bgAlt:"適合以遊戲為經典應用場景"
         },{
-            text:'独创真正去中心化的POS共识',
+            text:'獨創真正去中心化的POS共識',
             imgUrl:'400070120_wx.jpg',
-            bgTitle:"去中心化的POS共识",
-            bgAlt:"去中心化的POS共识"
+            bgTitle:"去中心化的POS共識",
+            bgAlt:"去中心化的POS共識"
         }]
     },
     //首页优势
     indexAdvantages:{
-        title:'GAIA的三大优势',
+        title:'GAIA的三大優勢',
         item:[{
-            title:'POS',
-            text:'PoS(Proof of Stake)是第三代区块链的象征，这是一种基于链上货币计价的共识机制。PoS算法不需要计算复杂的数学问题，避免了资源和能源的浪费。考虑到网络环境和区块链运行效率，在充分保证安全的前提下，GAIA设计了全新的PoS方案：基于竞争的PoS。',
+            title:'CPoS',
+            text:'CPoS(Proof of Stake)是第三代區塊鏈的象徵，這是一種基於鏈上貨幣計價的共識機制。 PoS算法不需要計算複雜的數學問題，避免了資源和能源的浪費。考慮到網絡環境和區塊鏈運行效率，在充分保證安全的前提下，GAIA設計了全新的PoS方案：基於競爭的PoS。',
             imgUrl:'pos.png',
-            bgTitle:"POS",
-            bgAlt:"POS"
+            bgTitle:"CPoS",
+            bgAlt:"CPoS"
         },{
-            title:'安全函数',
-            text:'安全函数专注于解决传统智能合约代码无法调用和操作区块链外数据的问题。在GAIA区块链架构中，我们提供一个经验证的安全的网关系统，运行在GAIA链中的代码可以通过安全函数调用外部数据，这将极大的拓展智能合约的应用范围。',
+            title:'安全函數',
+            text:'安全函數專注於解決傳統智能合約代碼無法調用和操作區塊鏈外數據的問題。在GAIA區塊鏈架構中，我們提供一個經驗證的安全的網關係統，運行在GAIA鏈中的代碼可以通過安全函數調用外部數據，這將極大的拓展智能合約的應用範圍。',
             imgUrl:'aqhs.png',
-            bgTitle:"安全函数",
-            bgAlt:"安全函数"
+            bgTitle:"安全函數",
+            bgAlt:"安全函數"
         },{
-            title:'超级侧链',
-            text:'GAIA带来全新的超级侧链技术，为开发者提供全新侧链应用模式。超级侧链代码和主链相同，使用相同的共识算法（cPOS），有自己独立的区块链。得益于PoS的共识算法，超级侧链可以直接使用部分主链的节点网络，也可以独立部署节点网络。',
+            title:'超級側鏈',
+            text:'GAIA帶來全新的超級側鏈技術，為開發者提供全新側鏈應用模式。超級側鏈代碼和主鏈相同，使用相同的共識算法（POS），有自己獨立的區塊鏈。得益於PoS的共識算法，超級側鏈可以直接使用部分主鏈的節點網絡，也可以獨立部署節點網絡。',
             imgUrl:'cjcl.png',
-            bgTitle:"超级侧链",
-            bgAlt:"超级侧链"
+            bgTitle:"超級側鏈",
+            bgAlt:"超級側鏈"
         }]
     },
     //首页链上应用
     indexApplication:{
-        title:'链上应用',
+        title:'鏈上應用',
         item:[{
             title:'高性能',
-            text:'基于PoS技术的GAIA能够极大地提高区块链的处理效率，而全新的去中心化协作模式能够带来极低的处理成本。在小规模的测试网络中我们已经可以实现每秒2000次的处理效率。',
-            imgUrl:'yo1.jpg'
+            text:'基於PoS技術的GAIA能夠極大地提高區塊鏈的處理效率，而全新的去中心化協作模式能夠帶來極低的處理成本。在小規模的測試網絡中我們已經可以實現每秒2000次的處理效率。',
+            imgUrl:'yo1.jpg',
+            bgTitle:"高性能",
+            bgAlt:"高性能"
         },{
             title:'可交互性',
-            text:'在GAIA区块链架构中，我们提供一个用户定义的外部函数调用，运行在GAIA链中的代码可以通过安全函数调用外部数据，这将极大的拓展智能合约的应用范围。',
-            imgUrl:'yo2.jpg'
+            text:'在GAIA區塊鏈架構中，我們提供一個用戶定義的外部函數調用，運行在GAIA鏈中的代碼可以通過安全函數調用外部數據，這將極大的拓展智能合約的應用範圍。',
+            imgUrl:'yo2.jpg',
+            bgTitle:"可交互性",
+            bgAlt:"可交互性"
         },{
-            title:'独立性',
-            text:'我们提供完整的解决方案并鼓励开发者直接在侧链上开发应用。超级侧链功能可以提供独立和可靠的应用开发环境，而跨链事务规范则充分保证了主链与侧链间的交互。',
-            imgUrl:'yo3.jpg'
+            title:'獨立性',
+            text:'我們提供完整的解決方案並鼓勵開發者直接在側鏈上開發應用。超級側鏈功能可以提供獨立和可靠的應用開發環境，而跨鏈事務規範則充分保證了主鏈與側鏈間的交互。',
+            imgUrl:'yo3.jpg',
+            bgTitle:"獨立性",
+            bgAlt:"獨立性"
         }]
     },
     //首页gaia钱包
     indexGAIAWallet:{
-        title:'GAIA钱包',
+        title:'錢包',
         text:'更安全，更快捷，更方便',
-        downloadText:'钱包下载',
-        bgTitle:"GAIA钱包",
-        bgAlt:"GAIA钱包"
+        downloadText:'錢包下載',
+        bgTitle:"錢包",
+        bgAlt:"錢包"
     },
     //关于我们-关于GAIA
     aboutUsAboutGAIA:{
-        title:'关于GAIA',
-        text:'GAIA.WORD是您所有与比特币有关的首要来源。我们可以帮助您 购买GAIA和/或选择GAIA钱包。您也可以阅读最新消息，或在我们的GAIA论坛上与社区进行交流。这是一个商业网站，列出钱包，交易所和其他比特币相关的公司。如果您对GAIA有，请点击这里联系我们。',
+        title:'關於GAIA',
+        text:'GAIA.WORD是您所有與比特幣有關的首要來源。我們可以幫助您購買GAIA和/或選擇GAIA錢包。您也可以閱讀最新消息，或在我們的GAIA論壇上與社區進行交流。這是一個商業網站，列出錢包，交易所和其他比特幣相關的公司。',
+        bgTitle:"關於GAIA",
+        bgAlt:"關於GAIA"
     },
     //关于我们-我们的团队
     aboutUsOurTeam:{
-        title:'我们的团队',
-        text:'GAIA拥有经验丰富的技术团队',
+        title:'核心團隊',
+        text:'GAIA擁有經驗豐富的技術團隊',
         item:[{
             imgUrl:'portrait1.jpg',
-            name:'纳塔利娅',
-            job:'职位',
-            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+            name:'Fenix ​​C. Hsu',
+            job:'CEO',
+            text:'Fenix Hsu , 畢業於美國加州大學伯克利分校物理專業本科，曾在哥倫比亞大學研究所攻讀博士學位，幣圈鏈圈最早期骨灰級鐵粉，區塊鏈遊戲早期佈道者。'
         },{
             imgUrl:'portrait2.jpg',
-            name:'纳塔利娅',
-            job:'职位',
-            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+            name:'唐敏',
+            job:'CTO',
+            text:'南京大學軟件工程碩士，多年分佈式網絡開發經驗，主持開發大型分佈式計算框架和存儲系統，國內區塊鏈行業早期佈道者。'
         },{
             imgUrl:'portrait3.jpg',
-            name:'纳塔利娅',
-            job:'职位',
-            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+            name:'丁辰靈',
+            job:'COO',
+            text:'知名科技財經媒體人，科技作家（著有《超級網紅》一書）。國內知名互聯網電商專家，DCCI評選的科技自媒體30人之一。致力於研究互聯網思維，傳統企業互聯網轉型，社會化營銷等.'
+        }]
+    },
+    //关于我们--顾问
+    aboutUsAdvisors:{
+        title:'顧問',
+        text:'GAIA擁有經驗豐富的技術團隊',
+        item:[{
+            name:'Calvin Ng',
+            text:'資深遊戲人和創業者，20餘年從業經驗，各大遊戲公司任職，曾將“魔獸世界”代入中國.'
         },{
-            imgUrl:'portrait4.jpg',
-            name:'纳塔利娅',
-            job:'职位',
-            text:'纳塔利娅自大学时代就开始为当地的创新者组织风险投资论坛，一直热衷于创业和新的数字经济。她知道她想与创新创业公司合作，所以她的职业生涯开始于战略咨询，以获得最佳实践并将其应用于任何组织。纳塔利娅后来引导了她对早期和成长阶段公司的创业热情。在空闲的时候，她喜欢瑜伽和制作珠宝'
+            name:'Adam Stradling',
+            text:'比特幣和區塊鏈開拓者, Bitcoin.com創始人.'
+        },{
+            name:'Tiago',
+            text:'Aptoide創始人 AppCoins發行人.'
+        },{
+            name:'Ryan Terribilini',
+            text:'Google Play運營資深策略師, Ripple 平台合作總監.'
+        },{
+            name:'Gaurang Torvekar',
+            text:'Indorse 聯合創始人，以太坊新加坡大會(Ethereum Singapore Meetups)的聯合組織人.'
+        },{
+            name:'Andras Kristof',
+            text:'FRD首席區塊鏈架構師，比特幣、以太坊和Ripple合作者，《數字代幣手冊》(Handbook of Digital Currency)合著者.'
+        },{
+            name:'Shallwe He',
+            text:'中國最早的社區創始人，Youkia.com創始人，擁有豐富的互聯網行業經驗，公司旗下研發出《新仙劍奇俠傳3D》《三國志2017》等經典代表作品，2016年被上市公司凱撒文化（SHE002425 ）以12億收購.'
+        },{
+            name:'Zmax leo',
+            text:'畢業於武漢工業大學商業經濟碩士，中國網絡遊戲第一批先驅者，20餘年技術開發經驗，大型多人在線網絡遊戲商用開發引擎的創始人.'
         }]
     },
     //GAIA浏览器搜索
     GAIAExplorerSearchFor:{
         title:'gaia.world',
         text:'Search addresses, transactions, epochs & slots',
-        tips:'搜索不成功'
+        tips:'蒐索不成功'
     },
     //钱包banner
     walletTopBanner:{
-        title:'下载GAIA钱包',
-        text:'GAIA钱包不单是链上资产的存储系统，更是区块链与用户交互的媒介，用户将可以在钱包中直接使用第三方分布式应用，钱包在整个生态系统中是如此的重要，正如浏览器在互联网中的作用',
-        bgTitle:"下载GAIA钱包",
-        bgAlt:"下载GAIA钱包",
+        pcTitle:"下載錢包",
+        phoneTitle:'下載',
+        phoneTitle0:"錢包",
+        text:'GAIA錢包不單是鏈上資產的存儲系統，更是區塊鏈與用戶交互的媒介，用戶將可以在錢包中直接使用第三方分佈式應用，錢包在整個生態系統中是如此的重要，正如瀏覽器在互聯網中的作用。',
+        bgTitle:"下載錢包",
+        bgAlt:"下載錢包",
         phoneDownload:{
             title:'—— 手机 ——',
             item:[{
@@ -252,8 +291,8 @@ export default {
     },
     //新闻列表
     newsList:{
-        prePage:'←  上一页',
-        nextPage:'下一页  →'
+        prePage:'←  上一頁',
+        nextPage:'下一頁  →'
     },
     //新闻详情侧边栏
     newsDetailSideBar:{
@@ -262,149 +301,149 @@ export default {
     },
     //路线图banner
     routeMapBanner:{
-        title:'GAIA路线图',
-        text:'FB项目分为四个阶段，以历史上伟大帝王出现的先后顺序命名',
-        bgTitle:"GAIA路线图",
-        bgAlt:"GAIA路线图"
+        title:'GAIA路線圖',
+        text:'GAIA項目分為四個階段，以歷史上偉大帝王出現的先後順序命名。',
+        bgTitle:"GAIA路線圖",
+        bgAlt:"GAIA路線圖"
     },
     //路线图各个阶段
     routeMapStages:{
         progressText:'进展',
         stages:[{
-            title:'亚历山大',
-            text:`搭建整个项目的整体框架，并且实现自研的cpos算法。
-实现一个本地数据库和一个内存数据库，用于存储区块链数据。实现一个加密数学库用于网络消息传递的加解密和用户私人信息的保护。
-我们还使用rust语言实现了一个js虚拟机，js语言的使用者众多，使用js作为上层应用的开发语言，能够吸引更多的开发者参与FB项目。
-我们还会开发一个js的模拟环境，使得开发者即使没有搭建区块链，直接导入一个js模拟文件，就可以开发上层应用。实现一个支持超级侧链的p2p网络层。我们还会实现一个前端框架，用于快速开发应用程序。当然最重要的还是实现我们自研的CPOS算法。`,
+            title:'亞歷山大',
+            text:`搭建整個項目的整體框架，並且實現自研的CPoS算法。
+實現一個本地數據庫和一個內存數據庫，用於存儲區塊鏈數據。實現一個加密數學庫用於網絡消息傳遞的加解密和用戶私人信息的保護。
+我們還使用rust語言實現了一個js虛擬機，js語言的使用者眾多，使用js作為上層應用的開發語言，能夠吸引更多的開發者參與GAIA項目。
+我們還會開發一個js的模擬環境，使得開發者即使沒有搭建區塊鏈，直接導入一個js模擬文件，就可以開發上層應用。實現一個支持超級側鏈的p2p網絡層。我們還會實現一個前端框架，用於快速開發應用程序。當然最重要的還是實現我們自研的CPoS算法。`,
             imgUrl:'Alexander.jpg',
-            bgTitle:"亚历山大",
-            bgAlt:"亚历山大",
+            bgTitle:"亞歷山大",
+            bgAlt:"亞歷山大",
             item:[{
                 percentage:70,
                 title:'store',
-                text:'内存数据的序列化和反序列化，内存数据的快速检索，虚拟内存'
+                text:'內存數據的序列化和反序列化，內存數據的快速檢索，虛擬內存'
             },{
                 percentage:10,
                 title:'tools',
-                text:'项目通用的工具'
+                text:'項目通用的工具'
             },{
                 percentage:25,
                 title:'crypto',
-                text:'加密算法，加密算法用于保证通信的安全性和保护用户资产'
+                text:'加密算法，加密算法用於保證通信的安全性和保護用戶資產'
             },{
                 percentage:20,
                 title:'math',
-                text:'通用基础数学，提供区块链使用的基础数学功能'
+                text:'通用基礎數學，提供區塊鏈使用的基礎數學功能'
             },{
                 percentage:80,
                 title:'db',
-                text:'本地存储数据库，序列化和反序列化，数据压缩'
+                text:'本地存儲數據庫，序列化和反序列化，數據壓縮'
             },{
                 percentage:80,
                 title:'vm',
-                text:'使用rust实现的js虚拟机，支持ES5语言和部分ES6特性'
+                text:'使用rust實現的js虛擬機，支持ES5語言和部分ES6特性'
             },{
                 percentage:80,
                 title:'p2p',
-                text:'支持多网络共存的p2p层'
+                text:'支持多網絡共存的p2p層'
             },{
                 percentage:90,
                 title:'net',
-                text:'底层网络协议'
+                text:'底層網絡協議'
             },{
                 percentage:5,
                 title:'serv',
-                text:'通用的服务器框架'
+                text:'通用的服務器框架'
             },{
                 percentage:0,
                 title:'env',
-                text:'js模拟环境，开发者使用虚拟环境就可以开发上层应用'
+                text:'js模擬環境，開發者使用虛擬環境就可以開發上層應用'
             },{
                 percentage:30,
                 title:'pos',
-                text:'基于竞争的权益证明算法'
+                text:'基於競爭的權益證明算法'
             },{
                 percentage:75,
                 title:'build',
-                text:'一个用于快速构建项目的工具'
+                text:'一個用於快速構建項目的工具'
             },{
                 percentage:95,
                 title:'front',
-                text:'一个前端框架，用于开发界面应用'
+                text:'一個前端框架，用於開發界面應用'
             },{
                 percentage:0,
                 title:'app',
-                text:'一个简易的交互工具'
+                text:'一個簡易的交互工具'
             }]
         },{
-            title:'屋大维',
-            text:`实现了整个区块链项目的主体功能。实现实现智能合约，为了吸引开发者，我们的虚拟机会兼容以太坊的EVM，使得以太坊的应用开发者能够方便的切换到FB网络，我们也会提供经过验证的模板智能合约，以降低入门门槛。
-实现支持多重签名的钱包，保证用户财产的安全性是区块链项目成功的基石。我们会实现一个去中心化的交易所，我们认为区块链的一个重要使命就是取代传统的中心化交易所，除此之外，我们还会实现安全函数，解决区块链和现实世界的交互问题，安全函数在博弈领域会有非常重要的地位。安全函数+钱包+交易所+多重签名+智能合约`,
+            title:'屋大維',
+            text:`實現了整個區塊鏈項目的主體功能。實現實現智能合約，為了吸引開發者，我們的虛擬機會兼容以太坊的EVM，使得以太坊的應用開發者能夠方便的切換到GAIA網絡，我們也會提供經過驗證的模板智能合約，以降低入門門檻。
+實現支持多重簽名的錢包，保證用戶財產的安全性是區塊鏈項目成功的基石。我們會實現一個去中心化的交易所，我們認為區塊鏈的一個重要使命就是取代傳統的中心化交易所，除此之外，我們還會實現安全函數，解決區塊鍊和現實世界的交互問題，安全函數在博弈領域會有非常重要的地位。安全函數+錢包+交易所+多重簽名+智能合約`,
             imgUrl:'Octavian.jpg',
-            bgTitle:"屋大维",
-            bgAlt:"屋大维",
+            bgTitle:"屋大維",
+            bgAlt:"屋大維",
             item:[{
                 percentage:0,
                 title:'smart constract ',
-                text:'提供基于JS的智能合约，并且兼容以太坊的合约'
+                text:'提供基於JS的智能合約，並且兼容以太坊的合約'
             },{
                 percentage:0,
                 title:'constract template',
-                text:'提供JS智能合约的模板，使得基础用户可以直接使用以后的合约，无需再次开发'
+                text:'提供JS智能合約的模板，使得基礎用戶可以直接使用以後的合約，無需再次開發'
             },{
                 percentage:0,
                 title:'multi-signature',
-                text:'实现多重签名的功能，更好的保护用户的财产安全'
+                text:'實現多重簽名的功能，更好的保護用戶的財產安全'
             },{
                 percentage:0,
                 title:'Decentralized exchange.',
-                text:'实现一个去中心化的交易所，FB能够实现一个稳定快速的交易系统'
+                text:'實現一個去中心化的交易所，GAIA能夠實現一個穩定快速的交易系統'
             },{
                 percentage:0,
                 title:'Security Function',
-                text:'通过安全函数解决区块链和现实世界的互信和交互问题'
+                text:'通過安全函數解決區塊鍊和現實世界的互信和交互問題'
             },{
                 percentage:0,
                 title:'wallet',
-                text:'实现一个多币种的钱包，用户可以使用钱包购买商品或者和其他货币进行交换'
+                text:'實現一個多幣種的錢包，用戶可以使用錢包購買商品或者和其他貨幣進行交換'
             }]
         },{
             title:'君士坦丁',
-            text:`补充周边功能和用户体验的优化。
-我们需要实现一个映射系统，将冗长的数学表达简化为人类易记易读的字符，以普通用户对区块链的理解和使用成本。
-同时，我们会实现一个轻客户端，使得更多用户能够更加快捷和方便的使用区块链上的信息。除此之外，为了保护用户利益，我们还会实现一个纸钱包和硬件钱包。
-为了方便用户的财产转移和使用其他链提供的服务，我们会实现一个基于CPOS的侧链。`,
+            text:`補充周邊功能和用戶體驗的優化。
+我們需要實現一個映射系統，將冗長的數學表達簡化為人類易記易讀的字符，以普通用戶對區塊鏈的理解和使用成本。
+同時，我們會實現一個輕客戶端，使得更多用戶能夠更加快捷和方便的使用區塊鏈上的信息。除此之外，為了保護用戶利益，我們還會實現一個紙錢包和硬件錢包。
+為了方便用戶的財產轉移和使用其他鏈提供的服務，我們會實現一個基於CPoS的側鏈。`,
             imgUrl:'Constantine.jpg',
             bgTitle:"君士坦丁",
             bgAlt:"君士坦丁",
             item:[{
                 percentage:0,
                 title:'mapping ',
-                text:'将区块链上的一切事物映射为一个字符表达'
+                text:'將區塊鏈上的一切事物映射為一個字符表達'
             },{
                 percentage:0,
                 title:'light client',
-                text:'无需下载完整的区块即可进行数据验证和交易发送'
+                text:'無需下載完整的區塊即可進行數據驗證和交易發送'
             },{
                 percentage:0,
                 title:'paper wallet',
-                text:'纸钱包可以极大的方便初级用户对区块链的使用'
+                text:'紙錢包可以極大的方便初級用戶對區塊鏈的使用'
             },{
                 percentage:0,
                 title:'hardware wallet',
-                text:'硬件钱包具有极高的安全性和隐私性'
+                text:'硬件錢包具有極高的安全性和隱私性'
             },{
                 percentage:0,
                 title:'sidechain',
-                text:'侧链极大的扩展了区块链可能的应用场景'
+                text:'側鏈極大的擴展了區塊鏈可能的應用場景'
             }]
         },{
-            title:'拿破仑',
-            text:`性能优化+可扩展性
-这个阶段我们主要关注点是改进区块链的可用性，并且根据当前最新的研究成果优化性能，并确保区块链的可扩展性。`,
+            title:'拿破崙',
+            text:`性能優化+可擴展性+錢包+交易所+多重簽名+智能合約。
+這個階段我們主要關注點是改進區塊鏈的可用性，並且根據當前最新的研究成果優化性能，並確保區塊鏈的可擴展性。`,
             imgUrl:'Napoleon.jpg',
-            bgTitle:"拿破仑",
-            bgAlt:"拿破仑",
+            bgTitle:"拿破崙",
+            bgAlt:"拿破崙",
             item:[]
         }]
     }

@@ -57,12 +57,12 @@
     height: 250px;
 }
 .ignore-card-img{
-    
     margin-bottom: 10px;
     background-position: center;
     background-size: cover;
 }
 .ignore-item-text{
+    font-family: "PingFangSC-Medium";
     font-size: 16px;
     color: #333333;
     line-height: 22px;

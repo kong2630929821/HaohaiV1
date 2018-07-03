@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "PingFangSC-Regular","PingFang SC","Helvetica Neue","Microsoft YaHei";
+    font-family: "PingFangSC-Medium","PingFangSC-Regular","PingFang SC","Helvetica Neue","Microsoft YaHei";
     background-color: #fff;
 }
 ul{
@@ -23,4 +23,10 @@ h1,h2,h3,h4,h5,h6{
 .markdown-container img{
     max-width: 100%;
     margin: 10px 0;
+}
+.ignore-markdown-container{
+    font-size: 15px;
+}
+.ourteam-card-item{
+    margin:30px 0 0 70px;
 }

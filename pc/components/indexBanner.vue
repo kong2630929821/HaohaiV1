@@ -4,7 +4,10 @@
     <img src="/pcImage/banner_logo.png" class="ignore-banner-logo">
     <div>
         <h1 class="ignore-banner-title">{{$t('indexTopBanner.title')}}</h1>
-        <p class="ignore-banner-advantages"><span v-for="(item,index) in $t('indexTopBanner.advantages')" :key="index" class="advantage-item">{{item}}<span>&nbsp;&nbsp;/&nbsp;&nbsp;</span></span></p>
+        <div class="ignore-banner-advantages">
+            <p v-for="(item,index) in $t('indexTopBanner.advantages')" :key="index" class="advantage-item">&nbsp;&nbsp;/&nbsp;&nbsp;{{item}}
+            </p>
+        </div>
     </div>
 </section>
 </template>
@@ -30,6 +33,7 @@
     color: #FFFFFF;
 }
 .ignore-banner-advantages{
+    font-family: "PingFangSC-Medium";
     opacity: 0.9;
     font-size: 16px;
     color: #FFFFFF;

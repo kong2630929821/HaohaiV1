@@ -21,15 +21,18 @@
     width: 100%;
     display: flex;
     align-items: center;
-    
+    font-family: "PingFangSC-Medium";
     margin-top: 210px;
     margin-bottom: 110px;
 }
 .text-box{
     margin-right: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .ignore-title{
-    font-family: "PingFangSC-Light";
+    
     font-size: 36px;
     color: #333333;
     line-height: 50px;
@@ -37,10 +40,11 @@
 }
 .gaia-text{
     width: 600px;
-    color: #666666;
+    color: #111111;
+    text-align: right;
 }
 .ignore-gaia-text{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin-top: 10px;
 }

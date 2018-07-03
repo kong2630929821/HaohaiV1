@@ -58,13 +58,14 @@
             <a :href="item.link" v-for="(item,index) in contactWays" :key="index" class="ignore-contact-way-item"  @mouseover="mouseHover(index)" @mouseout="mouseNormal(index)">
                 <img :src="'/pcImage/' + (item.isHover ? item.hover:item.normal)" class="contact-img">
                 <img :src="'/pcImage/' + item.qrcode" :class="item.isHover ? 'ignore-qrcode-img qrcode-img-show' : 'ignore-qrcode-img'">
+                <span class="ignore-contacts-text" >{{item.text}}</span>
             </a>
         </div>
         <div class="ignore-email-box">
             <div class="ignore-box">
             <img :src="'/pcImage/' + $t('footerContactAs.email.imgUrl')">
             </div>
-            <span class="ignore-text">{{$t('footerContactAs.email.text')}}</span>
+            <span  >{{$t('footerContactAs.email.text')}}</span>
         </div>
         <div class="ignore-phone-box">
             <div class="ignore-box">
@@ -118,7 +119,7 @@ footer{
 .ignore-contact-ways{
     margin-top: 10px;
     display: flex;
-    
+    flex-direction: column;
 }
 .ignore-contact-way-item{
     width: 30px;
@@ -126,10 +127,21 @@ footer{
     margin-right: 12px;
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
+    color: #B0B2C3;
+}
+.ignore-contact-way-item:hover{
+    color: #1A70DD;
+}
+.ignore-contacts-text{
+    font-size: 14px;
+    line-height: 22px;
 }
 .contact-img{
     width: 100%;
     height: 100%;
+    margin-right: 10px;
 }
 .ignore-contact-way-item:last-child{
     margin: 0;
@@ -150,9 +162,11 @@ footer{
     display: flex;
     margin-top: 26px;
     align-items: center;
+    color: #B0B2C3;
 }
 .ignore-phone-box{
     margin-top: 5px;
+    display: none;
 }
 .ignore-box{
     width:36px;
@@ -160,6 +174,7 @@ footer{
     align-items: center;
     height: 20px;
 }
+
 .ignore-text,
 .ignore-copyright{
     font-family: "PingFangSC-Light";
@@ -233,6 +248,7 @@ export default {
     data(){
         return {
             contactWays:[{
+                text:"WeChat",
                 normal:'wechat.png',
                 hover:'wechat2.png',
                 isHover:false,

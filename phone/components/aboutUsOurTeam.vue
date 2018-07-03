@@ -18,12 +18,12 @@
     </section>
 </template>
 <style scoped>
+
 .our-team{
     width: 100%;
     padding:60px 16px;
     background: #ECEFF1;
     position: relative;
-    display: none;
 }
 .title{
     font-size: 24px;

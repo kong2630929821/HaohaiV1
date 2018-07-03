@@ -10,7 +10,7 @@
             </div>
             <div class="dividing-line"></div>
             <div class="bg-img" :style="{backgroundImage:'url(/newsImage/' + news.imgUrl + ')'}"></div>
-            <div class="markdown-container">
+            <div class="markdown-container ignore-markdown-container">
                 <vue-markdown :source="newsContent"></vue-markdown>
             </div>
         </div>
@@ -69,7 +69,6 @@
 }
 .markdown-container{
     width: 100%;
-    font-size: 12px;
     line-height: 1.5;
     margin-bottom: 32px;
 }

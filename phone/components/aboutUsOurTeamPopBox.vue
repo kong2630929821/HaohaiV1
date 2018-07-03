@@ -1,18 +1,26 @@
 <template>
 <!--关于我们  弹出框-->
 <div class="mask" @click="clickMask">
-    <div class="pop-box">
-        <div class="person-img" :style="{backgroundImage:'url(/phoneImage/' + selfIntroduction.imgUrl + ')'}"></div>
+    <div :class="leave ? 'pop-box pop-box-leave' : 'pop-box pop-box-enter'" @webkitAnimationEnd="animationend" @animationEnd="animationend">
+        <div class="margin-box">
+        <div class="person-img" v-if="selfIntroduction.imgUrl">
+            <img :src="'/phoneImage/' + selfIntroduction.imgUrl" class="person-head">
+        </div>
         <p class="person-name">{{selfIntroduction.name}}</p>
         <p class="person-job">{{selfIntroduction.job}}</p>
         <div class="person-text">{{selfIntroductionText}}</div>
+        </div>
     </div>
 </div>
 </template>
 <style scoped>
-@keyframes an{
+@keyframes enter{
     0% {width:0;height:0;}
     100%  {width:295px;height:426px}
+}
+@keyframes leave{
+    0% {width:295px;height:426px}
+    100%  {width:0;height:0;}
 }
 .mask{
     display: flex;
@@ -31,23 +39,41 @@
     width: 0;
     height: 0;
     background: #fff;
-    padding: 20px 18px 17px 17px;
     z-index: 888;
     box-shadow: 0 2px 4px 0 rgba(50,50,93,0.10);
-    transition: all .5s linear;
-    animation: an .3s ease-in-out;
-    animation-fill-mode:forwards;
-    -webkit-transition: all .5s linear;
-    -webkit-animation: an .3s ease-in-out;
-    -webkit-animation-fill-mode:forwards;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
     overflow: hidden;
+    box-sizing: border-box;
+    
 }
-
+.pop-box-enter{
+    animation: enter .3s ease-in-out;
+    -webkit-animation: enter .3s ease-in-out;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+.pop-box-leave{
+    animation: leave .3s ease-in-out;
+    -webkit-animation: leave .3s ease-in-out;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+.margin-box{
+    margin: 20px;
+}
 .person-img{
     width: 100%;
     height: 170px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-head{
+    width: 96px;
+    height: 96px;
 }
 .person-name{
     font-family: "PingFangSC-Light";
@@ -84,6 +110,7 @@ export default {
     props:['selfIntroduction','isShow'],
     data(){
         return {
+            leave:false,
             docScrollTop:0
         }
     },
@@ -94,12 +121,19 @@ export default {
     },
     methods:{
         clickMask(){
-            this.$emit('hiddenCard');
+            this.leave = true;
+            
             $("body").css({
                     position:"relative",
                     marginTop:0,
             });  
             window.scrollTo(0,this.docScrollTop)
+        },
+        animationend(){
+           if(this.leave){
+               this.$emit('hiddenCard');
+               console.log("animationend")
+           }
         }
     },
     mounted(){

@@ -39,12 +39,12 @@
 .stage-summary{
     width: 950px;
     white-space: pre-wrap;
-    background: #203260;
 }
 .ignore-stage-summary{
+    font-family: "PingFangSC-Medium";
     padding: 20px 50px;
-    font-size: 15px;
-    color: #FFFFFF;
+    font-size: 16px;
+    color: #111111;
     text-align: center;
     line-height: 20px;
 }

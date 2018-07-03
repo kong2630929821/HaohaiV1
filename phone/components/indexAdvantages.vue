@@ -1,9 +1,12 @@
 <template>
 <!--首页  3大优势-->
     <section class="advantages">
-        <h2 class="title">{{$t('indexAdvantages.title')}}</h2>
-        <DividingLine></DividingLine>
-        <div :class="isShow[index] ? 'item-card advantage-item-card fade-in-up' : 'item-card advantage-item-card'" :key="index" v-for="(item,index) in $t('indexAdvantages.item')">
+        <div class="ignore-title-container">
+            <h2 class="title">{{$t('indexAdvantages.title')}}</h2>
+            <DividingLine></DividingLine>
+        </div>
+        <div :class="isShow[index] ? 'item-card advantage-item-card fade-in-up' : 'item-card advantage-item-card'" 
+        :key="index" v-for="(item,index) in $t('indexAdvantages.item')" :style="(index%2 === 0) ? 'background-color:#f8f8f8;' : ''">
             <div class="advantage-img" :style="{backgroundImage:'url(/phoneImage/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>    
             <div class="" :key="index" >
                 <h3 class="item-title">{{item.title}}</h3>
@@ -22,11 +25,18 @@
     animation: fadeInUp .5s;
 }
 .advantages{
-    padding: 60px 40px;
-    background: #203260;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.ignore-title-container{
+    background: #203260;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .title{
     font-family: "PingFangSC-Medium";
@@ -36,13 +46,14 @@
     text-align: center;
 }
 .item-card{
-    margin-top: 70px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 0;
     transform: translateY(300px);
     animation-fill-mode:forwards;
+    color: #111;
 }
 .advantage-img{
     width: 142px;
@@ -53,7 +64,6 @@
 
 .item-title{
     font-size: 24px;
-    color: #FFFFFF;
     line-height: 33px;
     margin-top: 58px;
 }
@@ -62,7 +72,6 @@
 }
 .item-text{
     font-size: 12px;
-    color: #FFFFFF;
     line-height: 17px;
 }
 

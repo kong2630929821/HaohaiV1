@@ -3,7 +3,7 @@
     <section class="ignore-wallet-banner wallet-banner" :alt="$t('walletTopBanner.bgAlt')" :title="$t('walletTopBanner.bgTitle')">
         <div class="logo-img ignore-logo-img" :style="{backgroundImage:'url(/pcImage/' + logoImg + ')'}"></div>
         <div>
-            <h1 class="ignore-title">{{$t('walletTopBanner.title')}}</h1>
+            <h1 class="ignore-title">{{$t('walletTopBanner.pcTitle')}}</h1>
             <DividingLine></DividingLine>
             <div class="ignore-text text">{{$t('walletTopBanner.text')}}</div>
         </div>
@@ -71,7 +71,8 @@
     max-width: 600px;
 }
 .ignore-text{
-    font-size: 14px;
+    font-family: "PingFangSC-Medium";
+    font-size: 16px;
     color: #FFFFFF;
     line-height: 20px;
     margin-top: 10px;

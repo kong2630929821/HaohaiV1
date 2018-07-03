@@ -18,9 +18,9 @@ async function getNewsConfig(){
       method: 'GET',
       url: "newsConfig.json",
       baseURL:root,
-      headers:{
+      /* headers:{
         "Cache-Control": "no-cache"
-      },
+      }, */
       withCredentials: false
     });
 }

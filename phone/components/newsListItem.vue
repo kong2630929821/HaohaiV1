@@ -1,6 +1,6 @@
 <template>
 <!--新闻列表item-->
-<nuxt-link :to="'/news/' + news.id + '/'" ::key="news.id" >
+<nuxt-link :to="'/news/' + news.id + '/'" ::key="news.id" class="news-item-link">
     <div class="news-item">
         <h6 class="news-title">{{title}}</h6>
         <div class="box">
@@ -14,14 +14,14 @@
 </template>
 <style scoped>
 .news-item{
-    padding: 16px 0;
+    padding: 16px 24px;
     background-color: #fff;
     border-bottom: 1px solid #DDDDDD;
     cursor: pointer;
 }
 
 .news-item:hover{
-    background-color: #F8FBFF;
+    background-color: #ECEFF1;
 }
 .news-title{
     font-family: "PingFangSC-Medium";

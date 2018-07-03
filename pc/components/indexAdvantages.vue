@@ -1,9 +1,12 @@
 <template>
 <!--首页  3大优势-->
     <section class="advantages">
-        <h2 class="ignore-title">{{$t('indexAdvantages.title')}}</h2>
-        <DividingLine></DividingLine>
-        <div :class="isShow[index] ? 'item-card advantage-item-card fade-in-up' : 'item-card advantage-item-card'" :key="index" v-for="(item,index) in $t('indexAdvantages.item')">
+        <div class="ignore-title-container">
+            <h2 class="ignore-title">{{$t('indexAdvantages.title')}}</h2>
+            <DividingLine></DividingLine>
+        </div>
+        <div :class="isShow[index] ? 'ignore-item-card advantage-item-card fade-in-up' : 'ignore-item-card advantage-item-card'" 
+        :key="index" v-for="(item,index) in $t('indexAdvantages.item')" :style="(index%2 === 0) ? 'background-color:#f8f8f8;' : ''">
             <div :class="index%2 === 1 ? 'order-1 advantage-img' : 'order-0 advantage-img' " :style="{backgroundImage:'url(/pcImage/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>    
             <div :class="index%2 === 1 ? 'order-2' : ''" :key="index" >
                 <h3 class="ignore-item-title">{{item.title}}</h3>
@@ -22,26 +25,39 @@
     animation: fadeInUp .5s;
 }
 .advantages{
-    padding: 80px 0 198px;
+    padding: 0 0 198px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #111111;
+    font-family: "PingFangSC-Medium";
+}
+.ignore-title-container{
     background: #203260;
+    width: 100%;
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .ignore-title{
-    font-family: "PingFangSC-Light";
+    color: #fff;
     font-size: 42px;
-    color: #FFFFFF;
     line-height: 59px;
     margin-bottom: 10px;
+    margin-top: 110px;
+    
 }
-.item-card{
-    margin-top: 220px;
+.ignore-item-card{
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     opacity: 0;
     transform: translateY(300px);
     animation-fill-mode:forwards;
+    height: 530px;
+    width: 100%;
 }
 .advantage-img{
     width: 300px;
@@ -53,7 +69,6 @@
 
 .ignore-item-title{
     font-size: 24px;
-    color: #FFFFFF;
     line-height: 33px;
     margin-bottom: 10px;
 }
@@ -61,8 +76,9 @@
     max-width: 550px;
 }
 .ignore-item-text{
-    font-size: 14px;
-    color: #FFFFFF;
+    font-family: "PingFangSC-Medium";
+    font-size: 16px;
+    color: #111111;
     line-height: 20px;
     margin-top: 10px;
 }

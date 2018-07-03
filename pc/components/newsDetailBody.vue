@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="bg-img ignore-bg-img" :style="{backgroundImage:'url(/newsImage/' + news.imgUrl + ')'}"></div>
-            <div class="markdown-container" id="markdown-container">
+            <div class="markdown-container ignore-markdown-container" id="markdown-container">
                 <vue-markdown :source="newsContent"></vue-markdown>
             </div>
         </div>

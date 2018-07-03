@@ -10,7 +10,6 @@
 </template>
 <style scoped>
 .news-list{
-    padding: 0 24px;
     margin-top: 50px;
     min-height: 35.7vh;
 }
@@ -45,6 +44,9 @@ export default {
             pageSize:5,
             curPage:1,
         };
+    },
+    created(){
+        console.log("created",this.sortedNews)
     },
     computed:{
         curPageNews:function(){
