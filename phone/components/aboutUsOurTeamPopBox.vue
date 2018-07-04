@@ -1,7 +1,9 @@
 <template>
 <!--关于我们  弹出框-->
 <div class="mask" @click="clickMask">
-    <div :class="leave ? 'pop-box pop-box-leave' : 'pop-box pop-box-enter'" @webkitAnimationEnd="animationend" @animationEnd="animationend">
+    <div :class="popClass" 
+        @webkitAnimationEnd="animationend" 
+        @animationEnd="animationend">
         <div class="margin-box">
         <div class="person-img" v-if="selfIntroduction.imgUrl">
             <img :src="'/phoneImage/' + selfIntroduction.imgUrl" class="person-head">
@@ -20,6 +22,14 @@
 }
 @keyframes leave{
     0% {width:295px;height:426px}
+    100%  {width:0;height:0;}
+}
+@keyframes enter0{
+    0% {width:0;height:0;}
+    100%  {width:295px;height:226px}
+}
+@keyframes leave0{
+    0% {width:295px;height:226px}
     100%  {width:0;height:0;}
 }
 .mask{
@@ -56,6 +66,18 @@
 .pop-box-leave{
     animation: leave .3s ease-in-out;
     -webkit-animation: leave .3s ease-in-out;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+.pop-box-enter0{
+    animation: enter0 .3s ease-in-out;
+    -webkit-animation: enter0 .3s ease-in-out;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+.pop-box-leave0{
+    animation: leave0 .3s ease-in-out;
+    -webkit-animation: leave0 .3s ease-in-out;
     animation-fill-mode:forwards;
     -webkit-animation-fill-mode:forwards;
 }
@@ -117,6 +139,10 @@ export default {
     computed:{
         selfIntroductionText(){
             return this.selfIntroduction.text.substr(0,100)
+        },
+        popClass(){
+            const popClass =  this.leave ? (this.selfIntroduction.imgUrl ? 'pop-box-leave' : 'pop-box-leave0') : (this.selfIntroduction.imgUrl ? 'pop-box-enter' : 'pop-box-enter0');
+            return "pop-box " + popClass;
         }
     },
     methods:{
@@ -132,7 +158,7 @@ export default {
         animationend(){
            if(this.leave){
                this.$emit('hiddenCard');
-               console.log("animationend")
+               //console.log("animationend")
            }
         }
     },

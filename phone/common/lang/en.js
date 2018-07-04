@@ -100,7 +100,7 @@ export default {
     //首页顶部banner
     indexTopBanner:{
         title:'The creator of game blockchain',
-        advantages:['A Competitive Proof of State model ( cPOS), which provides fairness and efficiency in signing smart contract with GaiaWorld nodes','Gaia Parachain specifically for exchanging token and identification','Gaia Parachain the secured virtual machine provides a gateway to interact with third party applications'],
+        advantages:['A Competitive Proof of State model (CPoS), which provides fairness and efficiency in signing smart contract with GaiaWorld nodes','Gaia Parachain specifically for exchanging token and identification','Gaia Parachain the secured virtual machine provides a gateway to interact with third party applications'],
         bgTitle:"The creator of game blockchain",
         bgAlt:"The creator of game blockchain"
     },
@@ -129,7 +129,7 @@ export default {
         title:'THREE MAJOR ADVANTAGES OF GAIA',
         item:[{
             title:'CPoS',
-            text:'As a symbol for the third generation blockchain, CPoS (Competition Prove of Stake) is a new consensus algorithm based on on-chain currency pricing. PoS replaces complicated math problems with and avoids the waste of computing power. Take into account of network security and operation efficiency, Gaiawold introduces a new CPoS consensus -- a CPoS based on competition (CPoS)',
+            text:'As a symbol for the third generation blockchain, PoS (Proof of Stake) is a new consensus algorithm based on on-chain currency pricing. PoS replaces complicated math problems with and avoids the waste of computing power. Take into account of network security and operation efficiency, Gaiawold introduces a new PoS consensus -- a PoS based on competition (CPoS).',
             imgUrl:'pos.png',
             bgTitle:"POS",
             bgAlt:"POS"
@@ -141,7 +141,7 @@ export default {
             bgAlt:"Gaia Shield Protocol"
         },{
             title:'Gaia Parachain',
-            text:'Gaiaworld brings  Parachain technology for developers with a new application model. The parallel chain is embedded with the same consensus algorithm (CPOS) of the main chain, but operates as its own independent blockchain. The Parallel chain can benefit directly from the part of nodes of the main network without losing its independence of its own nodes',
+            text:'Gaiaworld brings  Parachain technology for developers with a new application model. The parallel chain is embedded with the same consensus algorithm (CPoS) of the main chain, but operates as its own independent blockchain. The Parallel chain can benefit directly from the part of nodes of the main network without losing its independence of its own nodes',
             imgUrl:'cjcl.png',
             bgTitle:"Gaia Parachain",
             bgAlt:"Gaia Parachain"
@@ -152,31 +152,31 @@ export default {
         title:'On-Chain Application Solutions',
         item:[{
             title:'High Performance',
-            text:'Gaiaworld with the CPOS consensus greatly improve the efficiency of blockchain network, and the new decentralized collaboration mode reduces the costs to minimal. In a small scale test network, we have already realized 2,000 times/second processing efficiency',
+            text:'Gaiaworld with the CPoS consensus greatly improve the efficiency of blockchain network, and the new decentralized collaboration mode reduces the costs to minimal. In a small scale test network, we have already realized 2,000 times/second processing efficiency',
             imgUrl:'yo1.jpg',
             bgTitle:"High Performance",
             bgAlt:"High Performance"
         },{
-            title:'Third Party Application Interactions',
+            title:'Interactions',
             text:'In Gaiaworld blockchain architecture, we provide a user-defined external function call. The code running in the GAIA chain can access external data through Aegis function, which greatly expand the scope of the smart contract',
             imgUrl:'yo2.jpg',
-            bgTitle:"Third Party Application Interactions",
-            bgAlt:"Third Party Application Interactions"
+            bgTitle:"Interactions",
+            bgAlt:"Interactions"
         },{
-            title:'Independence  of Parallel Chain',
+            title:'Independence',
             text:'Gaiaworld provides a complete solution and encourages developers to build applications directly on the Parallel chain. The parallel chain is an independent and reliable application development environment, while the cross-chain transaction fully guarantees the interaction between the main chain and the parallel chain',
             imgUrl:'yo3.jpg',
-            bgTitle:"Independence  of Parallel Chain",
-            bgAlt:"Independence  of Parallel Chain"
+            bgTitle:"Independence",
+            bgAlt:"Independence"
         }]
     },
     //首页gaia钱包
     indexGAIAWallet:{
-        title:'GAIA Wallet',
+        title:'Wallet',
         text:'Safer, Faster, Easier',
-        downloadText:'DOWNLOAD WALLET',
-        bgTitle:"GAIA Wallet",
-        bgAlt:"GAIA Wallet"
+        downloadText:'DOWNLOAD',
+        bgTitle:"Wallet",
+        bgAlt:"Wallet"
     },
     //关于我们-关于GAIA
     aboutUsAboutGAIA:{

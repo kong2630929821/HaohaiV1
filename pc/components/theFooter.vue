@@ -56,7 +56,7 @@
         <DividingLine></DividingLine>
         <div class="ignore-contact-ways">
             <a :href="item.link" v-for="(item,index) in contactWays" :key="index" class="ignore-contact-way-item"  @mouseover="mouseHover(index)" @mouseout="mouseNormal(index)">
-                <img :src="'/pcImage/' + (item.isHover ? item.hover:item.normal)" class="contact-img">
+                <img :src="'/pcImage/' + (item.isHover ? item.hover:item.normal)" class="ignore-contact-img">
                 <img :src="'/pcImage/' + item.qrcode" :class="item.isHover ? 'ignore-qrcode-img qrcode-img-show' : 'ignore-qrcode-img'">
                 <span class="ignore-contacts-text" >{{item.text}}</span>
             </a>
@@ -122,8 +122,6 @@ footer{
     flex-direction: column;
 }
 .ignore-contact-way-item{
-    width: 30px;
-    height: 30px;
     margin-right: 12px;
     cursor: pointer;
     position: relative;
@@ -138,9 +136,9 @@ footer{
     font-size: 14px;
     line-height: 22px;
 }
-.contact-img{
-    width: 100%;
-    height: 100%;
+.ignore-contact-img{
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 .ignore-contact-way-item:last-child{

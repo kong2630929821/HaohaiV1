@@ -6,7 +6,7 @@
             <DividingLine></DividingLine>
         </div>
         <div :class="isShow[index] ? 'ignore-item-card advantage-item-card fade-in-up' : 'ignore-item-card advantage-item-card'" 
-        :key="index" v-for="(item,index) in $t('indexAdvantages.item')" :style="(index%2 === 0) ? 'background-color:#f8f8f8;' : ''">
+        :key="index" v-for="(item,index) in $t('indexAdvantages.item')" :style="(index%2 === 0) ? 'background-color:#F8FBFF;' : ''">
             <div :class="index%2 === 1 ? 'order-1 advantage-img' : 'order-0 advantage-img' " :style="{backgroundImage:'url(/pcImage/' + item.imgUrl + ')'}" :alt="item.bgAlt" :title="item.bgTitle"></div>    
             <div :class="index%2 === 1 ? 'order-2' : ''" :key="index" >
                 <h3 class="ignore-item-title">{{item.title}}</h3>

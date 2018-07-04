@@ -29,7 +29,7 @@
 <style scoped>
 header{
     width: 100%;
-    font-family: 'PingFangSC-Light';
+    font-family: 'PingFangSC-Medium';
     height: 80px;
     display: flex;
     align-items: center;

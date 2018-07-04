@@ -129,7 +129,7 @@ export default {
         title:'GAIA的三大優勢',
         item:[{
             title:'CPoS',
-            text:'CPoS(Proof of Stake)是第三代區塊鏈的象徵，這是一種基於鏈上貨幣計價的共識機制。 PoS算法不需要計算複雜的數學問題，避免了資源和能源的浪費。考慮到網絡環境和區塊鏈運行效率，在充分保證安全的前提下，GAIA設計了全新的PoS方案：基於競爭的PoS。',
+            text:'PoS(Proof of Stake)是第三代區塊鏈的象徵，這是一種基於鏈上貨幣計價的共識機制。 PoS算法不需要計算複雜的數學問題，避免了資源和能源的浪費。考慮到網絡環境和區塊鏈運行效率，在充分保證安全的前提下，GAIA設計了全新的PoS方案：基於競爭的PoS(CPoS)。',
             imgUrl:'pos.png',
             bgTitle:"CPoS",
             bgAlt:"CPoS"

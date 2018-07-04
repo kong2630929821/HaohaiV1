@@ -33,6 +33,7 @@
 
 <style scoped>
 header{
+    font-family: 'PingFangSC-Medium';
     width: 100%;
     height: 50px;
     display: flex;
