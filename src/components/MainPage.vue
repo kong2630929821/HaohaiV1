@@ -637,7 +637,7 @@ li {
 }
 @media (min-width: 768px) and (max-width: 1000px) {
   .haidou {
-    margin-left: 100px!important;
+    margin-left: 40px!important;
   }
 }
 
