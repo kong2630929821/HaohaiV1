@@ -635,6 +635,11 @@ li {
     height: 65px !important;
   }
 }
+@media (min-width: 768px) and (max-width: 1000px) {
+  .haidou {
+    margin-left: 100px!important;
+  }
+}
 
 @media (min-width: 314px) and (max-width: 800px) {
   .m-body-first {
@@ -642,7 +647,7 @@ li {
     margin-left:3vw ;
     overflow: hidden;
   }
-  .m-wrapper[data-v-109177d0] {
+  .m-wrapper {
     /* width: 99vw; */
     background-image: url(../../static/image/bg-phone-bg@2x.png);
     background-repeat: no-repeat;
