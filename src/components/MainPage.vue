@@ -1,5 +1,21 @@
 <template>
   <div class="m-wrapper">
+    <!-- <div class="download">
+   <el-dropdown class="move">
+  <span class="el-dropdown-link">
+    下载<i class="el-icon-arrow-down el-icon--right"></i>
+  </span>
+  <el-dropdown-menu slot="dropdown" class="down-main">
+    <li class="down-list" v-for="(v,i) in downList" @click="aboutMe(i)">{{v.title}}</li>
+  </el-dropdown-menu>
+  </el-dropdown>
+    </div> -->
+    <div class="download">
+        <span class="down-link">下载</span>
+        <ol class="down-main">
+          <li class="down-list" v-for="(v,i) in downList" @click="aboutMe(i)">{{v.title}}</li>
+        </ol>
+    </div>
     <div class="m-body-first">
       <div class="mbf-f">
 
@@ -29,14 +45,8 @@
 
           </div>
         </div>
-
-
         <img class="mbf-f-phone" src="../../static/image/phone-model@2x.png">
-
-
-
-
-
+      
       </div>
       <div class="mbf-f-box2">
         <ul style="display: flex;flex-wrap: wrap">
@@ -66,15 +76,15 @@
           <img class="group-small"  src="../../static/image/group-small@2x.png"/>
           <ul style="position: relative">
             <li >
-              <div class="haidou-hef"><a href="#">嗨豆</a></div>
+              <div class="haidou-hef"><a href="javaScript:;">嗨豆</a></div>
               <div class="haidou-hint">得ETH分红</div>
             </li>
             <li class="haidou">
-              <div class="haidou-hef"><a href="#">碎银</a></div>
+              <div class="haidou-hef"><a href="javaScript:;">银两</a></div>
               <div class="haidou-hint"> 游戏必备</div>
             </li>
             <li class="haidou">
-              <div class="haidou-hef"><a href="#">免费机会</a></div>
+              <div class="haidou-hef"><a href="javaScript:;">免费机会</a></div>
               <div class="haidou-hint">尽情玩</div>
             </li>
           </ul>
@@ -145,7 +155,6 @@
       </div>
     </div>
     <div class="bg-bottom-wave"></div>
-
   </div>
 </template>
 
@@ -154,13 +163,23 @@ export default {
   name: 'main-page',
   data () {
     return {
+      downList:[{title:'好嗨-仙之侠道',src:'../../static/image/yineng-signed.apk'},{title:'好嗨-区块英雄',src:'../../static/image/yineng-signed.apk'},{title:'好嗨-一世之尊',src:'../../static/image/yineng-signed.apk'}]
     }
-  }
+  },
+   methods:{
+          aboutMe(index){
+            this.$router.replace({name:'down',query:{title:this.downList[index].title,src:this.downList[index].src}});   
+          }
+        }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+*{
+  margin: 0;
+  padding: 0;
+}
 h1, h2 {
   font-weight: normal;
 }
@@ -172,19 +191,61 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-
-
+.download{
+  width:150px;
+  position: absolute;
+  top: 3vh;
+  right: 3vw;
+  z-index: 1;
+}
+.download:hover .down-main{
+  display: block;
+}
+.down-main{
+  width:90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius:6px;
+  margin-top: 1vh;
+  display:none;
+}
+ .down-link {
+    cursor: pointer;
+    width:90px;
+    height:40px;
+    display: block;
+    text-align: center;
+    font-size:13px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:40px;
+    background:linear-gradient(45deg,rgba(49,141,230,1) 0%,rgba(56,207,231,1) 100%);
+    border-radius:3px;
+  }
+.down-list{
+  width:150px;
+  height:50px;
+  font-size:14px;
+  text-align: center;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(34,34,34,1);
+  line-height:50px;
+  background:rgba(255,255,255,1);
+  cursor: pointer;
+}
+.down-list:hover{
+  background:rgba(239,239,239,1);
+}
 .m-wrapper {
  /* width: 99vw;*/
   background-image: url("../../static/image/bg-top@2x.png") ;
   background-repeat:no-repeat;
   background-size: 100% auto;
+  overflow: hidden;
 }
-
-
-
-
-
 .mbf-f {
   /*position: relative;
   left: 0;
